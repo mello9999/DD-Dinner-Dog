@@ -2,12 +2,12 @@ import React from 'react';
 import { Form, Input, Button, Row, Col, Divider, notification } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import axios from '../../config/axios';
-
+import { withRouter } from 'react-router-dom';
 const layout = {
     labelCol: { xs: 24, sm: 7, md: 6, lg: 6, xl: 5, xxl: 4 },
     wrapperCol: { xs: 24, sm: 17, md: 18, lg: 18, xl: 19, xxl: 20 },
 };
-export default function Register() {
+function Register(props) {
 
     const onFinish = values => {
         console.log('Received values of form: ', values);
@@ -16,16 +16,17 @@ export default function Register() {
             password: values.password,
             name: values.nickname
         }
-        axios.post('/users/register',body)
+        axios.post('/users/register', body)
             .then(res => {
                 notification.success({
-                    message: `Successful Registration, ${values.nickname}`
-                  });
+                    message: `Successful Registration, ${values.nickname}.`
+                });
+                props.history.push('/login');
             })
             .catch(err => {
                 notification.error({
-                    message: `Registration Fail`
-                  });
+                    message: `Registration Fail.`
+                });
             });
     };
 
@@ -117,3 +118,5 @@ export default function Register() {
         </Row>
     );
 }
+
+export default withRouter(Register);

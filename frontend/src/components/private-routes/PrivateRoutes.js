@@ -1,4 +1,4 @@
-import {Redirect, Switch, Route} from 'react-router-dom';
+import { Redirect, Switch, Route } from 'react-router-dom';
 import ConfigRoutes from "../../config/routes";
 import React from 'react';
 
@@ -9,14 +9,15 @@ function PrivateRoutes(props) {
     const redirectRoute = ConfigRoutes[role].redirectRoutes;
     return (
         <Switch>
-            {allowedRoutes.map(route => <Route
-                path={route.url}
-                key={route.url}
-                exact
+            {allowedRoutes.map(route => (
+                <Route
+                    path={route.url}
+                    key={route.url}
+                    exact
                 >
-                <route.component setRole={props.setRole}/>
-                </Route>)}
-            <Redirect to={redirectRoute}/>
+                    <route.component setRole={props.setRole} />
+                </Route>))}
+            <Redirect to={redirectRoute} />
         </Switch>
     )
 }
