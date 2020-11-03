@@ -1,4 +1,5 @@
 # DD-Dinner-Dog
+โปรเจ็คนี้เป็นส่วนหนึ่งของรายวิชา __CPE327 Software Engineering__ 
 ### Developer team
 > Member in team : 'Cap Moo Developer Team' :dog:
 > * :woman: Ms.Nasiree Suchartsunthorn 60070501095
@@ -48,3 +49,6 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
   - [ ] 3. Chat page 
   - [ ] 4. Premium page 
   - [ ] 5. Chat 'Vet' page 
+  
+  # Step to run 
+  <p align = 'center'> ...coming soon... </p>
