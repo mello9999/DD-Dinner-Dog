@@ -28,8 +28,18 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
 > 2. เพื่อเป็นตัวกลางในการจับคู่ให้สุนัข
 > 3. ผู้ใช้งานสามารถกำหนดลักษณะของสุนัขที่อยากเลือกได้
 
-## Product Perspective
+# Product Perspective
 :wolf: DD Dinner Dog เป็น Application ที่หาคู่ให้กับสุนัขจะมีผู้ใช้อยู่ 2 ประเภทคือ USER ที่เป็นเจ้าของ
 สุนัข เเละ สัตวแพทย์ ที่จะให้คำปรึกษาสำหรับเจ้าของสุนัข เจ้าของสุนัขสามารถหาเพื่อนหรือหาคู่ให้กับสุนัข
 ได้โดยตามใจตนเองจะสามารถเลือกตำเเหน่งที่สนใจ หรือ พันธุ์สุนัขที่สนใจได้ตามใจเจ้าของสุนัขโดยการดู
 โปรไฟล์ เเละเจ้าของสุนัขสามารถรายงานเจ้าของสุนัขคนอื่นที่ก่อกวนได้ :dog::heart::dog2:
+
+# Work Schedural
+- [:heavy_check_mark:] Get Requirement specification
+- [:heavy_check_mark:] Design Mock up 
+- [ ] Implement 5 module up 
+-- ( ) 1. login / register 
+-- ( ) 2. Swipe page
+-- ( ) 3. Chat page 
+-- ( ) 4. Premium page 
+-- ( ) 5. Chat 'Vet' page 
