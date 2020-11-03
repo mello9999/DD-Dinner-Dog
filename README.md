@@ -1,6 +1,6 @@
 # DD-Dinner-Dog
->>  โปรเจ็คนี้เป็นส่วนหนึ่งของรายวิชา __CPE327 Software Engineering__ 
->>  จัดทำโดย นักศึกษาวิศวกรรมคอมพิวเตอร์ ชั้นปี 3-4 มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี (Computer Engineering at King Mongkut's University of Technology Thonburi)
+โปรเจ็คนี้เป็นส่วนหนึ่งของรายวิชา __CPE327 Software Engineering__ 
+จัดทำโดย นักศึกษาวิศวกรรมคอมพิวเตอร์ ชั้นปี 3-4 มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี (Computer Engineering at King Mongkut's University of Technology Thonburi)
 
 ### Developer team
 > Member in team : 'Cap Moo Developer Team' :dog:
