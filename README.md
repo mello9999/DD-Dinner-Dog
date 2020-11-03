@@ -38,8 +38,8 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
 - [x] Get Requirement specification :heavy_check_mark:
 - [x] Design Mock up :heavy_check_mark:
 - [ ] Implement 5 module up 
-  - ( ) 1. login / register 
-  - ( ) 2. Swipe page
-  - ( ) 3. Chat page 
-  - ( ) 4. Premium page 
-  - ( ) 5. Chat 'Vet' page 
+  - [ ] 1. login / register 
+  - [ ] 2. Swipe page
+  - [ ] 3. Chat page 
+  - [ ] 4. Premium page 
+  - [ ] 5. Chat 'Vet' page 
