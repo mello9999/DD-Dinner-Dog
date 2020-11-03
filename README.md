@@ -35,8 +35,8 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
 โปรไฟล์ เเละเจ้าของสุนัขสามารถรายงานเจ้าของสุนัขคนอื่นที่ก่อกวนได้ :dog::heart::dog2:
 
 # Work Schedural
-- [:heavy_check_mark:] Get Requirement specification
-- [:heavy_check_mark:] Design Mock up 
+- [x] Get Requirement specification :heavy_check_mark:
+- [x] Design Mock up :heavy_check_mark:
 - [ ] Implement 5 module up 
   - ( ) 1. login / register 
   - ( ) 2. Swipe page
