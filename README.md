@@ -1,5 +1,5 @@
 # DD-Dinner-Dog
->> CPE327 software engineering project 
+> CPE327 software engineering project 
 
 # Introduction
 > 
