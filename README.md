@@ -68,6 +68,7 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
   
 # Installation and Setup Instructions
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
+
 Installation:
 ### backend 
 #### Install __npm__
@@ -76,33 +77,33 @@ Installation:
 #### Install __sequelize-cli__ เพื่อการเชื่อมต่อกับ database 
 `$ npm install -g sequelize-cli`
 
-#### Create Database 
+#### Create Database   
 `$ sequelize-cli db:create`
 
-#### run 
+#### run   
 `$ node index.js`
 
 ### frontend
-#### Install __npm__
+#### Install __npm__  
 `$ npm install`
 
-To Start Server:
+To Start Server:  
 `$ npm start`
 
-To Visit App:
+To Visit App:  
 `localhost:3000/...` 
  
 # Running the tests 
 เวลา run program ต้อง run ทั้ง 2 ส่วนพร้อมกัน
 ###  backend
-To Start Server:
+To Start Server:  
 `$ node index.js`
 
 ###  frontend
-To Start Server:
+To Start Server :  
 `$ npm start`
 
-To Visit App:
+To Visit App :  
 `localhost:3000/...` 
   
 # Deployment  
