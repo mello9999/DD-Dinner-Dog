@@ -1,12 +1,5 @@
 # DD-Dinner-Dog
 โปรเจ็คนี้เป็นส่วนหนึ่งของรายวิชา __CPE327 Software Engineering__ 
-### Developer team
-> Member in team : 'Cap Moo Developer Team' :dog:
-> * :woman: Ms.Nasiree Suchartsunthorn 60070501095
-> * :woman: Ms.Natchariya Wongamnuayporn 61070507204
-> * :man: Mr.Natchapol Patamawisut 61070507205
-> * :woman: Ms.Thanaporn Cheentada 61070507209
-> * :man: Ms.Rungwigrai Payakkanuwat 610705072019
 
 # Project Description 
 :guide_dog: DD Dinner Dog เป็นระบบหาเพื่อนและหาคู่ให้กับสุนัข โดย DD Dinner Dog ถูกสร้างในรูปแบบ
@@ -32,8 +25,7 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
 > 3. เมื่อผู้ใช้งานปัดเลือกตรงกัน ก็จะสามารถใช้งานช่องแชทเพื่อติดต่อแลกเปลี่ยนข้อมูลสุนัขผ่านทางข้อความ โทรด้วยเสียง และ วิดีโอคอล ก่อนการนำสุนัขมานัดเจอกันได้ 
 > 4. เจ้าของสุนัขสามารถรายงานเจ้าของสุนัขคนอื่นที่ก่อกวนได้ 
 > 5. เจ้าของสุนัขสามารถเเชท เพื่อติดต่อกับสัตวเเพทย์ได้ตลอดเวลา 
-
-:dog::heart::dog2:
+<br> :dog::heart::dog2: </br>
 
 # Work Planner
 - [x] Get Requirement specification :heavy_check_mark:
@@ -51,5 +43,28 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
   - [ ] 4. Premium page 
   - [ ] 5. Chat 'Vet' page 
   
-  # Step to run 
-  <p align = 'center'> ...coming soon... </p>
+ # Installing  
+ <p align = 'center'> ...coming soon... </p>
+  
+ # Running the tests 
+ <p align = 'center'> ...coming soon... </p>
+  
+ # Deployment  
+ <p align = 'center'> ...coming soon... </p>
+  
+ # Built With 
+ <p align = 'center'> ...coming soon... </p>
+  
+# Versioning 
+ <p align = 'center'> ...coming soon... </p>
+  
+# Authors
+> Member in team : 'Cap Moo Developer Team' :dog:
+> * :woman: Ms.Nasiree Suchartsunthorn 60070501095
+> * :woman: Ms.Natchariya Wongamnuayporn 61070507204
+> * :man: Mr.Natchapol Patamawisut 61070507205
+> * :woman: Ms.Thanaporn Cheentada 61070507209
+> * :man: Ms.Rungwigrai Payakkanuwat 610705072019
+
+# Acknowledgements
+ <p align = 'center'> ...coming soon... </p>
