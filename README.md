@@ -83,6 +83,8 @@ Installation:
 #### run   
 `$ node index.js`
 
+***
+
 ### frontend
 #### Install __npm__  
 `$ npm install`
@@ -96,8 +98,10 @@ To Visit App:
 # Running the tests 
 เวลา run program ต้อง run ทั้ง 2 ส่วนพร้อมกัน
 ###  backend
-To Start Server:  
+To Run Server:  
 `$ node index.js`
+
+***
 
 ###  frontend
 To Start Server :  
