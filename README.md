@@ -66,46 +66,44 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
       - [ ] 1. User 
       - [ ] 2. Vet 
   
-# Installing
+# Installation and Setup Instructions
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
+Installation:
 ### backend 
 #### Install __npm__
-```
-$ npm install 
-```
+`$ npm install `
+
 #### Install __sequelize-cli__ เพื่อการเชื่อมต่อกับ database 
-```
-$ npm install -g sequelize-cli
-```
+`$ npm install -g sequelize-cli`
+
 #### Create Database 
-```
-$ sequelize-cli db:create
-```
+`$ sequelize-cli db:create`
+
 #### run 
-```
-$ node index.js
-```
+`$ node index.js`
+
 ### frontend
 #### Install __npm__
-```
-$ npm install
-```
-#### run 
-```
-$ npm start
-```
+`$ npm install`
+
+To Start Server:
+`$ npm start`
+
+To Visit App:
+`localhost:3000/...` 
  
 # Running the tests 
 เวลา run program ต้อง run ทั้ง 2 ส่วนพร้อมกัน
 ###  backend
-#### run
-```
-$ node index.js
-```
+To Start Server:
+`$ node index.js`
+
 ###  frontend
-#### run 
-```
-$ npm start
-```
+To Start Server:
+`$ npm start`
+
+To Visit App:
+`localhost:3000/...` 
   
 # Deployment  
 <p align = 'center'> ...coming soon... </p>
