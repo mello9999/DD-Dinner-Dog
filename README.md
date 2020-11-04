@@ -69,43 +69,43 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
 # Installing
 ### backend 
 #### Install __npm__
-'''
+```
 npm install 
-'''
+```
 #### Install __sequelize-cli__ เพื่อการเชื่อมต่อกับ database 
-'''
+```
 npm install -g sequelize-cli
-'''
+```
 #### Create Database 
-'''
+```
 sequelize-cli db:create
-'''
+```
 #### run 
-'''
+```
 node index.js
-'''
+```
 ### frontend
 #### Install __npm__
-'''
+```
 npm install
-'''
+```
 #### run 
-'''
+```
 npm start
-'''
+```
  
 # Running the tests 
 เวลา run program ต้อง run ทั้ง 2 ส่วนพร้อมกัน
 ###  backend
 #### run
-'''
+```
 node index.js
-'''
+```
 ###  frontend
 #### run 
-'''
+```
 npm start
-'''
+```
   
 # Deployment  
 <p align = 'center'> ...coming soon... </p>
