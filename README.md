@@ -67,7 +67,6 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
       - [ ] 2. Vet 
   
  # Installing  
- <p align = 'center'> ...coming soon... </p>
   
  # Running the tests 
  <p align = 'center'> ...coming soon... </p>
