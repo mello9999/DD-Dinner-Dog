@@ -70,28 +70,28 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
 ### backend 
 #### Install __npm__
 ```
-npm install 
+$ npm install 
 ```
 #### Install __sequelize-cli__ เพื่อการเชื่อมต่อกับ database 
 ```
-npm install -g sequelize-cli
+$ npm install -g sequelize-cli
 ```
 #### Create Database 
 ```
-sequelize-cli db:create
+$ sequelize-cli db:create
 ```
 #### run 
 ```
-node index.js
+$ node index.js
 ```
 ### frontend
 #### Install __npm__
 ```
-npm install
+$ npm install
 ```
 #### run 
 ```
-npm start
+$ npm start
 ```
  
 # Running the tests 
@@ -99,12 +99,12 @@ npm start
 ###  backend
 #### run
 ```
-node index.js
+$ node index.js
 ```
 ###  frontend
 #### run 
 ```
-npm start
+$ npm start
 ```
   
 # Deployment  
