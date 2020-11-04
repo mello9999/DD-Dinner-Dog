@@ -32,13 +32,13 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
 - [x] Get Requirement specification :heavy_check_mark:
 - [x] Design Mock up :heavy_check_mark:
 - [ ] Implement 5 module up :o:
-  - [ ] 1. login 
+  - [ ] 1. login  (New doing)
       - [ ] 1. User
       - [ ] 2. Vet
-  - [ ] 2. register 
+  - [ ] 2. register (Kao doing)
       - [ ] 1. User
       - [ ] 2. Vet 
-  - [ ] 3. Swipe page
+  - [ ] 3. Swipe page 
   - [ ] 4. Chat 'User' page 
   - [ ] 5. Chat 'Vet' page  
   - [ ] 6. Premium page
@@ -66,51 +66,53 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
       - [ ] 1. User 
       - [ ] 2. Vet 
   
- # Installing
- เวลา run program ต้อง run ทั้ง 2 ส่วนพร้อมกัน 
- 
- ### backend 
- '''
- npm install 
- '''
- 
- '''
- npm install -g sequelize-cli
- '''
- 
- '''
+# Installing
+### backend 
+'''
+npm install 
+'''
+#### Install __sequelize-cli__ เพื่อการเชื่อมต่อกับ database 
+'''
+npm install -g sequelize-cli
+'''
+#### Create Database 
+'''
 sequelize-cli db:create
- '''
- #### run 
- '''
-sequelize-cli db:create
- '''
- '''
- node index.js
- '''
+'''
+#### run 
+'''
+node index.js
+'''
+### frontend 
+'''
+npm install
+'''
+#### run 
+'''
+npm start
+'''
  
- ### frontend 
- '''
- npm install
- '''
- 
- '''
- npm install
- '''
- 
- 
+# Running the tests 
+เวลา run program ต้อง run ทั้ง 2 ส่วนพร้อมกัน
+##  backend
+#### run 
+'''
+node index.js
+'''
+##  frontend
+#### run 
+'''
+npm start
+'''
   
- # Running the tests 
- <p align = 'center'> ...coming soon... </p>
+# Deployment  
+<p align = 'center'> ...coming soon... </p>
   
- # Deployment  
- <p align = 'center'> ...coming soon... </p>
-  
- # Built With 
- <p align = 'center'> ...coming soon... </p>
+# Built With 
+<p align = 'center'> ...coming soon... </p>
   
 # Versioning 
- <p align = 'center'> ...coming soon... </p>
+<p align = 'center'> ...coming soon... </p>
   
 # Authors
 > Member in team : 'Cap Moo Developer Team' :dog:
