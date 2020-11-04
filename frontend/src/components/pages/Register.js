@@ -19,7 +19,7 @@ function Register(props) {
         axios.post('/users/register', body)
             .then(res => {
                 notification.success({
-                    message: `Successful Registration, ${values.nickname}.`
+                    message: `Successful Registration, Mx.${values.nickname}.`
                 });
                 props.history.push('/login');
             })
