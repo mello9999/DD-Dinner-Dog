@@ -71,13 +71,13 @@ Clone down this repository. You will need `node` and `npm` installed globally on
 
 Installation:
 ### backend 
-Install __npm__
+Install __npm__  
 `$ npm install `
 
-Install __sequelize-cli__ เพื่อการเชื่อมต่อกับ database 
+Install __sequelize-cli__ เพื่อการเชื่อมต่อกับ database   
 `$ npm install -g sequelize-cli`
 
-Create Database   
+Create Database  
 `$ sequelize-cli db:create`
 
 run   
