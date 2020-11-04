@@ -65,7 +65,7 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
 > * :woman: Ms.Natchariya Wongamnuayporn 61070507204
 > * :man: Mr.Natchapol Patamawisut 61070507205
 > * :woman: Ms.Thanaporn Cheentada 61070507209
-> * :man: Ms.Rungwigrai Payakkanuwat 610705072019
+> * :man: Ms.Rungwigrai Payakkanuwat 61070507219
 
 # Acknowledgements
  <p align = 'center'> ...coming soon... </p>
