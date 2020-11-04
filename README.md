@@ -68,6 +68,7 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
   
 # Installing
 ### backend 
+#### Install __npm__
 '''
 npm install 
 '''
@@ -94,12 +95,12 @@ npm start
  
 # Running the tests 
 เวลา run program ต้อง run ทั้ง 2 ส่วนพร้อมกัน
-##  backend
+###  backend
 #### run 
 '''
 node index.js
 '''
-##  frontend
+###  frontend
 #### run 
 '''
 npm start
