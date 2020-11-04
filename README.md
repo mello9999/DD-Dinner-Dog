@@ -84,7 +84,8 @@ sequelize-cli db:create
 '''
 node index.js
 '''
-### frontend 
+### frontend
+#### Install __npm__
 '''
 npm install
 '''
@@ -96,7 +97,7 @@ npm start
 # Running the tests 
 เวลา run program ต้อง run ทั้ง 2 ส่วนพร้อมกัน
 ###  backend
-#### run 
+#### run
 '''
 node index.js
 '''
