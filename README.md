@@ -28,7 +28,7 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
 
 :dog::heart::dog2: 
 
-# Work Planner
+# To Do Lists 
 - [x] Get Requirement specification :heavy_check_mark:
 - [x] Design Mock up :heavy_check_mark:
 - [ ] Implement 5 module up :o:
