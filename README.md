@@ -32,17 +32,39 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
 - [x] Get Requirement specification :heavy_check_mark:
 - [x] Design Mock up :heavy_check_mark:
 - [ ] Implement 5 module up :o:
-  - [ ] 1. login / register 
-  - [ ] 2. Swipe page
-  - [ ] 3. Chat page 
-  - [ ] 4. Premium page 
-  - [ ] 5. Chat 'Vet' page 
+  - [ ] 1. login 
+      - [ ] 1. User
+      - [ ] 2. Vet
+  - [ ] 2. register 
+      - [ ] 1. User
+      - [ ] 2. Vet 
+  - [ ] 3. Swipe page
+  - [ ] 4. Chat 'User' page 
+  - [ ] 5. Chat 'Vet' page  
+  - [ ] 6. Premium page
+  - [ ] 7. Profile page 
+      - [ ] 1. User
+      - [ ] 2. Vet  
+  - [ ] 8. Setting page 
+      - [ ] 1. User 
+      - [ ] 2. Vet 
 - [ ] Tester :o:
-  - [ ] 1. login / register 
-  - [ ] 2. Swipe page
-  - [ ] 3. Chat page 
-  - [ ] 4. Premium page 
-  - [ ] 5. Chat 'Vet' page 
+  - [ ] 1. login 
+      - [ ] 1. User
+      - [ ] 2. Vet
+  - [ ] 2. register 
+      - [ ] 1. User
+      - [ ] 2. Vet 
+  - [ ] 3. Swipe page
+  - [ ] 4. Chat 'User' page 
+  - [ ] 5. Chat 'Vet' page  
+  - [ ] 6. Premium page
+  - [ ] 7. Profile page 
+      - [ ] 1. User
+      - [ ] 2. Vet  
+  - [ ] 8. Setting page 
+      - [ ] 1. User 
+      - [ ] 2. Vet 
   
  # Installing  
  <p align = 'center'> ...coming soon... </p>
