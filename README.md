@@ -32,10 +32,10 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
 - [x] Get Requirement specification :heavy_check_mark:
 - [x] Design Mock up :heavy_check_mark:
 - [ ] Implement 5 module up :o:
-  - [ ] 1. login  (New doing)
+  - [ ] 1. login  
       - [ ] 1. User
       - [ ] 2. Vet
-  - [ ] 2. register (Kao doing)
+  - [ ] 2. register 
       - [ ] 1. User
       - [ ] 2. Vet 
   - [ ] 3. Swipe page 
