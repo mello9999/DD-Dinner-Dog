@@ -117,7 +117,7 @@ $ npm start
 <p align = 'center'> ...coming soon... </p>
   
 # Authors
-> Member in team : 'Cap Moo Developer Team' :dog:
+Member in team : 'Cap Moo Developer Team' :dog:
 > * :woman: Ms.Nasiree Suchartsunthorn 60070501095
 > * :woman: Ms.Natchariya Wongamnuayporn 61070507204
 > * :man: Mr.Natchapol Patamawisut 61070507205
