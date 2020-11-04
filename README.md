@@ -70,31 +70,31 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
  เวลา run program ต้อง run ทั้ง 2 ส่วนพร้อมกัน 
  
  ### backend 
-  '''js
+ '''
  npm install 
  '''
  
- '''js
+ '''
  npm install -g sequelize-cli
  '''
  
- '''js
+ '''
 sequelize-cli db:create
  '''
  #### run 
- '''js
+ '''
 sequelize-cli db:create
  '''
- '''js
+ '''
  node index.js
  '''
  
  ### frontend 
- '''js
+ '''
  npm install
  '''
  
- '''js
+ '''
  npm install
  '''
  
