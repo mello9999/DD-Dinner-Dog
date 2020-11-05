@@ -1,5 +1,12 @@
 # DD-Dinner-Dog
 โปรเจ็คนี้เป็นส่วนหนึ่งของรายวิชา __CPE327 Software Engineering__ 
+### Developer Team
+Member in team : 'Cap Moo Developer Team' :dog:
+> * :woman: Ms.Nasiree Suchartsunthorn 60070501095
+> * :woman: Ms.Natchariya Wongamnuayporn 61070507204
+> * :man: Mr.Natchapol Patamawisut 61070507205
+> * :woman: Ms.Thanaporn Cheentada 61070507209
+> * :man: Ms.Rungwigrai Payakkanuwat 61070507219
 
 # Project Description 
 :guide_dog: DD Dinner Dog เป็นระบบหาเพื่อนและหาคู่ให้กับสุนัข โดย DD Dinner Dog ถูกสร้างในรูปแบบ
@@ -120,13 +127,5 @@ To Visit App :
 # Versioning 
 <p align = 'center'> ...coming soon... </p>
   
-# Authors
-Member in team : 'Cap Moo Developer Team' :dog:
-> * :woman: Ms.Nasiree Suchartsunthorn 60070501095
-> * :woman: Ms.Natchariya Wongamnuayporn 61070507204
-> * :man: Mr.Natchapol Patamawisut 61070507205
-> * :woman: Ms.Thanaporn Cheentada 61070507209
-> * :man: Ms.Rungwigrai Payakkanuwat 61070507219
-
 # Acknowledgements
  <p align = 'center'> ...coming soon... </p>
