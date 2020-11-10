@@ -1,18 +1,18 @@
 # Work Planner 
 
 ## P'May  :woman:
-   Register Module  
-   Chat Module
+   - [ ] Register Module  
+   - [ ] Chat Module
 
 ## Eye  :red_haired_woman:	
-  [ ] Swap page
-  [ ] ส่วนเสริม!!!   
-    [ ] Setting Page
+  - [ ] Swap page
+  - [ ] ส่วนเสริม!!!   
+    - [ ] Setting Page
     
 ## New  :bearded_person:
-  [ ] Login page  
-  [ ] Profile page 
+  - [ ] Login page  
+  - [ ] Profile page 
   
   
 #### Extra :bangbang::bangbang:
-> [ ] Premium page 
+> - [ ]  Premium page 
