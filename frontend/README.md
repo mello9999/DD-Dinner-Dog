@@ -1,8 +1,8 @@
 # Work Planner 
 
 ## P'May  :woman:
-   - [ ] Register Module  
-   - [ ] Chat Module
+   - [ ] Register page
+   - [ ] Chat page
 
 ## Eye  :red_haired_woman:	
   - [ ] Swap page
