@@ -35,44 +35,6 @@ Web Application ซึ่งทุกคนที่เป็นเจ้าข�
 
 :dog::heart::dog2: 
 
-# To Do Lists 
-- [x] Get Requirement specification :heavy_check_mark:
-- [x] Design Mock up :heavy_check_mark:
-- [ ] Implement 5 module up :o:
-  - [ ] 1. login  
-      - [ ] 1. User
-      - [ ] 2. Vet
-  - [ ] 2. register 
-      - [ ] 1. User
-      - [ ] 2. Vet 
-  - [ ] 3. Swipe page 
-  - [ ] 4. Chat 'User' page 
-  - [ ] 5. Chat 'Vet' page  
-  - [ ] 6. Premium page
-  - [ ] 7. Profile page 
-      - [ ] 1. User
-      - [ ] 2. Vet  
-  - [ ] 8. Setting page 
-      - [ ] 1. User 
-      - [ ] 2. Vet 
-- [ ] Tester :o:
-  - [ ] 1. login 
-      - [ ] 1. User
-      - [ ] 2. Vet
-  - [ ] 2. register 
-      - [ ] 1. User
-      - [ ] 2. Vet 
-  - [ ] 3. Swipe page
-  - [ ] 4. Chat 'User' page 
-  - [ ] 5. Chat 'Vet' page  
-  - [ ] 6. Premium page
-  - [ ] 7. Profile page 
-      - [ ] 1. User
-      - [ ] 2. Vet  
-  - [ ] 8. Setting page 
-      - [ ] 1. User 
-      - [ ] 2. Vet 
-  
 # Installation and Setup Instructions
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 > :exclamation::exclamation: Please install only first time (install npm เเละ node.js ครั้งเเรกเท่านั้น) :exclamation::exclamation:
