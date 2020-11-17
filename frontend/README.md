@@ -1,7 +1,7 @@
 # Work Planner 
 
 ## P'May  :woman:
-   - [ ] Register page
+   - [ ] Profile page
    - [ ] Chat page
 
 ## Eye  :red_haired_woman:	
@@ -11,7 +11,7 @@
     
 ## New  :bearded_person:
   - [ ] Login page  
-  - [ ] Profile page 
+  - [ ] Register page 
   
 ---
 - #### Extra :bangbang::bangbang:
