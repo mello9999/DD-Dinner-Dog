@@ -89,5 +89,4 @@ To Visit App :
 # Versioning 
 <p align = 'center'> ...coming soon... </p>
   
-# Acknowledgements
- <p align = 'center'> ...coming soon... </p>
+
