@@ -1,0 +1,5 @@
+robotframework
+# for demo_ui.robot
+robotframework-seleniumlibrary
+# for demo_api.robot
+robotframework-requests
