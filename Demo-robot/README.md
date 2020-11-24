@@ -1,8 +1,8 @@
 # Work Planner 
 ### Kao :woman: 
 #### Robot Framework Tester of project 
-- [ ] login
-- [ ] register
+- [x] login
+- [x] register
 - [ ] Home
 - [ ] Profile
 - [ ] Chat
