@@ -8,7 +8,7 @@ ${HOME URL}       http://localhost:3000/profile
 ${BROWSER}        Chrome
 ${email}             nene199@gmail.com 
 ${password}          2020     
-${new_password}      1111
+${new_password}      9999
 
 *** Test Cases ***
 Valid Login
@@ -30,7 +30,7 @@ Invalid Login
 *** Keywords ***
 Open Browser To DD Dinner Dog 
     Open Browser       ${LOGIN URL}      ${BROWSER}
-    Title Should Be    DD Dinner Dog 
+    Title Should Be    DD Dinner Dog
 Input Username
     [Arguments]    ${username}
     Input Text     id = username         ${username}

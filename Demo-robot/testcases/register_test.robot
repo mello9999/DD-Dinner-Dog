@@ -12,7 +12,7 @@ ${old_password}         2020
 ${old_nickname}         nene 
 
 ${email}                bank1333@gmail.com
-${password}             1999
+${password}             1333
 ${nickname}             bankNatchapol
 
 *** Test Cases ***
