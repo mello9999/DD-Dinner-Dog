@@ -34,7 +34,7 @@ export default function Login(props) {
                 <div className="Form">
                     <Row justify="center">
                         <Title level={2} className="Title">
-                            Login
+                            DD Dinner Dog
                     </Title>
                     </Row>
                     <Divider className="Divider" />
