@@ -1,15 +1,15 @@
 # Work Planner 
-
-## P'May  :woman:
+### Web page
+### P'May  :woman:
    - [ ] Profile page
    - [ ] Chat page
 
-## Eye  :red_haired_woman:	
+### Eye  :red_haired_woman:	
   - [ ] Swap page
   - [ ] ส่วนเสริม!!!   
     - [ ] Setting Page
     
-## New  :bearded_person:
+### New  :bearded_person:
   - [ ] Login page  
   - [ ] Register page 
   
