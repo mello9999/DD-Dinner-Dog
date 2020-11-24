@@ -2,8 +2,8 @@
 > :exclamation::exclamation: ทุกครั้งในการ pull ใน GitHub จะต้องทำการ ` เปลี่ยนรหัสตั้งค่าใน database ` :exclamation::exclamation:
 
 # Work Planner 
-## Bank :man:
-- [ ] Database 
+### Bank :man:
+#### Database 
   - [ ] 1. Account
   - [ ] 2. Dog_Info
   - [ ] 3. Certificate
