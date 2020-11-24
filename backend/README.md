@@ -1,5 +1,5 @@
 # Remainder :exclamation::exclamation:
-> :exclamation::exclamation: ทุกครั้งในการ ` git pull จากคนอื่น `  จาก GitHub จะต้องทำการ ` เปลี่ยนรหัสตั้งค่าใน database ` :exclamation::exclamation:
+:exclamation::exclamation: ทุกครั้งในการ ` git pull จากคนอื่น `  จาก GitHub จะต้องทำการ ` เปลี่ยนรหัสตั้งค่าใน database ` :exclamation::exclamation:
 
 # Work Planner 
 ### Bank :man:
