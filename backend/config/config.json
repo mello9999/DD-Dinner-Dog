@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "postgres",
-    "password": "nongnew2542",
+    "password": "kao2542",
     "database": "simple-todo-list",
     "host": "127.0.0.1",
     "dialect": "postgres",

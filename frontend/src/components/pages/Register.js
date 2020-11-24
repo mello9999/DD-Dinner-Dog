@@ -48,6 +48,7 @@ function Register(props) {
                         style={{ width: "100%" }}
                     >
                         <Form.Item
+                            id = "email"
                             name="email"
                             label="E-mail"
                             rules={[
@@ -65,6 +66,7 @@ function Register(props) {
                         </Form.Item>
 
                         <Form.Item
+                            id = "password"
                             name="password"
                             label="Password"
                             rules={[
@@ -102,6 +104,7 @@ function Register(props) {
                         </Form.Item>
 
                         <Form.Item
+                            id = "nickname"
                             name="nickname"
                             label={<span>Nickname&nbsp;</span>}
                             rules={[{ required: true, message: 'Please input your nickname!', whitespace: true }]}
@@ -109,9 +112,9 @@ function Register(props) {
                             <Input />
                         </Form.Item>
 
-                        <Button className="Button" type="primary" htmlType="submit">
+                        <Button id="register_button" className="Button" type="primary" htmlType="submit">
                             Register
-                            </Button>
+                        </Button>
                     </Form>
                 </div>
             </Col>

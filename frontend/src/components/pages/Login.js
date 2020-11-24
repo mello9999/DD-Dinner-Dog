@@ -22,7 +22,7 @@ export default function Login(props) {
                 window.location.replace('/profile');
             })
             .catch(err => {
-                notification.error({
+                notification.error({ 
                     message: `Login Fail.`
                 });
             })
@@ -54,6 +54,7 @@ export default function Login(props) {
                         style={{ width: "100%" }}
                     >
                         <Form.Item
+                            id = "username"
                             label="Username"
                             name="username"
                             rules={[{ required: true, message: 'Please input your username!' }]}
@@ -62,6 +63,7 @@ export default function Login(props) {
                         </Form.Item>
 
                         <Form.Item
+                            id = "password"
                             label="Password"
                             name="password"
                             rules={[{ required: true, message: 'Please input your password!' }]}
@@ -69,7 +71,7 @@ export default function Login(props) {
                             <Input.Password />
                         </Form.Item>
 
-                        <Button className="Button" type="primary" htmlType="submit">
+                        <Button id = "login_button" className="Button" type="primary" htmlType="submit">
                             Submit
                         </Button>
                     </Form>
