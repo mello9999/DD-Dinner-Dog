@@ -22,8 +22,8 @@ Valid Register
     Input Password            ${password}
     Input Confirm Password    ${password}
     Input Nickname            ${nickname}
-    Submit Credentials
-    login Page Should Be Open 
+    Submit Credentials        
+    login Page Should Be Open
     Close Browser
 
 Invalid Register
@@ -34,11 +34,11 @@ Invalid Register
     Input Nickname1           ${old_nickname}
     Submit Credentials
     Wait Until Page Contains   Registration Fail.
-    
+    Close Browser
 
 *** Keywords ***
 Open Browser To DD Dinner Dog 
-    Open Browser    ${REGISTER URL}     ${BROWSER}
+    Open Browser       ${REGISTER URL}   ${BROWSER}  
     Title Should Be    DD Dinner Dog 
 
 Input Email
@@ -66,6 +66,8 @@ Submit Credentials
 
 login Page Should Be Open
     Title Should Be    DD Dinner Dog
+
+
 
 
 
