@@ -29,13 +29,22 @@ export default function Login(props) {
     };
 
     return (
-        <Row justify="center">
+        <Row justify="center" >
             <Col xs={23} sm={23} md={23} lg={14} xl={14} xxl={12}>
                 <div className="Form">
                     <Row justify="center">
-                        <Title level={2} className="Title">
-                            DD Dinner Dog
-                    </Title>
+                        <Title level={2} className="Title" style={{color: '#8C9868'}}>
+                            D
+                        </Title>
+                        <Title level={2} className="Title" style={{color: '#ee7458' , marginTop:"25px"}}>
+                            D <span style={{color: '#8c9868'}}>Dinner  </span>  
+                        </Title><span style={{color: '#FFFFF'}}></span>
+                        {/*<Title level={2} className="Title" style={{color: '#8C9868', marginTop:"25px" }}>
+                            Dinner 
+                        </Title>*/}
+                        <Title level={2} className='Title' style={{color: '#ee7458', marginTop:"25px"}}>
+                            Dog
+                        </Title>
                     </Row>
                     <Divider className="Divider" />
                     <Form
