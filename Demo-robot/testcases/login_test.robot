@@ -47,4 +47,3 @@ profile Page Should Be Open
     Title Should Be    DD Dinner Dog
 
 
-

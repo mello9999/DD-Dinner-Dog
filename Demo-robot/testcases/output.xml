@@ -1,116 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.7.3 on win32)" generated="20201125 00:30:28.447" rpa="false">
-<suite id="s1" name="Login Test" source="F:\DD-DINNER-DOG\Demo-robot\testcases\login_test.robot">
-<test id="s1-t1" name="Invalid Login">
+<robot generator="Robot 3.2.2 (Python 3.7.3 on win32)" generated="20201125 21:04:28.872" rpa="false">
+<suite id="s1" name="Register Test" source="F:\DD-DINNER-DOG\Demo-robot\testcases\register_test.robot">
+<test id="s1-t1" name="Valid Register">
 <kw name="Open Browser To DD Dinner Dog">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
-<arg>${LOGIN URL}</arg>
+<arg>${REGISTER URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201125 00:30:28.728" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/login'.</msg>
-<status status="PASS" starttime="20201125 00:30:28.728" endtime="20201125 00:30:33.049"></status>
+<msg timestamp="20201125 21:04:29.121" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/register'.</msg>
+<status status="PASS" starttime="20201125 21:04:29.120" endtime="20201125 21:04:33.037"></status>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <doc>Verifies that the current page title equals ``title``.</doc>
 <arguments>
 <arg>DD Dinner Dog</arg>
 </arguments>
-<msg timestamp="20201125 00:30:33.056" level="INFO">Page title is 'DD Dinner Dog'.</msg>
-<status status="PASS" starttime="20201125 00:30:33.049" endtime="20201125 00:30:33.056"></status>
+<msg timestamp="20201125 21:04:33.045" level="INFO">Page title is 'DD Dinner Dog'.</msg>
+<status status="PASS" starttime="20201125 21:04:33.037" endtime="20201125 21:04:33.045"></status>
 </kw>
-<status status="PASS" starttime="20201125 00:30:28.728" endtime="20201125 00:30:33.056"></status>
+<status status="PASS" starttime="20201125 21:04:29.120" endtime="20201125 21:04:33.045"></status>
 </kw>
-<kw name="Input Username">
+<kw name="Input Email">
 <arguments>
 <arg>${email}</arg>
 </arguments>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>id = username</arg>
-<arg>${username}</arg>
-</arguments>
-<msg timestamp="20201125 00:30:33.058" level="INFO">Typing text 'nene199@gmail.com' into text field 'id = username'.</msg>
-<status status="PASS" starttime="20201125 00:30:33.058" endtime="20201125 00:30:33.399"></status>
-</kw>
-<status status="PASS" starttime="20201125 00:30:33.057" endtime="20201125 00:30:33.399"></status>
-</kw>
-<kw name="Input Password1">
-<arguments>
-<arg>${new_password}</arg>
-</arguments>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id = password</arg>
-<arg>${new_password}</arg>
-</arguments>
-<msg timestamp="20201125 00:30:33.402" level="INFO">Typing text '9999' into text field 'id = password'.</msg>
-<status status="PASS" starttime="20201125 00:30:33.401" endtime="20201125 00:30:33.550"></status>
-</kw>
-<status status="PASS" starttime="20201125 00:30:33.400" endtime="20201125 00:30:33.550"></status>
-</kw>
-<kw name="Submit Credentials">
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>id = login_button</arg>
-</arguments>
-<msg timestamp="20201125 00:30:33.551" level="INFO">Clicking button 'id = login_button'.</msg>
-<status status="PASS" starttime="20201125 00:30:33.551" endtime="20201125 00:30:33.645"></status>
-</kw>
-<status status="PASS" starttime="20201125 00:30:33.550" endtime="20201125 00:30:33.645"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Login Fail.</arg>
-</arguments>
-<status status="PASS" starttime="20201125 00:30:33.646" endtime="20201125 00:30:34.326"></status>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201125 00:30:34.326" endtime="20201125 00:30:36.571"></status>
-</kw>
-<status status="PASS" starttime="20201125 00:30:28.726" endtime="20201125 00:30:36.572" critical="yes"></status>
-</test>
-<test id="s1-t2" name="Valid Login">
-<kw name="Open Browser To DD Dinner Dog">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<arguments>
-<arg>${LOGIN URL}</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20201125 00:30:36.575" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/login'.</msg>
-<status status="PASS" starttime="20201125 00:30:36.574" endtime="20201125 00:30:40.870"></status>
-</kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>DD Dinner Dog</arg>
-</arguments>
-<msg timestamp="20201125 00:30:40.877" level="INFO">Page title is 'DD Dinner Dog'.</msg>
-<status status="PASS" starttime="20201125 00:30:40.871" endtime="20201125 00:30:40.877"></status>
-</kw>
-<status status="PASS" starttime="20201125 00:30:36.574" endtime="20201125 00:30:40.878"></status>
-</kw>
-<kw name="Input Username">
-<arguments>
+<arg>id = email</arg>
 <arg>${email}</arg>
+<arg>${old_email}</arg>
 </arguments>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id = username</arg>
-<arg>${username}</arg>
-</arguments>
-<msg timestamp="20201125 00:30:40.879" level="INFO">Typing text 'nene199@gmail.com' into text field 'id = username'.</msg>
-<status status="PASS" starttime="20201125 00:30:40.879" endtime="20201125 00:30:41.214"></status>
+<msg timestamp="20201125 21:04:33.047" level="INFO">Typing text 'bank1333@gmail.com' into text field 'id = email'.</msg>
+<status status="PASS" starttime="20201125 21:04:33.046" endtime="20201125 21:04:33.371"></status>
 </kw>
-<status status="PASS" starttime="20201125 00:30:40.878" endtime="20201125 00:30:41.215"></status>
+<status status="PASS" starttime="20201125 21:04:33.046" endtime="20201125 21:04:33.371"></status>
 </kw>
 <kw name="Input Password">
 <arguments>
@@ -121,42 +47,182 @@
 <arguments>
 <arg>id = password</arg>
 <arg>${password}</arg>
+<arg>${old_password}</arg>
 </arguments>
-<msg timestamp="20201125 00:30:41.217" level="INFO">Typing text '2020' into text field 'id = password'.</msg>
-<status status="PASS" starttime="20201125 00:30:41.217" endtime="20201125 00:30:41.376"></status>
+<msg timestamp="20201125 21:04:33.374" level="INFO">Typing text '1333' into text field 'id = password'.</msg>
+<status status="PASS" starttime="20201125 21:04:33.373" endtime="20201125 21:04:33.528"></status>
 </kw>
-<status status="PASS" starttime="20201125 00:30:41.216" endtime="20201125 00:30:41.376"></status>
+<status status="PASS" starttime="20201125 21:04:33.372" endtime="20201125 21:04:33.529"></status>
+</kw>
+<kw name="Input Confirm Password">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id = confirm</arg>
+<arg>${password}</arg>
+<arg>${old_password}</arg>
+</arguments>
+<msg timestamp="20201125 21:04:33.530" level="INFO">Typing text '1333' into text field 'id = confirm'.</msg>
+<status status="PASS" starttime="20201125 21:04:33.530" endtime="20201125 21:04:33.662"></status>
+</kw>
+<status status="PASS" starttime="20201125 21:04:33.529" endtime="20201125 21:04:33.662"></status>
+</kw>
+<kw name="Input Nickname">
+<arguments>
+<arg>${nickname}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id = nickname</arg>
+<arg>${nickname}</arg>
+</arguments>
+<msg timestamp="20201125 21:04:33.664" level="INFO">Typing text 'bankNatchapol' into text field 'id = nickname'.</msg>
+<status status="PASS" starttime="20201125 21:04:33.664" endtime="20201125 21:04:33.850"></status>
+</kw>
+<status status="PASS" starttime="20201125 21:04:33.663" endtime="20201125 21:04:33.850"></status>
 </kw>
 <kw name="Submit Credentials">
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
-<arg>id = login_button</arg>
+<arg>id = register_button</arg>
 </arguments>
-<msg timestamp="20201125 00:30:41.378" level="INFO">Clicking button 'id = login_button'.</msg>
-<status status="PASS" starttime="20201125 00:30:41.378" endtime="20201125 00:30:41.478"></status>
+<msg timestamp="20201125 21:04:33.851" level="INFO">Clicking button 'id = register_button'.</msg>
+<status status="PASS" starttime="20201125 21:04:33.851" endtime="20201125 21:04:33.947"></status>
 </kw>
-<status status="PASS" starttime="20201125 00:30:41.377" endtime="20201125 00:30:41.478"></status>
+<status status="PASS" starttime="20201125 21:04:33.851" endtime="20201125 21:04:33.947"></status>
 </kw>
-<kw name="profile Page Should Be Open">
+<kw name="login Page Should Be Open">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <doc>Verifies that the current page title equals ``title``.</doc>
 <arguments>
 <arg>DD Dinner Dog</arg>
 </arguments>
-<msg timestamp="20201125 00:30:41.485" level="INFO">Page title is 'DD Dinner Dog'.</msg>
-<status status="PASS" starttime="20201125 00:30:41.480" endtime="20201125 00:30:41.486"></status>
+<msg timestamp="20201125 21:04:33.956" level="INFO">Page title is 'DD Dinner Dog'.</msg>
+<status status="PASS" starttime="20201125 21:04:33.949" endtime="20201125 21:04:33.957"></status>
 </kw>
-<status status="PASS" starttime="20201125 00:30:41.479" endtime="20201125 00:30:41.486"></status>
+<status status="PASS" starttime="20201125 21:04:33.948" endtime="20201125 21:04:33.957"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201125 00:30:41.486" endtime="20201125 00:30:43.736"></status>
+<status status="PASS" starttime="20201125 21:04:33.959" endtime="20201125 21:04:36.134"></status>
 </kw>
-<status status="PASS" starttime="20201125 00:30:36.573" endtime="20201125 00:30:43.737" critical="yes"></status>
+<status status="PASS" starttime="20201125 21:04:29.119" endtime="20201125 21:04:36.135" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Invalid Register">
+<kw name="Open Browser To DD Dinner Dog">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${REGISTER URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201125 21:04:36.138" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/register'.</msg>
+<status status="PASS" starttime="20201125 21:04:36.138" endtime="20201125 21:04:40.566"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>DD Dinner Dog</arg>
+</arguments>
+<msg timestamp="20201125 21:04:40.573" level="INFO">Page title is 'DD Dinner Dog'.</msg>
+<status status="PASS" starttime="20201125 21:04:40.567" endtime="20201125 21:04:40.573"></status>
+</kw>
+<status status="PASS" starttime="20201125 21:04:36.137" endtime="20201125 21:04:40.574"></status>
+</kw>
+<kw name="Input Email">
+<arguments>
+<arg>${old_email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id = email</arg>
+<arg>${email}</arg>
+<arg>${old_email}</arg>
+</arguments>
+<msg timestamp="20201125 21:04:40.575" level="INFO">Typing text 'nene199@gmail.com' into text field 'id = email'.</msg>
+<status status="PASS" starttime="20201125 21:04:40.575" endtime="20201125 21:04:40.895"></status>
+</kw>
+<status status="PASS" starttime="20201125 21:04:40.574" endtime="20201125 21:04:40.896"></status>
+</kw>
+<kw name="Input Password">
+<arguments>
+<arg>${old_password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id = password</arg>
+<arg>${password}</arg>
+<arg>${old_password}</arg>
+</arguments>
+<msg timestamp="20201125 21:04:40.898" level="INFO">Typing text '2020' into text field 'id = password'.</msg>
+<status status="PASS" starttime="20201125 21:04:40.897" endtime="20201125 21:04:41.041"></status>
+</kw>
+<status status="PASS" starttime="20201125 21:04:40.896" endtime="20201125 21:04:41.041"></status>
+</kw>
+<kw name="Input Confirm Password">
+<arguments>
+<arg>${old_password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id = confirm</arg>
+<arg>${password}</arg>
+<arg>${old_password}</arg>
+</arguments>
+<msg timestamp="20201125 21:04:41.043" level="INFO">Typing text '2020' into text field 'id = confirm'.</msg>
+<status status="PASS" starttime="20201125 21:04:41.043" endtime="20201125 21:04:41.173"></status>
+</kw>
+<status status="PASS" starttime="20201125 21:04:41.042" endtime="20201125 21:04:41.173"></status>
+</kw>
+<kw name="Input Nickname1">
+<arguments>
+<arg>${old_nickname}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id = nickname</arg>
+<arg>${old_nickname}</arg>
+</arguments>
+<msg timestamp="20201125 21:04:41.174" level="INFO">Typing text 'nene' into text field 'id = nickname'.</msg>
+<status status="PASS" starttime="20201125 21:04:41.174" endtime="20201125 21:04:41.301"></status>
+</kw>
+<status status="PASS" starttime="20201125 21:04:41.173" endtime="20201125 21:04:41.301"></status>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id = register_button</arg>
+</arguments>
+<msg timestamp="20201125 21:04:41.303" level="INFO">Clicking button 'id = register_button'.</msg>
+<status status="PASS" starttime="20201125 21:04:41.302" endtime="20201125 21:04:41.414"></status>
+</kw>
+<status status="PASS" starttime="20201125 21:04:41.302" endtime="20201125 21:04:41.414"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Registration Fail.</arg>
+</arguments>
+<status status="PASS" starttime="20201125 21:04:41.415" endtime="20201125 21:04:41.456"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201125 21:04:41.457" endtime="20201125 21:04:43.638"></status>
+</kw>
+<status status="PASS" starttime="20201125 21:04:36.137" endtime="20201125 21:04:43.639" critical="yes"></status>
 </test>
 <doc>Simple example using SeleniumLibrary.</doc>
-<status status="PASS" starttime="20201125 00:30:28.449" endtime="20201125 00:30:43.739"></status>
+<status status="PASS" starttime="20201125 21:04:28.874" endtime="20201125 21:04:43.641"></status>
 </suite>
 <statistics>
 <total>
@@ -166,7 +232,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" id="s1" name="Login Test">Login Test</stat>
+<stat pass="2" fail="0" id="s1" name="Register Test">Register Test</stat>
 </suite>
 </statistics>
 <errors>
