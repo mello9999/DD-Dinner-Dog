@@ -11,14 +11,6 @@ ${password}          2020
 ${new_password}      9999
 
 *** Test Cases ***
-Invalid Login
-    Open Browser To DD Dinner Dog 
-    Input Username    ${email} 
-    Input Password1    ${new_password}
-    Submit Credentials
-    Wait Until Page Contains   Login Fail.
-    Close Browser
-
 Valid Login
     Open Browser To DD Dinner Dog
     Input Username    ${email} 
@@ -27,6 +19,13 @@ Valid Login
     profile Page Should Be Open
     Close Browser
     
+Invalid Login
+    Open Browser To DD Dinner Dog 
+    Input Username    ${email} 
+    Input Password1    ${new_password}
+    Submit Credentials
+    Wait Until Page Contains   Login Fail.
+    Close Browser
 
 *** Keywords ***
 Open Browser To DD Dinner Dog 

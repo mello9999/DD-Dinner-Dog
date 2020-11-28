@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.7.3 on win32)" generated="20201125 21:04:28.872" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.7.3 on win32)" generated="20201128 15:19:51.690" rpa="false">
 <suite id="s1" name="Register Test" source="F:\DD-DINNER-DOG\Demo-robot\testcases\register_test.robot">
 <test id="s1-t1" name="Valid Register">
 <kw name="Open Browser To DD Dinner Dog">
@@ -9,18 +9,18 @@
 <arg>${REGISTER URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201125 21:04:29.121" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/register'.</msg>
-<status status="PASS" starttime="20201125 21:04:29.120" endtime="20201125 21:04:33.037"></status>
+<msg timestamp="20201128 15:19:51.958" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/register'.</msg>
+<status status="PASS" starttime="20201128 15:19:51.957" endtime="20201128 15:19:56.404"></status>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <doc>Verifies that the current page title equals ``title``.</doc>
 <arguments>
 <arg>DD Dinner Dog</arg>
 </arguments>
-<msg timestamp="20201125 21:04:33.045" level="INFO">Page title is 'DD Dinner Dog'.</msg>
-<status status="PASS" starttime="20201125 21:04:33.037" endtime="20201125 21:04:33.045"></status>
+<msg timestamp="20201128 15:19:56.410" level="INFO">Page title is 'DD Dinner Dog'.</msg>
+<status status="PASS" starttime="20201128 15:19:56.404" endtime="20201128 15:19:56.410"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:29.120" endtime="20201125 21:04:33.045"></status>
+<status status="PASS" starttime="20201128 15:19:51.957" endtime="20201128 15:19:56.411"></status>
 </kw>
 <kw name="Input Email">
 <arguments>
@@ -33,10 +33,10 @@
 <arg>${email}</arg>
 <arg>${old_email}</arg>
 </arguments>
-<msg timestamp="20201125 21:04:33.047" level="INFO">Typing text 'bank1333@gmail.com' into text field 'id = email'.</msg>
-<status status="PASS" starttime="20201125 21:04:33.046" endtime="20201125 21:04:33.371"></status>
+<msg timestamp="20201128 15:19:56.412" level="INFO">Typing text 'bank1333@gmail.com' into text field 'id = email'.</msg>
+<status status="PASS" starttime="20201128 15:19:56.412" endtime="20201128 15:19:56.724"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:33.046" endtime="20201125 21:04:33.371"></status>
+<status status="PASS" starttime="20201128 15:19:56.411" endtime="20201128 15:19:56.725"></status>
 </kw>
 <kw name="Input Password">
 <arguments>
@@ -49,10 +49,10 @@
 <arg>${password}</arg>
 <arg>${old_password}</arg>
 </arguments>
-<msg timestamp="20201125 21:04:33.374" level="INFO">Typing text '1333' into text field 'id = password'.</msg>
-<status status="PASS" starttime="20201125 21:04:33.373" endtime="20201125 21:04:33.528"></status>
+<msg timestamp="20201128 15:19:56.726" level="INFO">Typing text '1333' into text field 'id = password'.</msg>
+<status status="PASS" starttime="20201128 15:19:56.726" endtime="20201128 15:19:56.872"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:33.372" endtime="20201125 21:04:33.529"></status>
+<status status="PASS" starttime="20201128 15:19:56.725" endtime="20201128 15:19:56.872"></status>
 </kw>
 <kw name="Input Confirm Password">
 <arguments>
@@ -65,10 +65,10 @@
 <arg>${password}</arg>
 <arg>${old_password}</arg>
 </arguments>
-<msg timestamp="20201125 21:04:33.530" level="INFO">Typing text '1333' into text field 'id = confirm'.</msg>
-<status status="PASS" starttime="20201125 21:04:33.530" endtime="20201125 21:04:33.662"></status>
+<msg timestamp="20201128 15:19:56.874" level="INFO">Typing text '1333' into text field 'id = confirm'.</msg>
+<status status="PASS" starttime="20201128 15:19:56.873" endtime="20201128 15:19:57.004"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:33.529" endtime="20201125 21:04:33.662"></status>
+<status status="PASS" starttime="20201128 15:19:56.873" endtime="20201128 15:19:57.004"></status>
 </kw>
 <kw name="Input Nickname">
 <arguments>
@@ -80,10 +80,10 @@
 <arg>id = nickname</arg>
 <arg>${nickname}</arg>
 </arguments>
-<msg timestamp="20201125 21:04:33.664" level="INFO">Typing text 'bankNatchapol' into text field 'id = nickname'.</msg>
-<status status="PASS" starttime="20201125 21:04:33.664" endtime="20201125 21:04:33.850"></status>
+<msg timestamp="20201128 15:19:57.006" level="INFO">Typing text 'bankNatchapol' into text field 'id = nickname'.</msg>
+<status status="PASS" starttime="20201128 15:19:57.005" endtime="20201128 15:19:57.193"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:33.663" endtime="20201125 21:04:33.850"></status>
+<status status="PASS" starttime="20201128 15:19:57.005" endtime="20201128 15:19:57.193"></status>
 </kw>
 <kw name="Submit Credentials">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -91,10 +91,10 @@
 <arguments>
 <arg>id = register_button</arg>
 </arguments>
-<msg timestamp="20201125 21:04:33.851" level="INFO">Clicking button 'id = register_button'.</msg>
-<status status="PASS" starttime="20201125 21:04:33.851" endtime="20201125 21:04:33.947"></status>
+<msg timestamp="20201128 15:19:57.195" level="INFO">Clicking button 'id = register_button'.</msg>
+<status status="PASS" starttime="20201128 15:19:57.195" endtime="20201128 15:19:57.299"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:33.851" endtime="20201125 21:04:33.947"></status>
+<status status="PASS" starttime="20201128 15:19:57.194" endtime="20201128 15:19:57.299"></status>
 </kw>
 <kw name="login Page Should Be Open">
 <kw name="Title Should Be" library="SeleniumLibrary">
@@ -102,16 +102,16 @@
 <arguments>
 <arg>DD Dinner Dog</arg>
 </arguments>
-<msg timestamp="20201125 21:04:33.956" level="INFO">Page title is 'DD Dinner Dog'.</msg>
-<status status="PASS" starttime="20201125 21:04:33.949" endtime="20201125 21:04:33.957"></status>
+<msg timestamp="20201128 15:19:57.305" level="INFO">Page title is 'DD Dinner Dog'.</msg>
+<status status="PASS" starttime="20201128 15:19:57.301" endtime="20201128 15:19:57.306"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:33.948" endtime="20201125 21:04:33.957"></status>
+<status status="PASS" starttime="20201128 15:19:57.300" endtime="20201128 15:19:57.306"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201125 21:04:33.959" endtime="20201125 21:04:36.134"></status>
+<status status="PASS" starttime="20201128 15:19:57.306" endtime="20201128 15:19:59.444"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:29.119" endtime="20201125 21:04:36.135" critical="yes"></status>
+<status status="PASS" starttime="20201128 15:19:51.955" endtime="20201128 15:19:59.445" critical="yes"></status>
 </test>
 <test id="s1-t2" name="Invalid Register">
 <kw name="Open Browser To DD Dinner Dog">
@@ -121,18 +121,18 @@
 <arg>${REGISTER URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201125 21:04:36.138" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/register'.</msg>
-<status status="PASS" starttime="20201125 21:04:36.138" endtime="20201125 21:04:40.566"></status>
+<msg timestamp="20201128 15:19:59.448" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/register'.</msg>
+<status status="PASS" starttime="20201128 15:19:59.448" endtime="20201128 15:20:03.659"></status>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <doc>Verifies that the current page title equals ``title``.</doc>
 <arguments>
 <arg>DD Dinner Dog</arg>
 </arguments>
-<msg timestamp="20201125 21:04:40.573" level="INFO">Page title is 'DD Dinner Dog'.</msg>
-<status status="PASS" starttime="20201125 21:04:40.567" endtime="20201125 21:04:40.573"></status>
+<msg timestamp="20201128 15:20:03.665" level="INFO">Page title is 'DD Dinner Dog'.</msg>
+<status status="PASS" starttime="20201128 15:20:03.659" endtime="20201128 15:20:03.666"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:36.137" endtime="20201125 21:04:40.574"></status>
+<status status="PASS" starttime="20201128 15:19:59.448" endtime="20201128 15:20:03.666"></status>
 </kw>
 <kw name="Input Email">
 <arguments>
@@ -145,10 +145,10 @@
 <arg>${email}</arg>
 <arg>${old_email}</arg>
 </arguments>
-<msg timestamp="20201125 21:04:40.575" level="INFO">Typing text 'nene199@gmail.com' into text field 'id = email'.</msg>
-<status status="PASS" starttime="20201125 21:04:40.575" endtime="20201125 21:04:40.895"></status>
+<msg timestamp="20201128 15:20:03.667" level="INFO">Typing text 'nene199@gmail.com' into text field 'id = email'.</msg>
+<status status="PASS" starttime="20201128 15:20:03.667" endtime="20201128 15:20:03.975"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:40.574" endtime="20201125 21:04:40.896"></status>
+<status status="PASS" starttime="20201128 15:20:03.666" endtime="20201128 15:20:03.975"></status>
 </kw>
 <kw name="Input Password">
 <arguments>
@@ -161,10 +161,10 @@
 <arg>${password}</arg>
 <arg>${old_password}</arg>
 </arguments>
-<msg timestamp="20201125 21:04:40.898" level="INFO">Typing text '2020' into text field 'id = password'.</msg>
-<status status="PASS" starttime="20201125 21:04:40.897" endtime="20201125 21:04:41.041"></status>
+<msg timestamp="20201128 15:20:03.977" level="INFO">Typing text '2020' into text field 'id = password'.</msg>
+<status status="PASS" starttime="20201128 15:20:03.977" endtime="20201128 15:20:04.116"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:40.896" endtime="20201125 21:04:41.041"></status>
+<status status="PASS" starttime="20201128 15:20:03.976" endtime="20201128 15:20:04.116"></status>
 </kw>
 <kw name="Input Confirm Password">
 <arguments>
@@ -177,10 +177,10 @@
 <arg>${password}</arg>
 <arg>${old_password}</arg>
 </arguments>
-<msg timestamp="20201125 21:04:41.043" level="INFO">Typing text '2020' into text field 'id = confirm'.</msg>
-<status status="PASS" starttime="20201125 21:04:41.043" endtime="20201125 21:04:41.173"></status>
+<msg timestamp="20201128 15:20:04.118" level="INFO">Typing text '2020' into text field 'id = confirm'.</msg>
+<status status="PASS" starttime="20201128 15:20:04.118" endtime="20201128 15:20:04.254"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:41.042" endtime="20201125 21:04:41.173"></status>
+<status status="PASS" starttime="20201128 15:20:04.117" endtime="20201128 15:20:04.254"></status>
 </kw>
 <kw name="Input Nickname1">
 <arguments>
@@ -192,10 +192,10 @@
 <arg>id = nickname</arg>
 <arg>${old_nickname}</arg>
 </arguments>
-<msg timestamp="20201125 21:04:41.174" level="INFO">Typing text 'nene' into text field 'id = nickname'.</msg>
-<status status="PASS" starttime="20201125 21:04:41.174" endtime="20201125 21:04:41.301"></status>
+<msg timestamp="20201128 15:20:04.257" level="INFO">Typing text 'nene' into text field 'id = nickname'.</msg>
+<status status="PASS" starttime="20201128 15:20:04.256" endtime="20201128 15:20:04.376"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:41.173" endtime="20201125 21:04:41.301"></status>
+<status status="PASS" starttime="20201128 15:20:04.255" endtime="20201128 15:20:04.376"></status>
 </kw>
 <kw name="Submit Credentials">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -203,26 +203,26 @@
 <arguments>
 <arg>id = register_button</arg>
 </arguments>
-<msg timestamp="20201125 21:04:41.303" level="INFO">Clicking button 'id = register_button'.</msg>
-<status status="PASS" starttime="20201125 21:04:41.302" endtime="20201125 21:04:41.414"></status>
+<msg timestamp="20201128 15:20:04.377" level="INFO">Clicking button 'id = register_button'.</msg>
+<status status="PASS" starttime="20201128 15:20:04.377" endtime="20201128 15:20:04.459"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:41.302" endtime="20201125 21:04:41.414"></status>
+<status status="PASS" starttime="20201128 15:20:04.377" endtime="20201128 15:20:04.459"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>Registration Fail.</arg>
 </arguments>
-<status status="PASS" starttime="20201125 21:04:41.415" endtime="20201125 21:04:41.456"></status>
+<status status="PASS" starttime="20201128 15:20:04.460" endtime="20201128 15:20:04.491"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201125 21:04:41.457" endtime="20201125 21:04:43.638"></status>
+<status status="PASS" starttime="20201128 15:20:04.492" endtime="20201128 15:20:06.710"></status>
 </kw>
-<status status="PASS" starttime="20201125 21:04:36.137" endtime="20201125 21:04:43.639" critical="yes"></status>
+<status status="PASS" starttime="20201128 15:19:59.447" endtime="20201128 15:20:06.711" critical="yes"></status>
 </test>
 <doc>Simple example using SeleniumLibrary.</doc>
-<status status="PASS" starttime="20201125 21:04:28.874" endtime="20201125 21:04:43.641"></status>
+<status status="PASS" starttime="20201128 15:19:51.693" endtime="20201128 15:20:06.713"></status>
 </suite>
 <statistics>
 <total>
