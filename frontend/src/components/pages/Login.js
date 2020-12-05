@@ -33,16 +33,16 @@ export default function Login(props) {
             <Col xs={23} sm={23} md={23} lg={14} xl={14} xxl={12}>
                 <div className="Form">
                     <Row justify="center">
-                        <Title level={2} className="Title" style={{color: '#8C9868'}}>
+                        <Title level={2} className="Title" style={{color: '#8C9868' , fontSize:"75px"}}>
                             D
                         </Title>
-                        <Title level={2} className="Title" style={{color: '#ee7458' , marginTop:"25px"}}>
+                        <Title level={2} className="Title" style={{color: '#ee7458' , marginTop:"25px" , fontSize:"75px"}}>
                             D <span style={{color: '#8c9868'}}>Dinner  </span>  
                         </Title><span style={{color: '#FFFFF'}}></span>
                         {/*<Title level={2} className="Title" style={{color: '#8C9868', marginTop:"25px" }}>
                             Dinner 
                         </Title>*/}
-                        <Title level={2} className='Title' style={{color: '#ee7458', marginTop:"25px"}}>
+                        <Title level={2} className='Title' style={{color: '#ee7458', marginTop:"25px" , fontSize:"75px"}}>
                             Dog
                         </Title>
                     </Row>
@@ -71,9 +71,12 @@ export default function Login(props) {
                             <Input.Password />
                         </Form.Item>
 
-                        <Button id = "login_button" className="Button" type="primary" htmlType="submit">
+                        
+                        <Button id = "login_button" className="Button" type="primary" htmlType="submit" size="large">
                             Submit
                         </Button>
+                        <Button variant="link" size="sm" style={{marginLeft:"625px"}}>Register</Button>
+                        
                     </Form>
                 </div>
             </Col>

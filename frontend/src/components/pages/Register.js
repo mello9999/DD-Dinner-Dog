@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Button, Row, Col, Divider, notification } from 'antd';
+import { Form, Input, Button, Row, Col, Divider, notification, message } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import axios from '../../config/axios';
 import { withRouter } from 'react-router-dom';
@@ -37,7 +37,7 @@ function Register(props) {
                     className="Form"
                 >
                     <Row justify="center">
-                        <Title level={2} className="Title">
+                        <Title level={2} className="Title" style={{color: '#8c9868' , fontSize:"50px"}}>
                             Register
                         </Title>
                     </Row>
@@ -108,6 +108,27 @@ function Register(props) {
                             name="nickname"
                             label={<span>Nickname&nbsp;</span>}
                             rules={[{ required: true, message: 'Please input your nickname!', whitespace: true }]}
+                        >
+                            <Input />
+                        </Form.Item>
+
+
+                        <Form.Item
+                            id = "Phone Number"
+                            name="Phone Number"
+                            label={<span>Phone Number&nbsp;</span>}
+                            rules={[
+                                {
+                                    required: true,
+                                    type: "integer",
+                                    message: 'Please input interger!',
+                                    whitespace:true
+                                },
+                                { 
+                                    required: true, 
+                                    message: 'Please input your Phone Number!', 
+                                    whitespace: true 
+                                }]}
                         >
                             <Input />
                         </Form.Item>
