@@ -130,6 +130,7 @@ export default function Profile(props) {
             const user = jwtDecode(token);
             setName(user.name);
             setId(user.id);
+            console.log(user)
         }
     }, [])
     return (
