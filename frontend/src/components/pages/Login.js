@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Button, Row, Col, Divider, notification } from 'antd';
+import { Form, Input, Button, Row, Col, Divider, notification, Popover } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import axios from '../../config/axios';
 import LocalStorageService from '../../services/localStorageService';
@@ -51,35 +51,41 @@ export default function Login(props) {
                         className="App"
                         {...layout}
                         onFinish={onFinish}
-                        style={{ width: "100%" }}
+                        style={{ width: "100%" , marginLeft: "50px"}}
                     >
                         <Form.Item
                             id = "username"
-                            label="Username"
+                            /*label="Username"*/
                             name="username"
                             rules={[{ required: true, message: 'Please input your username!' }]}
+                            
+                            
                            
                         >
-                            <Input />
+                            <Input size="large" placeholder="Username"/>
                         </Form.Item>
 
                         <Form.Item
                             id = "password"
-                            label="Password"
+                            /*label="Password"*/
                             name="password"
                             rules={[{ required: true, message: 'Please input your password!' }]}
+                            
                         >
-                            <Input.Password />
+                            <Input.Password size="large" placeholder="Password"/>
                         </Form.Item>
 
                         
-                        <Button id = "login_button" className="Button" type="primary" htmlType="submit" size="large">
+                        <Button id = "login_button" style={{background:'#ee7c58' , hovering:'#ffffff' , borderColor:'#ee7c58' , width:"150px" , marginRight:"80px"}} className="Button" type="primary" htmlType="submit" size="large" shape="round">
                             Submit
                         </Button>
-                        <Button variant="link" size="sm" style={{marginLeft:"625px"}}>Register</Button>
+                        
+                        {/*<Button variant="link" size="sm" style={{marginLeft:"625px"}}>Register</Button>*/}
+                        
                         
                     </Form>
                 </div>
+                
             </Col>
         </Row>
     );
