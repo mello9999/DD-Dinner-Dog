@@ -1,0 +1,155 @@
+.RightBar{
+    border: medium none;
+    background: #ffffff none repeat scroll 0% 0%;
+    width: 1021px;
+    height: 682px;
+    left: 345px;
+    position: absolute;
+    margin-top: 0px;
+    float: right;
+}
+
+.RightBar_DT{
+    display: flex;
+    color: #9A9895;
+    float: none; /*กำหนดการลอย*/ 
+    justify-content: space-between; /*เรียงซ้ายสุด กลาง ขวาสุด*/
+    margin: 34px;
+}
+
+.RightBar_DT h2{
+    color: #9A9895;
+    font-size: 18px;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+.RightBar_user1{
+    display: flex;
+    float: left;
+}
+
+        .RightBar_user1 img{
+            margin-left: 60px;
+            position: absolute;
+        }
+
+        .RightBar_user1_message{
+            width: 222px;
+            height: 47px;
+            left: 130px;
+            top: 104px;
+            background: rgba(154, 152, 149, 0.25);
+            border-radius: 14px;    /*ความโค้ง*/
+            margin-left: 130px;
+        }
+
+        .RightBar_user1_message h2{
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 18px;
+            color: #717171;
+        }
+
+        .RightBar_user1 h3{
+            font-style: normal;
+            font-size: 14px;
+            color: #9A9895;
+            margin-left: 7px;
+            margin-top: 15px;
+        }
+
+        .RightBar_user1_active{
+            margin-top: 15px;
+        }
+
+.RightBar_me{
+    display: flex;
+    float: right;   /*ชิดขอบขวา*/
+    position: relative;
+    top: 60px;
+}
+
+        .RightBar_me_active{
+            margin-top: 15px;
+        }
+
+        .RightBar_me_active h3{
+            font-style: normal;
+            font-size: 14px;
+            color: #9A9895;
+            margin: 0px 10px;
+            text-align: right;
+
+        }
+
+        .RightBar_me_message{
+            width: 222px;
+            height: 47px;
+            left: 130px;
+            top: 104px;
+            background: #BAC1A4;
+            border-radius: 14px;    /*ความโค้ง*/
+            margin-left: 0px;
+            
+        }
+
+        .RightBar_me_message h2{
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 18px;
+            color: #ffffff;
+            float: right;
+        }
+
+        .RightBar_me img{
+            margin-left: 14px;
+        }
+
+.RightBar_message{
+    width: 959px;
+    height: 50px;
+    left: 22px;
+    top: 576px;
+    background: #F4F4F4;
+    border-radius: 41px;
+    position: absolute;
+    float: right;
+
+}
+
+        .RightBar_message_img1 {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 870px;
+            bottom: 0px;
+        }
+
+        .RightBar_message_img2 {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 830px;
+            margin-top: 12px
+        }
+
+        .RightBar_message_img3 {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 790px;
+            margin-top: 12px;
+        }
+
+        .RightBar_message_img4 {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            left: 740px;
+            margin-top: 10px;
+        }
+
+
+
+
