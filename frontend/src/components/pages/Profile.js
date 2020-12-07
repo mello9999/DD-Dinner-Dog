@@ -130,16 +130,14 @@ export default function Profile(props) {
             const user = jwtDecode(token);
             setName(user.name);
             setId(user.id);
-            console.log('sssssssssssssssssssssssss', user)
         }
     }, [])
     return (
         <div style={{ "display": "flex", "padding": "30px 100px 0 0" }}>
 
             <form>
-                <Grid container spacing={1}  >
-
-                    <Grid container xs={12}>
+                <Grid container spacing={1} >
+                    <Grid container xs={12} >
                         <Grid container xs={4} justify="center" alignItems="center" direction="column">
                             <input
                                 id="fi1"
@@ -183,7 +181,7 @@ export default function Profile(props) {
                                     <Grid item xs={12} align="center" >
                                         <h2 style={{ "marginTop": "-50px", "backgroundColor": "orange", "width": "200px", "color": "white" }}>
                                             Account Setting
-                        </h2>
+                                        </h2>
                                     </Grid>
                                     <Grid container xs={5}>
                                         <Grid container item xs={12} direction="column" align="left">
@@ -213,7 +211,7 @@ export default function Profile(props) {
                                         <Grid container item xs={12} direction="column" align="left">
                                             <Typography inline valient="body1" style={{ "color": "white" }} >
                                                 Breeds
-                        </Typography>
+                                            </Typography>
                                             <input
                                                 type="text"
                                                 value={breeds}
@@ -224,7 +222,7 @@ export default function Profile(props) {
                                         <Grid container item xs={12} direction="column" align="left">
                                             <Typography inline valient="body1" style={{ "color": "white" }} >
                                                 Location
-                        </Typography>
+                                            </Typography>
                                             <input
                                                 type="text"
                                                 value={location}
@@ -238,7 +236,7 @@ export default function Profile(props) {
                                         <Grid container item xs={6} direction="column" align="left">
                                             <Typography inline valient="body1" style={{ "color": "white" }}>
                                                 About
-                        </Typography>
+                                            </Typography>
                                             <input
                                                 type="text"
                                                 value={about}
@@ -248,7 +246,7 @@ export default function Profile(props) {
                                             <Grid container item xs={6} direction="column" align="left" style={{ "marginTop": "22px" }}>
                                                 <Typography inline valient="body1" style={{ "color": "white" }}>
                                                     Certificate
-                        </Typography>
+                                                </Typography>
                                                 <input
                                                     id="fi2"
                                                     type="file"
@@ -285,7 +283,7 @@ export default function Profile(props) {
                                     </Grid>
                                     <Typography inline valient="body1" style={{ "color": "white" }} >
                                         Insert Picture
-                        </Typography>
+                                    </Typography>
                                     <Grid container xs={12} style={{ "marginTop": "0px" }}>
 
                                         <Grid container item xs={2} direction="column" align="left" >
