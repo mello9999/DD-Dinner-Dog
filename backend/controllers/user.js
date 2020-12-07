@@ -16,6 +16,10 @@ const registerUser = async (req, res) => {
             password: hashedPassword,
             name: name
         });
+        //const targetUser = await db.User.findOne({ where: { username: username } });
+        // await db.DOG_INFO.create({
+        //     username:username
+        // });
         res.status(201).send({message: "User created"});
     }
 }

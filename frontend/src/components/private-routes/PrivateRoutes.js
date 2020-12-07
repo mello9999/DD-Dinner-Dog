@@ -7,6 +7,7 @@ function PrivateRoutes(props) {
 
     const allowedRoutes = ConfigRoutes[role].allowedRoutes;
     const redirectRoute = ConfigRoutes[role].redirectRoutes;
+    console.log(allowedRoutes.map(a => (a)))
     return (
         <Switch>
             {allowedRoutes.map(route => (
