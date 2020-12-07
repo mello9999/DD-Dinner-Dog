@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 //import { Button } from 'antd';
 import LocalStorageService from '../../services/localStorageService';
-import axios from 'axios';
+import axios from '../../config/axios';
+
 import jwtDecode from 'jwt-decode';
 import { Button, Grid, Typography } from '@material-ui/core';
 
@@ -13,22 +14,15 @@ export default function Profile(props) {
     const [breeds, setBreeds] = useState(null);
     const [location, setLocation] = useState(null);
     const [about, setAbout] = useState(null);
-    const [profileFile, setProfileFile] = useState(null);
     const [profileFileData, setProfileData] = useState(null);
-    const [certificateFile, setCertificateFile] = useState(null);
     const [certificateFileData, setCertificateData] = useState(null);
-    const [picture1File, setPicture1File] = useState(null);
     const [picture1Data, setPicture1Data] = useState(null);
-    const [picture2File, setPicture2File] = useState(null);
     const [picture2Data, setPicture2Data] = useState(null);
-    const [picture3File, setPicture3File] = useState(null);
     const [picture3Data, setPicture3Data] = useState(null);
-    const [picture4File, setPicture4File] = useState(null);
     const [picture4Data, setPicture4Data] = useState(null);
     const onChangeProfilePicture = e => {
         if (e.target.files[0]) {
             //console.log("picture: ", e.target.files);
-            setProfileFile(e.target.files[0]);
             const reader = new FileReader();
             reader.addEventListener("load", () => {
                 setProfileData(reader.result);
@@ -39,7 +33,6 @@ export default function Profile(props) {
     const onChangeCertificate = e => {
         if (e.target.files[0]) {
             //console.log("picture: ", e.target.files);
-            setCertificateFile(e.target.files[0]);
             const reader = new FileReader();
             reader.addEventListener("load", () => {
                 setCertificateData(reader.result);
@@ -50,7 +43,7 @@ export default function Profile(props) {
     const onChangePicture1 = e => {
         if (e.target.files[0]) {
             //console.log("picture: ", e.target.files);
-            setPicture1File(e.target.files[0]);
+            
             const reader = new FileReader();
             reader.addEventListener("load", () => {
                 setPicture1Data(reader.result);
@@ -61,7 +54,6 @@ export default function Profile(props) {
     const onChangePicture2 = e => {
         if (e.target.files[0]) {
             //console.log("picture: ", e.target.files);
-            setPicture2File(e.target.files[0]);
             const reader = new FileReader();
             reader.addEventListener("load", () => {
                 setPicture2Data(reader.result);
@@ -72,7 +64,6 @@ export default function Profile(props) {
     const onChangePicture3 = e => {
         if (e.target.files[0]) {
             //console.log("picture: ", e.target.files);
-            setPicture3File(e.target.files[0]);
             const reader = new FileReader();
             reader.addEventListener("load", () => {
                 setPicture3Data(reader.result);
@@ -83,7 +74,6 @@ export default function Profile(props) {
     const onChangePicture4 = e => {
         if (e.target.files[0]) {
             //console.log("picture: ", e.target.files);
-            setPicture4File(e.target.files[0]);
             const reader = new FileReader();
             reader.addEventListener("load", () => {
                 setPicture4Data(reader.result);
@@ -91,14 +81,11 @@ export default function Profile(props) {
             reader.readAsDataURL(e.target.files[0]);
         }
     };
-    // const logout = () => {
-    //     LocalStorageService.removeToken();
-    //     props.setRole("guest");
-    // }
-    // <Button variant="contained"
-    //                                         component="label"
-    //                                         onClick={logout}>Logout</Button>
-    //                                 </Grid>
+    const logout = () => {
+        LocalStorageService.removeToken();
+        props.setRole("guest");
+    }
+    
 
     const submitForm = () => {
         const formData = new FormData();
@@ -115,8 +102,9 @@ export default function Profile(props) {
         formData.append("picture2Data", picture2Data);
         formData.append("picture3Data", picture3Data);
         formData.append("picture4Data", picture4Data);
+      
         axios
-            .post("/upload", formData)
+            .post("/doginfo/upload", formData)
             .then((res) => {
                 alert("File Upload success");
             })
@@ -128,9 +116,20 @@ export default function Profile(props) {
         const token = LocalStorageService.getToken();
         if (token) {
             const user = jwtDecode(token);
-            setName(user.name);
+            console.log(user, 'awsx')
             setId(user.id);
-            console.log(user)
+            setName(user.name);
+            setGender(user.gender);
+            setAge(user.age);
+            setBreeds(user.breeds);
+            setLocation(user.location);
+            setAbout(user.about);
+            setProfileData(user.profileFileData);
+            setCertificateData(user.certificateFileData);
+            setPicture1Data(user.picture1Data);
+            setPicture2Data(user.picture2Data);
+            setPicture3Data(user.picture3Data);
+            setPicture4Data(user.picture4Data);
         }
     }, [])
     return (
@@ -138,8 +137,8 @@ export default function Profile(props) {
 
             <form>
                 <Grid container spacing={1} >
-                    <Grid container xs={12} >
-                        <Grid container xs={4} justify="center" alignItems="center" direction="column">
+                    <Grid container item xs={12} >
+                        <Grid container item xs={4} justify="center" alignItems="center" direction="column">
                             <input
                                 id="fi1"
                                 type="file"
@@ -147,7 +146,7 @@ export default function Profile(props) {
                                 onChange={onChangeProfilePicture}
                                 hidden
                             />
-                            <label for="fi1">
+                            <label htmlFor="fi1">
                                 <div
                                     style={{
                                         height: "150px",
@@ -155,10 +154,11 @@ export default function Profile(props) {
                                         border: "1px dashed black",
                                         borderRadius: "50%"
                                     }}
-                                    for="fi1"
+                                    htmlFor="fi1"
                                 >
                                     <img
                                         src={profileFileData}
+                                        alt=""
                                         style={{
                                             objectFit: "cover",
                                             height: "150px",
@@ -170,82 +170,82 @@ export default function Profile(props) {
                             </label>
                             <input
                                 type="text"
-                                value={name}
+                            
                                 onChange={(e) => setName(e.target.value)}
                                 style={{ "width": "100px", "border": "1px solid white", "backgroundColor": "grey" }}
                             />
                         </Grid>
 
-                        <Grid container xs={8} style={{ "borderRadius": "2%", "backgroundColor": "orange", "border": "30px dashed orange" }}>
+                        <Grid container item xs={8} style={{ "borderRadius": "2%", "backgroundColor": "orange", "border": "30px dashed orange" }}>
                             <div>
-                                <Grid container xs={12} style={{ "borderRadius": "2%", "border": "3px solid  white", "padding": "30px" }}>
+                                <Grid container item xs={12} style={{ "borderRadius": "2%", "border": "3px solid  white", "padding": "30px" }}>
                                     <Grid item xs={12} align="center" >
                                         <h2 style={{ "marginTop": "-50px", "backgroundColor": "orange", "width": "200px", "color": "white" }}>
                                             Account Setting
                                         </h2>
                                     </Grid>
-                                    <Grid container xs={5}>
+                                    <Grid container item xs={5}>
                                         <Grid container item xs={12} direction="column" align="left">
-                                            <Typography inline valient="body1" style={{ "color": "white" }}>
+                                            <Typography inline="true" valient="body1" style={{ "color": "white" }}>
                                                 gender
                                             </Typography>
                                             <input
                                                 type="text"
-                                                value={gender}
+                                                
                                                 onChange={(e) => setGender(e.target.value)}
                                                 style={{ "width": "100px" }}
                                             />
                                         </Grid>
 
                                         <Grid container item xs={12} direction="column" align="left">
-                                            <Typography inline valient="body1" style={{ "color": "white" }}>
+                                            <Typography inline="True" valient="body1" style={{ "color": "white" }}>
                                                 Age
                                             </Typography>
                                             <input
                                                 type="text"
-                                                value={age}
+                                                
                                                 onChange={(e) => setAge(e.target.value)}
                                                 style={{ "width": "100px" }}
                                             />
                                         </Grid>
 
                                         <Grid container item xs={12} direction="column" align="left">
-                                            <Typography inline valient="body1" style={{ "color": "white" }} >
+                                            <Typography inline="True" valient="body1" style={{ "color": "white" }} >
                                                 Breeds
                                             </Typography>
                                             <input
                                                 type="text"
-                                                value={breeds}
+                                                
                                                 onChange={(e) => setBreeds(e.target.value)}
                                                 style={{ "width": "200px" }}
                                             />
                                         </Grid>
                                         <Grid container item xs={12} direction="column" align="left">
-                                            <Typography inline valient="body1" style={{ "color": "white" }} >
+                                            <Typography inline="True" valient="body1" style={{ "color": "white" }} >
                                                 Location
                                             </Typography>
                                             <input
                                                 type="text"
-                                                value={location}
+                                                
                                                 onChange={(e) => setLocation(e.target.value)}
                                                 style={{ "width": "200px" }}
                                             />
                                         </Grid>
 
                                     </Grid>
-                                    <Grid container xs={7}>
+                                    <Grid container item xs={7}>
                                         <Grid container item xs={6} direction="column" align="left">
-                                            <Typography inline valient="body1" style={{ "color": "white" }}>
+                                            <Typography inline="True" valient="body1" style={{ "color": "white" }}>
                                                 About
                                             </Typography>
                                             <input
                                                 type="text"
-                                                value={about}
+                                                
                                                 onChange={(e) => setAbout(e.target.value)}
                                                 style={{ "width": "400px" }}
                                             />
                                             <Grid container item xs={6} direction="column" align="left" style={{ "marginTop": "22px" }}>
-                                                <Typography inline valient="body1" style={{ "color": "white" }}>
+                                                <Typography inline="True" valient="body1" style={{ "color": "white" }}>
                                                     Certificate
                                                 </Typography>
                                                 <input
@@ -255,7 +255,7 @@ export default function Profile(props) {
                                                     onChange={onChangeCertificate}
                                                     hidden
                                                 />
-                                                <label for="fi2">
+                                                <label htmlFor="fi2">
                                                     <div
                                                         style={{
                                                             height: "200px",
@@ -264,10 +264,11 @@ export default function Profile(props) {
                                                             borderRadius: "10%",
                                                             backgroundColor: "white"
                                                         }}
-                                                        for="fi2"
+                                                        htmlFor="fi2"
                                                     >
                                                         <img
                                                             src={certificateFileData}
+                                                            alt=""
                                                             style={{
                                                                 objectFit: "cover",
                                                                 height: "200px",
@@ -282,10 +283,10 @@ export default function Profile(props) {
                                         </Grid>
 
                                     </Grid>
-                                    <Typography inline valient="body1" style={{ "color": "white" }} >
+                                    <Typography inline="True" valient="body1" style={{ "color": "white" }} >
                                         Insert Picture
                                     </Typography>
-                                    <Grid container xs={12} style={{ "marginTop": "0px" }}>
+                                    <Grid container item xs={12} style={{ "marginTop": "0px" }}>
 
                                         <Grid container item xs={2} direction="column" align="left" >
                                             <input
@@ -295,7 +296,7 @@ export default function Profile(props) {
                                                 onChange={onChangePicture1}
                                                 hidden
                                             />
-                                            <label for="fi3">
+                                            <label htmlFor="fi3">
                                                 <div
                                                     style={{
                                                         height: "120px",
@@ -304,10 +305,11 @@ export default function Profile(props) {
                                                         borderRadius: "10%",
                                                         backgroundColor: "white"
                                                     }}
-                                                    for="fi3"
+                                                    htmlFor="fi3"
                                                 >
                                                     <img
                                                         src={picture1Data}
+                                                        alt=""
                                                         style={{
                                                             objectFit: "cover",
                                                             height: "120px",
@@ -327,7 +329,7 @@ export default function Profile(props) {
                                                 onChange={onChangePicture2}
                                                 hidden
                                             />
-                                            <label for="fi4">
+                                            <label htmlFor="fi4">
                                                 <div
                                                     style={{
                                                         height: "120px",
@@ -336,10 +338,11 @@ export default function Profile(props) {
                                                         borderRadius: "10%",
                                                         backgroundColor: "white"
                                                     }}
-                                                    for="fi4"
+                                                    htmlFor="fi4"
                                                 >
                                                     <img
                                                         src={picture2Data}
+                                                        alt=""
                                                         style={{
                                                             objectFit: "cover",
                                                             height: "120px",
@@ -359,7 +362,7 @@ export default function Profile(props) {
                                                 onChange={onChangePicture3}
                                                 hidden
                                             />
-                                            <label for="fi5">
+                                            <label htmlFor="fi5">
                                                 <div
                                                     style={{
                                                         height: "120px",
@@ -368,10 +371,11 @@ export default function Profile(props) {
                                                         borderRadius: "10%",
                                                         backgroundColor: "white"
                                                     }}
-                                                    for="fi5"
+                                                    htmlFor="fi5"
                                                 >
                                                     <img
                                                         src={picture3Data}
+                                                        alt=""
                                                         style={{
                                                             objectFit: "cover",
                                                             height: "120px",
@@ -391,7 +395,7 @@ export default function Profile(props) {
                                                 onChange={onChangePicture4}
                                                 hidden
                                             />
-                                            <label for="fi6">
+                                            <label htmlFor="fi6">
                                                 <div
                                                     style={{
                                                         height: "120px",
@@ -400,10 +404,11 @@ export default function Profile(props) {
                                                         borderRadius: "10%",
                                                         backgroundColor: "white"
                                                     }}
-                                                    for="fi6"
+                                                    htmlFor="fi6"
                                                 >
                                                     <img
                                                         src={picture4Data}
+                                                        alt=""
                                                         style={{
                                                             objectFit: "cover",
                                                             height: "120px",
@@ -416,13 +421,17 @@ export default function Profile(props) {
 
                                         </Grid>
                                     </Grid>
-                                    <Grid item xs={12} align="right" >
+                                    <Grid item xs={6} align="right" >
                                         <Button variant="contained"
                                             component="label"
                                             onClick={submitForm}>Save</Button>
 
                                     </Grid>
-
+                                    <Grid item xs={6} align="right" >
+                                    <Button variant="contained"
+                                            component="label"
+                                            onClick={logout}>Logout</Button>
+                                    </Grid>
 
                                 </Grid>
                             </div>

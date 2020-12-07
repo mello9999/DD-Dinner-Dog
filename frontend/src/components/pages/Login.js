@@ -11,18 +11,19 @@ const layout = {
 export default function Login(props) {
 
     const onFinish = values => {
+        
         const body = {
             username: values.username,
             password: values.password
         };
+        
         axios.post("/users/login", body)
             .then(result => {
-                console.log(body)
                 LocalStorageService.setToken(result.data.token);
                 props.setRole("user");
                 window.location.replace('/profile');
             })
-            .catch(err => {
+            .catch(err => {                
                 notification.error({ 
                     message: `Login Fail.`
                 });

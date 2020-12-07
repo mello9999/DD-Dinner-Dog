@@ -5,6 +5,7 @@ const app = express();
 const cors = require('cors');
 const todoListRoutes = require('./routes/todoList');
 const userRoutes = require('./routes/user');
+const doginfoRoutes = require('./routes/doginfo');
 const db = require('./models');
 require('./config/passport/passport');
 
@@ -15,6 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/todo-list', todoListRoutes);
 app.use('/users', userRoutes)
+app.use('/doginfo', doginfoRoutes)
 //{force: true} if database already exist
 db.sequelize.sync().then(() => {
     app.listen(process.env.PORT, () => {

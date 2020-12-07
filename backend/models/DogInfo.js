@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
         about: {
             type: DataTypes.TEXT
         },
-        about: {
+        location: {
             type: DataTypes.TEXT
         },
         profilePicture: {

@@ -10,18 +10,16 @@ const registerUser = async (req, res) => {
     } else {
         const salt = bcryptjs.genSaltSync(12);
         const hashedPassword = bcryptjs.hashSync(password, salt);
-
+        
         await db.User.create({
             username: username,
             password: hashedPassword,
             name: name
         });
-        targetUser = await db.User.findOne({ where: { username: username } });
-        console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
-        await db.DOG_INFO.create({
-            id: targetUser.id
+        targetUser1 = await db.User.findOne({ where: { username: username } });
+        await db.DogInfo.create({
+            id: targetUser1.id
         });
-        console.log('yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy')
         //const targetUser = await db.User.findOne({ where: { username: username } });
         // await db.DOG_INFO.create({
         //     username:username
@@ -31,22 +29,19 @@ const registerUser = async (req, res) => {
 }
 
 const loginUser = async (req, res) => {
-    console.log('aaaaaaaaaaaaaaaa')
-    const { username, password} = req.body;
-    console.log(db.User)
-    const targetUser = await db.User.findOne({ where: { username: username } })
-    console.log(targetUser.id)
-    const dog = await db.DOG_INFO.findOne({ where: { id: targetUser.id } })
-    console.log('ddddddddddddd')
     
+    const { username, password} = req.body;
+
+    const targetUser = await db.User.findOne({ where: { username: username } })
     if (!targetUser) {
         res.status(400).send({ message: "Username or password is wrong."});
     } else {
+        const dog = await db.DogInfo.findOne({ where: { id: targetUser.id } })
         const isCorrectPassword = bcryptjs.compareSync(password, targetUser.password);
         if (isCorrectPassword){
             const payload = {
-                name: targetUser.name,
-                id: targetUser.id
+                id: targetUser.id,
+                name: dog.name, gender:dog.gender, age:dog.age, breeds:dog.breeds, location:dog.locations, about:dog.about, profilePicture: dog.profilePicture, certificate: dog.certificate, picture1: dog.picture1, picture2: dog.picture2, picture3: dog.picture3, picture4: dog.spicture4
             };
             const token = jwt.sign(payload, process.env.SECRET_OR_KEY, {expiresIn:3600});
             res.status(200).send({
