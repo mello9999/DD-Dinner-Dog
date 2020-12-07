@@ -3,14 +3,20 @@ module.exports = (sequelize, DataTypes) => {
         name: {
             type: DataTypes.STRING(255)
         },
-        specie: {
-            type: DataTypes.STRING(255)
-        },
-        birthDate: {
-            type: DataTypes.DATEONLY
+        age: {
+            type: DataTypes.INTEGER
         },
         gender: {
             type: DataTypes.STRING(255)
+        },
+        breeds: {
+            type: DataTypes.STRING(255)
+        },
+        about: {
+            type: DataTypes.TEXT
+        },
+        about: {
+            type: DataTypes.TEXT
         },
         profilePicture: {
             type: DataTypes.TEXT 
@@ -25,9 +31,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.TEXT 
         },
         picture4: {
-            type: DataTypes.TEXT 
-        },
-        color: {
             type: DataTypes.TEXT 
         },
         certificate:{
