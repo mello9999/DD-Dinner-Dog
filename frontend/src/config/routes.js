@@ -2,6 +2,7 @@ import TodoPage from '../components/pages/Index';
 import LoginPage from '../components/pages/Login';
 import ProfilePage from '../components/pages/Profile';
 import RegisterPage from '../components/pages/Register';
+import ChatMay from '../components/ChatMay/index';
 
 const components = {
     todo: {
@@ -19,6 +20,10 @@ const components = {
     profile: {
         url: "/profile",
         component: ProfilePage
+    },
+    chat: {
+        url: "/chat",
+        component: ChatMay
     }
 
 }
@@ -28,7 +33,8 @@ export default {
     guest: {
         allowedRoutes: [
             components.login,
-            components.register
+            components.register,
+            components.chat
         ],
         redirectRoutes: "/login"
     },
@@ -37,7 +43,8 @@ export default {
             components.todo,
             components.profile,
             components.login,
-            components.register
+            components.register,
+            components.chat
         ],
         redirectRoutes: "/profile"
     }
