@@ -51,31 +51,36 @@ export default function Login(props) {
                         className="App"
                         {...layout}
                         onFinish={onFinish}
-                        style={{ width: "100%" }}
+                        style={{ width: "100%" , marginLeft: "50px"}}
                     >
                         <Form.Item
                             id = "username"
-                            label="Username"
+                            /*label="Username"*/
                             name="username"
                             rules={[{ required: true, message: 'Please input your username!' }]}
-                        >
-                            <Input />
-                        </Form.Item>
-
-                        <Form.Item
-                            id = "password"
-                            label="Password"
-                            name="password"
-                            rules={[{ required: true, message: 'Please input your password!' }]}
-                        >
-                            <Input.Password />
+                        
+                        ><div class="Password_input" >
+                            <Input size="large" placeholder="Username" style={{ borderRadius: "20px", borderColor: "#727272"}}/>
+                            </div>
                         </Form.Item>
 
                         
-                        <Button id = "login_button" className="Button" type="primary" htmlType="submit" size="large">
+                        <Form.Item
+                            id = "password"
+                            /*label="Password"*/
+                            name="password"
+                            rules={[{ required: true, message: 'Please input your password!' }]}
+                        >
+                            
+                                <Input.Password size="large" placeholder="Password" style={{borderRadius: "20px" , borderColor:"#727272"}}/>
+                            
+                        </Form.Item>
+                        
+                        
+                        <Button id = "login_button" className="Button" type="primary" htmlType="submit" shape="round" size="large" style={{borderColor: '#ffffff' , color:'#ffffff' , background:'#ee7458' , marginLeft: "-30px"}}>
                             Submit
                         </Button>
-                        <Button variant="link" size="sm" style={{marginLeft:"625px"}}>Register</Button>
+                        
                         
                     </Form>
                 </div>

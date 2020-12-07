@@ -3,18 +3,24 @@
   
 }
 
-.Form {
-  border-radius: 5px;
-  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
-  background-color: #f8f8f8;
+.Form {   /*กรอบ dd dinner dog*/
+  
+  border-Width: 3px;
+  
   margin: 20px;
   padding: 20px;
 }
 
+.Password_input input {
+  border-width: 2px;
+  
+}
+
 .Button {
   font-size: 20px;
-  width: 100%;
+  width: 150px;
   height: auto;
+  margin-right: 80px;
   margin-bottom: 20px;
   color: #000000;
 }
