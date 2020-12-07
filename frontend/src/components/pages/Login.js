@@ -17,6 +17,7 @@ export default function Login(props) {
         };
         axios.post("/users/login", body)
             .then(result => {
+                console.log(body)
                 LocalStorageService.setToken(result.data.token);
                 props.setRole("user");
                 window.location.replace('/profile');

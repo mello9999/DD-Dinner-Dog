@@ -16,6 +16,12 @@ const registerUser = async (req, res) => {
             password: hashedPassword,
             name: name
         });
+        targetUser = await db.User.findOne({ where: { username: username } });
+        console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+        await db.DOG_INFO.create({
+            id: targetUser.id
+        });
+        console.log('yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy')
         //const targetUser = await db.User.findOne({ where: { username: username } });
         // await db.DOG_INFO.create({
         //     username:username
@@ -25,8 +31,14 @@ const registerUser = async (req, res) => {
 }
 
 const loginUser = async (req, res) => {
+    console.log('aaaaaaaaaaaaaaaa')
     const { username, password} = req.body;
+    console.log(db.User)
     const targetUser = await db.User.findOne({ where: { username: username } })
+    console.log(targetUser.id)
+    const dog = await db.DOG_INFO.findOne({ where: { id: targetUser.id } })
+    console.log('ddddddddddddd')
+    
     if (!targetUser) {
         res.status(400).send({ message: "Username or password is wrong."});
     } else {
