@@ -59,9 +59,9 @@ export default function Login(props) {
                             name="username"
                             rules={[{ required: true, message: 'Please input your username!' }]}
                         
-                        ><div class="Password_input" >
-                            <Input size="large" placeholder="Username" style={{ borderRadius: "20px", borderColor: "#727272"}}/>
-                            </div>
+                        >
+                            <Input size="large" placeholder="Username" style={{ borderRadius: "20px", borderColor: "#727272" , borderWidth: "2.5px"}}/>
+                            
                         </Form.Item>
 
                         
@@ -69,22 +69,29 @@ export default function Login(props) {
                             id = "password"
                             /*label="Password"*/
                             name="password"
-                            rules={[{ required: true, message: 'Please input your password!' }]}
+                            rules={[{ required: true, message: 'Please input your password!'}]}
+                            
+                            
                         >
                             
-                                <Input.Password size="large" placeholder="Password" style={{borderRadius: "20px" , borderColor:"#727272"}}/>
-                            
+                                <Input.Password size="large" placeholder="Password" style={{borderRadius: "20px" , borderColor:"#727272" , borderWidth:"2.5px"}}/>
+                                <div>
+                                    <Button type="link" style={{marginLeft: "450px" , color: '#000000'}}> Forgot password </Button>
+                                </div>
                         </Form.Item>
                         
                         
                         <Button id = "login_button" className="Button" type="primary" htmlType="submit" shape="round" size="large" style={{borderColor: '#ffffff' , color:'#ffffff' , background:'#ee7458' , marginLeft: "-30px"}}>
                             Submit
                         </Button>
-                        
+                        <div>
+                            <Button id = "Register" type="link" style={{marginLeft: "100px" , color: '#000000' , marginTop: "-10px"}}> Register </Button>
+                        </div>
                         
                     </Form>
                 </div>
             </Col>
         </Row>
     );
+    
 }

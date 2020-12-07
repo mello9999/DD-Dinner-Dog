@@ -11,11 +11,6 @@
   padding: 20px;
 }
 
-.Password_input input {
-  border-width: 2px;
-  
-}
-
 .Button {
   font-size: 20px;
   width: 150px;
@@ -73,3 +68,5 @@
     transform: rotate(360deg);
   }
 }
+
+
