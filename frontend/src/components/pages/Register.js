@@ -37,9 +37,25 @@ function Register(props) {
                     className="Form"
                 >
                     <Row justify="center">
-                        <Title level={2} className="Title" style={{color: '#8c9868' , fontSize:"50px"}}>
-                            Register
+
+                    <Title level={2} className="Title" style={{color: '#8C9868' , fontSize:"75px"}}>
+                            D
                         </Title>
+                        <Title level={2} className="Title" style={{color: '#ee7458' , marginTop:"25px" , fontSize:"75px"}}>
+                            D <span style={{color: '#8c9868'}}>Dinner  </span>  
+                        </Title><span style={{color: '#FFFFF'}}></span>
+                        {/*<Title level={2} className="Title" style={{color: '#8C9868', marginTop:"25px" }}>
+                            Dinner 
+                        </Title>*/}
+                        <Title level={2} className='Title' style={{color: '#ee7458', marginTop:"25px" , fontSize:"75px"}}>
+                            Dog
+                        </Title>
+
+                        <div style={{marginTop: "120px"}}>
+                            <Title id="Regis_2" level={2} className="Title" style={{color: '#727272' , fontSize:"25px" , marginLeft: "-900px"}}>
+                                Register
+                            </Title>
+                        </div>
                     </Row>
                     <Divider className="Divider" />
                     <Form
@@ -47,10 +63,10 @@ function Register(props) {
                         onFinish={onFinish}
                         style={{ width: "100%" }}
                     >
-                        <Form.Item
+                        <Form.Item 
                             id = "email"
                             name="email"
-                            label="E-mail"
+                            /*label="E-mail"*/
                             rules={[
                                 {
                                     type: 'email',
@@ -62,13 +78,13 @@ function Register(props) {
                                 },
                             ]}
                         >
-                            <Input />
+                            <Input placeholder="Email" style={{marginLeft: "80px"}}/>
                         </Form.Item>
 
-                        <Form.Item
+                        <Form.Item 
                             id = "password"
                             name="password"
-                            label="Password"
+                            /*label="Password"*/
                             rules={[
                                 {
                                     required: true,
@@ -77,12 +93,13 @@ function Register(props) {
                             ]}
                             hasFeedback
                         >
-                            <Input.Password />
+                            <Input.Password placeholder="Password" style={{marginLeft: "80px" , borderRadius: "30px" , borderWidth: "3px" , borderColor: '#727272'}}/>
                         </Form.Item>
 
                         <Form.Item
+                            id = "confirm"
                             name="confirm"
-                            label="Confirm Password"
+                            /*label="Confirm Password"*/
                             hasFeedback
                             dependencies={["password"]}
                             rules={[
@@ -100,42 +117,43 @@ function Register(props) {
                                 })
                             ]}
                         >
-                            <Input.Password />
+                            <Input.Password placeholder="Confirm Password" style={{marginLeft: "80px" , borderRadius: "30px" , borderWidth: "3px" , borderColor: '#727272'}}/>
                         </Form.Item>
 
                         <Form.Item
                             id = "nickname"
                             name="nickname"
-                            label={<span>Nickname&nbsp;</span>}
+                            /*label={<span>Nickname&nbsp;</span>}*/
                             rules={[{ required: true, message: 'Please input your nickname!', whitespace: true }]}
                         >
-                            <Input />
+                            <Input placeholder="Nick Name" style={{marginLeft: "80px"}}/>
                         </Form.Item>
 
 
                         <Form.Item
-                            id = "Phone Number"
-                            name="Phone Number"
-                            label={<span>Phone Number&nbsp;</span>}
+                            id = "PhoneNumber"
+                            name="PhoneNumber"
+                            /*label={<span>Phone Number&nbsp;</span>}*/
                             rules={[
-                                {
-                                    required: true,
-                                    type: "integer",
-                                    message: 'Please input interger!',
-                                    whitespace:true
-                                },
                                 { 
                                     required: true, 
                                     message: 'Please input your Phone Number!', 
                                     whitespace: true 
                                 }]}
                         >
-                            <Input />
+                            <Input placeholder="Phone Number" style={{marginLeft: "80px"}}/>
                         </Form.Item>
+                        <div>
+                            <Button id="Next_button" className="nextButton" type="primary" htmlType="submit">
+                                Next
+                            </Button>
+                        </div>
 
-                        <Button id="register_button" className="Button" type="primary" htmlType="submit">
-                            Register
-                        </Button>
+                        <div style={{marginTop: "-27px"}}>
+                            <Button id="Back_button" href='/login' className="backButton" type="primary">
+                                Back
+                            </Button>
+                        </div>
                     </Form>
                 </div>
             </Col>

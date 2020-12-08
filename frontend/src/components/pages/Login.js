@@ -1,5 +1,9 @@
 import React from 'react';
-import { Form, Input, Button, Row, Col, Divider, notification } from 'antd';
+import phone from "../../z_phone 1.png"
+import google from "../../z_google 1.png"
+import line from "../../z_line 1.png"
+import facebook from "../../z_facebook 1.png"
+import { Form, Input, Button, Row, Col, Divider, notification, popover } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import axios from '../../config/axios';
 import LocalStorageService from '../../services/localStorageService';
@@ -7,7 +11,11 @@ const layout = {
     labelCol: { xs: 24, sm: 5, md: 4, lg: 5, xl: 4, xxl: 3 },
     wrapperCol: { xs: 24, sm: 19, md: 20, lg: 19, xl: 20, xxl: 21 },
 };
-
+const content = (
+    <div>
+        <p> content </p>
+    </div>
+);
 export default function Login(props) {
 
     const onFinish = values => {
@@ -27,6 +35,8 @@ export default function Login(props) {
                 });
             })
     };
+
+   
 
     return (
         <Row justify="center" >
@@ -75,19 +85,44 @@ export default function Login(props) {
                         >
                             
                                 <Input.Password size="large" placeholder="Password" style={{borderRadius: "20px" , borderColor:"#727272" , borderWidth:"2.5px"}}/>
-                                <div>
-                                    <Button type="link" style={{marginLeft: "450px" , color: '#000000'}}> Forgot password </Button>
-                                </div>
+                                
                         </Form.Item>
-                        
-                        
-                        <Button id = "login_button" className="Button" type="primary" htmlType="submit" shape="round" size="large" style={{borderColor: '#ffffff' , color:'#ffffff' , background:'#ee7458' , marginLeft: "-30px"}}>
-                            Submit
-                        </Button>
+                            <div style={{marginTop: "-30px"}}>
+                                <Button type="link" style={{marginLeft: "370px" , color: '#646464'}}><p id="forgot_password"> Forgot password </p></Button>
+                            </div>
+
                         <div>
-                            <Button id = "Register" type="link" style={{marginLeft: "100px" , color: '#000000' , marginTop: "-10px"}}> Register </Button>
+                            <Button id = "login_button" className="Button" type="primary" htmlType="submit" /*shape="round"*/ size="large" style={{marginLeft: "-30px" , marginTop: "15px" , fontFamily: 'Quicksand' , fontWeight: "500"}}>
+                                Submit
+                            </Button>
                         </div>
-                        
+
+                        <div style={{marginTop: "-15px" , marginRight: "90px"}}>
+                            
+                            <Button id = "Register" href='/register' type="link" style={{marginLeft: "100px" , color: '#646464' , marginTop: "-10px"}}><p id="register"> Register</p> </Button>
+                            
+                        </div>
+                        <div style={{marginRight:"100px" , marginTop:"45px"}}>
+                            <p id="line_or"><hr></hr>
+                            or</p>
+                        </div>
+                        <div>
+                            <Button id = "DD_veter" className="Button" type="primary"  /*shape="round"*/ size="large" style={{marginLeft: "430px" , marginTop: "15px" , fontFamily: 'Quicksand' , fontWeight: "500"}}>
+                                DD veterinary
+                            </Button>
+                        </div>
+                        <div>
+                            <img  id="Image1" alt="นิวหน้าหี" src={phone}/>
+                        </div>
+                        <div>
+                            <img id="Image2" alt="นิวหน้าหี2" src={google} />
+                        </div>
+                        <div>
+                            <img id="Image3" alt="นิวหน้าหี3" src={line}/>
+                        </div>
+                        <div>
+                            <img id="Image4" alt="นิวหน้าหี4" src={facebook} />
+                        </div>
                     </Form>
                 </div>
             </Col>
