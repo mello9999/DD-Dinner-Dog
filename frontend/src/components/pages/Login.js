@@ -19,7 +19,7 @@ export default function Login(props) {
             .then(result => {
                 LocalStorageService.setToken(result.data.token);
                 props.setRole("user");
-                window.location.replace('/profile');
+                window.location.replace('/home');
             })
             .catch(err => {
                 notification.error({ 

@@ -1,0 +1,12 @@
+.containerApp {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: #F6EFE7;
+}
+.headerContainer {
+    background-color: brown;
+    width: 100px;
+}

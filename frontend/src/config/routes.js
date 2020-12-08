@@ -1,6 +1,6 @@
 import TodoPage from '../components/pages/Index';
 import LoginPage from '../components/pages/Login';
-import ProfilePage from '../components/pages/Profile';
+import HomePage from '../components/pages/home/Home';
 import RegisterPage from '../components/pages/Register';
 
 const components = {
@@ -16,9 +16,9 @@ const components = {
         url: "/register",
         component: RegisterPage
     },
-    profile: {
-        url: "/profile",
-        component: ProfilePage
+    home: {
+        url: "/home",
+        component: HomePage
     }
 
 }
@@ -28,17 +28,18 @@ export default {
     guest: {
         allowedRoutes: [
             components.login,
-            components.register
+            components.register,
+            components.home,
         ],
         redirectRoutes: "/login"
     },
     user: {
         allowedRoutes: [
             components.todo,
-            components.profile,
+            components.home,
             components.login,
             components.register
         ],
-        redirectRoutes: "/profile"
+        redirectRoutes: "/home"
     }
 }
