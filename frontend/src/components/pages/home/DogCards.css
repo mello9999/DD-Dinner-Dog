@@ -1,14 +1,15 @@
 .card{
     position: relative;
-    width: 600px;
-    padding: 20px;
+    width: 666px;
+    padding: 50px;
     max-width: 85vw;
-    height: 50vh;
+    height: 60vh;
     border-radius: 20px;
     background-size: cover0;
     background-position: center;
     box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 0.3);
-    rotate:80deg;
+    rotate:70deg;
+    
 }
 
 .card > h3 {

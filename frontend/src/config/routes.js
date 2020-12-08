@@ -2,6 +2,7 @@ import TodoPage from '../components/pages/Index';
 import LoginPage from '../components/pages/Login';
 import HomePage from '../components/pages/home/Home';
 import RegisterPage from '../components/pages/Register';
+import Setting from '../components/pages/setting/Setting';
 
 const components = {
     todo: {
@@ -19,6 +20,10 @@ const components = {
     home: {
         url: "/home",
         component: HomePage
+    },
+    setting: {
+        url: "/setting",
+        component: Setting
     }
 
 }
@@ -30,6 +35,7 @@ export default {
             components.login,
             components.register,
             components.home,
+            components.setting
         ],
         redirectRoutes: "/login"
     },
@@ -38,7 +44,8 @@ export default {
             components.todo,
             components.home,
             components.login,
-            components.register
+            components.register,
+            components.setting,
         ],
         redirectRoutes: "/home"
     }
