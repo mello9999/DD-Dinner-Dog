@@ -3,7 +3,7 @@ import phone from "../../z_phone 1.png"
 import google from "../../z_google 1.png"
 import line from "../../z_line 1.png"
 import facebook from "../../z_facebook 1.png"
-import { Form, Input, Button, Row, Col, Divider, notification, popover } from 'antd';
+import { Form, Input, Button, Row, Col, Divider, notification, Popconfirm, message} from 'antd';
 import Title from 'antd/lib/typography/Title';
 import axios from '../../config/axios';
 import LocalStorageService from '../../services/localStorageService';
@@ -16,6 +16,17 @@ const content = (
         <p> content </p>
     </div>
 );
+
+function confirm(e) {
+    console.log(e);
+    message.success('so good');
+}
+
+function cancel(e) {
+    console.log(e);
+    message.error('wait a 1000000000sec');
+}
+
 export default function Login(props) {
 
     const onFinish = values => {
@@ -107,9 +118,17 @@ export default function Login(props) {
                             or</p>
                         </div>
                         <div>
-                            <Button id = "DD_veter" className="Button" type="primary"  /*shape="round"*/ size="large" style={{marginLeft: "430px" , marginTop: "15px" , fontFamily: 'Quicksand' , fontWeight: "500"}}>
-                                DD veterinary
-                            </Button>
+                            <Popconfirm
+                                title = "DD veterinary ... comming soon"
+                                onConfirm={confirm}
+                                onCancel={cancel}>
+                                
+
+                                    <Button id = "DD_veter" className="Button" type="primary"  /*shape="round"*/ size="large" style={{marginLeft: "430px" , marginTop: "15px" , fontFamily: 'Quicksand' , fontWeight: "500"}}>
+                                        DD veterinary
+                                    </Button>
+
+                            </Popconfirm>
                         </div>
                         <div>
                             <img  id="Image1" alt="นิวหน้าหี" src={phone}/>

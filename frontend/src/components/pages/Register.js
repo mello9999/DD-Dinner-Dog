@@ -146,14 +146,14 @@ function Register(props) {
                             <Input placeholder="Phone Number" style={{marginLeft: "80px"}}/>
                         </Form.Item>
                         <div>
-                            <Button id="Next_button" className="nextButton" type="primary" htmlType="submit">
-                                Next
+                            <Button id="submit_button" className="nextButton" type="primary" htmlType="submit">
+                                submit
                             </Button>
                         </div>
 
-                        <div style={{marginTop: "-27px"}}>
-                            <Button id="Back_button" href='/login' className="backButton" type="primary">
-                                Back
+                        <div style={{marginTop: "-34px"}}>
+                            <Button id="login_button2" href='/login' className="backButton" type="primary">
+                                <p style={{marginTop: "2px"}}>login</p>
                             </Button>
                         </div>
 

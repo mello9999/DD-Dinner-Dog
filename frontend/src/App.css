@@ -132,22 +132,22 @@
 
 #Image1 {
   margin-top:-95px ;
-  margin-right: 325px;
+  margin-right: 425px;
 }
 
 #Image2 {
   margin-top: -140px;
-  margin-right: 450px;
+  margin-right: 545px;
 }
 
 #Image3 {
   margin-top: -185px;
-  margin-right: 580px;
+  margin-right: 700px;
 }
 
 #Image4 {
   margin-top: -230px;
-  margin-right: 200px;
+  margin-right: 300px;
 }
 
 #email {
@@ -178,9 +178,9 @@
   border-color:#727272 ;
 }
 
-#Next_button {
+#submit_button {
   border-radius: 30px;
-  margin-top: 10px;
+  margin-top: 7px;
   margin-left: 500px;
   width: 150px;
   height: 40px;
@@ -191,9 +191,9 @@
   
 }
 
-#Next_button:hover{
+#submit_button:hover{
   border-radius: 30px;
-  margin-top: 10px;
+  margin-top: 7px;
   margin-left: 500px;
   width: 150px;
   height: 40px;
@@ -203,7 +203,7 @@
   box-shadow: 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
 }
 
-#Back_button {
+#login_button2 {
   border-radius: 30px;
   margin-top: -50px;
   margin-right: 480px;
@@ -215,7 +215,7 @@
   transition: 0.5s;
 }
 
-#Back_button:hover {
+#login_button2:hover {
   border-radius: 30px;
   margin-top: -50px;
   margin-right: 480px;
