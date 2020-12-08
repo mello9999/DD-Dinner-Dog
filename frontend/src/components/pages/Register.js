@@ -1,4 +1,6 @@
 import React from 'react';
+import DogFoot2 from "../../z_DogFoot2.png"
+import DogFoot3 from "../../z_DogFoot2.png"
 import { Form, Input, Button, Row, Col, Divider, notification, message } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import axios from '../../config/axios';
@@ -154,6 +156,15 @@ function Register(props) {
                                 Back
                             </Button>
                         </div>
+
+                        <div>
+                            <img id="Image5" alt="นิวหน้าหี5" src={DogFoot2} />
+                        </div>
+                        
+                        <div>
+                            <img id="Image6" alt="นิวหน้าหี6" src={DogFoot3} />
+                        </div>
+                        
                     </Form>
                 </div>
             </Col>
