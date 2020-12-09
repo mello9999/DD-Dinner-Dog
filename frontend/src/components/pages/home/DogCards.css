@@ -1,3 +1,4 @@
+
 .card{
     position: relative;
     width: 666px;
@@ -8,7 +9,7 @@
     background-size: cover0;
     background-position: center;
     box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 0.3);
-    rotate:70deg;
+    margin-top:50px;
     
 }
 
