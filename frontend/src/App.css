@@ -66,3 +66,51 @@
     transform: rotate(360deg);
   }
 }
+
+#Box_gender {
+  border-radius: 30px;
+  border: 3.5px solid #727272;
+  outline: none;
+}
+
+#Box_age {
+  border-radius: 30px;
+  border: 3.5px solid #727272;
+  outline: none;
+
+}
+
+#Box_breeds {
+  border-radius: 30px;
+  border: 3.5px solid #727272;
+  outline: none;
+}
+
+#Box_location {
+  border-radius: 30px;
+  border: 3.5px solid #727272;
+  outline: none;
+}
+
+#Box_about {
+  border-radius: 30px;
+  border: 3.5px solid #727272;
+  outline: none;
+}
+
+#Box_save {
+  margin-left: 350px;
+  margin-top: 30px;
+}
+
+#Box_logout {
+  margin-top: 30px;
+  margin-left: 175px;
+}
+
+#Box_name {
+  margin-top: 10px;
+  border-radius: 30px;
+  outline: none;
+  
+}
