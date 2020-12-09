@@ -221,7 +221,7 @@ export default function Profile(props) {
                                                     type="text"
                                                     value={gender || ''}
                                                     onChange={(e) => setGender(e.target.value)}
-                                                    style={{ "width": "100px" }}
+                                                    style={{ "width": "50%" }}
                                                 />
                                             
                                         </Grid>
@@ -235,7 +235,7 @@ export default function Profile(props) {
                                                 type="text"
                                                 value={age || ''}
                                                 onChange={(e) => setAge(e.target.value)}
-                                                style={{ "width": "100px" }}
+                                                style={{ "width": "50%" }}
                                             />
                                         </Grid>
 
@@ -248,7 +248,7 @@ export default function Profile(props) {
                                                 type="text"
                                                 value={breeds || ''}
                                                 onChange={(e) => setBreeds(e.target.value)}
-                                                style={{ "width": "200px" }}
+                                                style={{ "width": "90%" }}
                                             />
                                         </Grid>
                                         <Grid container item xs={12} direction="column" align="left">
@@ -260,7 +260,7 @@ export default function Profile(props) {
                                                 type="text"
                                                 value={location || ''}
                                                 onChange={(e) => setLocation(e.target.value)}
-                                                style={{ "width": "200px" }}
+                                                style={{ "width": "90%" }}
                                             />
                                         </Grid>
 
@@ -275,7 +275,7 @@ export default function Profile(props) {
                                                 type="text"
                                                 value={about || ''}
                                                 onChange={(e) => setAbout(e.target.value)}
-                                                style={{ "width": "400px" }}
+                                                style={{ "width": "150%" }}
                                             />
                                             <Grid container item xs={6} direction="column" align="left" style={{ "marginTop": "22px" }}>
                                                 <Typography inline="True" valient="body1" style={{ "color": "white" }}>
@@ -291,8 +291,8 @@ export default function Profile(props) {
                                                 <label htmlFor="fi2">
                                                     <div
                                                         style={{
-                                                            height: "200px",
-                                                            width: "300px",
+                                                            height: "100%",
+                                                            width: "100%",
                                                             border: "3px solid #727272",
                                                             borderRadius: "10%",
                                                             backgroundColor: "white"
@@ -333,7 +333,8 @@ export default function Profile(props) {
                                                 <div
                                                     style={{
                                                         height: "120px",
-                                                        width: "120px",
+                                                        width: "95%",
+                                                        marginRight: "7px",
                                                         border: "3px solid #727272",
                                                         borderRadius: "10%",
                                                         backgroundColor: "white"
@@ -360,7 +361,8 @@ export default function Profile(props) {
                                                 <div
                                                     style={{
                                                         height: "120px",
-                                                        width: "120px",
+                                                        width: "78.5%",
+                                                        marginLeft:"30px",
                                                         border: "3px solid #727272",
                                                         borderRadius: "10%",
                                                         backgroundColor: "white"
@@ -387,7 +389,8 @@ export default function Profile(props) {
                                                 <div
                                                     style={{
                                                         height: "120px",
-                                                        width: "120px",
+                                                        width: "69%",
+                                                        marginLeft: "55px",
                                                         border: "3px solid #727272",
                                                         borderRadius: "10%",
                                                         backgroundColor: "white"
@@ -415,7 +418,8 @@ export default function Profile(props) {
                                                     
                                                     style={{
                                                         height: "120px",
-                                                        width: "120px",
+                                                        width: "50%",
+                                                        marginLeft: "85px",
                                                         border: "3px solid #727272",
                                                         borderRadius: "10%",
                                                         backgroundColor: "white"
