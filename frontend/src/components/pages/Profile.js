@@ -137,7 +137,7 @@ export default function Profile(props) {
             
 
             axios
-                .get(`/doginfo/getinfo/${user.id}` )
+                .post('/doginfo/getinfo/' )
                 .then((res) => {
                     
                     setId(res.data.id);
