@@ -135,13 +135,25 @@ function Register(props) {
                         <Form.Item
                             id = "PhoneNumber"
                             name="PhoneNumber"
+                            hasFeedback
+                            dependencies={["PhoneNumber"]}
                             /*label={<span>Phone Number&nbsp;</span>}*/
                             rules={[
-                                { 
-                                    required: true, 
-                                    message: 'Please input your Phone Number!', 
-                                    whitespace: true 
-                                }]}
+                               
+                                ({ getFieldValue }) => ({
+                                    validator(rule, value) {
+                                        
+                                    
+                                    let re = new RegExp("^[0-9]{10}$");
+                                    console.log(re.test(getFieldValue('PhoneNumber')))
+                                    if (re.test(getFieldValue('PhoneNumber'))) {
+                                        
+                                        return Promise.resolve();
+                                    }
+                                    return Promise.reject('Invalid Phone Number');
+                                }
+                            })]}
+                               
                         >
                             <Input placeholder="Phone Number" style={{marginLeft: "80px"}}/>
                         </Form.Item>
