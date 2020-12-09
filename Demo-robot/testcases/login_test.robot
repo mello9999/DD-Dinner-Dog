@@ -6,9 +6,9 @@ Library           SeleniumLibrary
 ${LOGIN URL}      http://localhost:3000/login
 ${HOME URL}       http://localhost:3000/profile
 ${BROWSER}        Chrome
-${email}             test1@test.com
-${password}          123456   
-${new_password}      789123
+${email}             nene199@gmail.com
+${password}          2020   
+${new_password}      2021
 
 *** Test Cases ***
 Valid Login
@@ -19,6 +19,7 @@ Valid Login
     profile Page Should Be Open
     Close Browser
     
+
 Invalid Login
     Open Browser To DD Dinner Dog 
     Input Username    ${email} 
