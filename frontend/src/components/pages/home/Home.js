@@ -17,7 +17,7 @@ export default function Home(props) {
         LocalStorageService.removeToken();
         props.setRole("guest");
     }
-
+    
     useEffect(() => {
         const token = LocalStorageService.getToken();
         if (token) {
