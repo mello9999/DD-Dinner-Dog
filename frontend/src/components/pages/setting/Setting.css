@@ -1,0 +1,23 @@
+.containerMain{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: saddlebrown;
+    
+    
+}
+
+.containerLeftSide{
+    
+}
+
+.containerSetting{
+    display: flex;
+    min-width: 80vw;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
