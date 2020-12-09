@@ -99,11 +99,12 @@ export default function Login(props) {
                                 
                         </Form.Item>
                         <div style={{marginTop: "-30px"}}>
+                            <br></br>
                             <Popconfirm
                                 title = "Forget password ... comming soon"
                                 onConfirm={confirm} 
                                 onCancel={cancel}> 
-                                <Button type="link" style={{marginLeft: "370px" , color: '#646464'}}><p id="forgot_password"> Forgot password </p></Button>
+                                <Button id = "forgot_password" type="link" style={{marginLeft: "370px" , color: '#646464'}}><p> Forgot password </p></Button>
                             </Popconfirm>
                         </div>
                             

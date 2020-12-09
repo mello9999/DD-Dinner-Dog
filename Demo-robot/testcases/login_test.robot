@@ -28,6 +28,11 @@ Invalid Login
     Wait Until Page Contains   Login Fail.
     Close Browser
 
+Forget Password
+    Open Browser To DD Dinner Dog 
+    Forget Password
+    Close Browser 
+
 *** Keywords ***
 Open Browser To DD Dinner Dog 
     Open Browser       ${LOGIN URL}      ${BROWSER}

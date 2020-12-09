@@ -71,6 +71,11 @@ Invalid Register case2
     login Page Should Be Open
     Close Browser
 
+Back to register 
+    Open Browser To DD Dinner Dog
+    Back to register
+    Close Browser
+
 *** Keywords ***
 Open Browser To DD Dinner Dog 
     Open Browser       ${REGISTER URL}   ${BROWSER}  
@@ -102,6 +107,9 @@ Submit Credentials
 
 Reset form
     Click Button    id = Button_clear 
+
+Back to register 
+    Click Button    id = login_button2
 
 login Page Should Be Open
     Title Should Be    DD Dinner Dog
