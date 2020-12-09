@@ -41,9 +41,7 @@ export default function DistanceSlider() {
       Maximum Distance
       </Typography>
       <Grid container spacing={2} alignItems="center">
-        <Grid item>
-          <VolumeUp />
-        </Grid>
+        
         <Grid item xs>
           <Slider
             value={typeof value === 'number' ? value : 0}
