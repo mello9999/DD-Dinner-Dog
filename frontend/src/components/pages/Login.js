@@ -130,7 +130,6 @@ export default function Login(props) {
                                     <Button id = "DD_veter" className="Button" type="primary"  /*shape="round"*/ size="large" style={{marginLeft: "430px" , marginTop: "15px" , fontFamily: 'Quicksand' , fontWeight: "500"}}>
                                         DD veterinary
                                     </Button>
-
                             </Popconfirm>
                         </div>
                         <div>
