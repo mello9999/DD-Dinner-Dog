@@ -8,6 +8,14 @@ import DistanceSlider from '../setting/DistanceSlider';
 import AgeRangeSlider from '../setting/AgeRange';
 import ThemeModeButton from '../setting/ThemeModeButton';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import { FaFacebook } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
+import { RiMailSendLine } from 'react-icons/ri';
+import Fab from '@material-ui/core/Fab';
+
+
 
 const useStyles = makeStyles({
     mainCard: {
@@ -36,6 +44,7 @@ const useStyles = makeStyles({
     },
     textField: {
     }
+
 });
 
 export default function Setting() {
@@ -66,7 +75,9 @@ export default function Setting() {
                         />
                     </div>
                     <div className={styles.changePassButt}> 
-                        <Button>Change Password</Button>
+                        <Button variant="contained">
+                            Change Password
+                        </Button>
                     </div>
                     <div className={styles.textFieldContainer}>
                         <label  mb={5}>
@@ -100,13 +111,25 @@ export default function Setting() {
                         <ThemeModeButton />
                     </div>
                     <div>
-                        Connect accounts
+                        <Typography id="textConnectAccount" gutterBottom>
+                            Connect Accounts
+                        </Typography>
+                        <IconButton>
+                            <FaFacebook />
+                        </IconButton>
+                        <IconButton >
+                            <FcGoogle />
+                        </IconButton>
                     </div>
                     <div>
-                        Contact Us
+                        <Button variant="contained">
+                            Contact Us  <RiMailSendLine />
+                        </Button>
                     </div>
                     <div>
-                        Button
+                        <Fab variant="extended">
+                            Save
+                        </Fab>
                     </div>
                 </div>
             </div>
