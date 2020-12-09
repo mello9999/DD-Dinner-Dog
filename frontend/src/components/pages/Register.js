@@ -1,6 +1,7 @@
 import React from 'react';
 import DogFoot2 from "../../z_DogFoot2.png"
 import DogFoot3 from "../../z_DogFoot2.png"
+import Bin from "../../z_bin.png"
 import { Form, Input, Button, Row, Col, Divider, notification, message } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import axios from '../../config/axios';
@@ -156,17 +157,33 @@ function Register(props) {
                                
                         >
                             <Input placeholder="Phone Number" style={{marginLeft: "80px"}}/>
+                            
                         </Form.Item>
-                        <div>
-                            <Button id="submit_button" className="nextButton" type="primary" htmlType="submit">
-                                submit
-                            </Button>
-                        </div>
 
-                        <div style={{marginTop: "-34px"}}>
-                            <Button id="login_button2" href='/login' className="backButton" type="primary">
-                                <p style={{marginTop: "2px"}}>login</p>
-                            </Button>
+                        <div>
+                            <div style={{marginTop: "-15px"}}>
+                                <Button style={{color : '#000000'}} id="Button_clear" type="link"><img id="Image7" alt="นิวหน้าหี7" src={Bin}/>
+                                    clear
+                                </Button>
+                            </div>    
+                            
+                        
+
+                        
+                            <div>
+                                <div>
+                                    <Button id="submit_button" className="nextButton" type="primary" htmlType="submit">
+                                        submit
+                                    </Button>
+                                </div>
+                        
+
+                                <div style={{marginTop: "-31px"}}>
+                                    <Button id="login_button2" href='/login' className="backButton" type="primary">
+                                        <p style={{marginTop: "2px"}}> Back </p>
+                                    </Button>
+                                </div>
+                            </div>
                         </div>
 
                         <div>
