@@ -22,8 +22,8 @@ export default function AgeRangeSlider() {
   };
 
   return (
-    <div className={classes.root}>
-      <Typography id="range-slider" gutterBottom>
+    <div className={classes.root} id="Big4">
+      <Typography id="range-slider" gutterBottom style={{fontFamily: "Quicksand" , fontWeight:"bold"}}>
         Age range
       </Typography>
       <Slider

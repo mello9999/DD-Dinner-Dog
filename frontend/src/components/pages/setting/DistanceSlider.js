@@ -36,21 +36,21 @@ export default function DistanceSlider() {
   };
 
   return (
-    <div className={classes.root}>
-      <Typography id="input-slider" gutterBottom>
+    <div className={classes.root} id="Big3">
+      <Typography id="input-slider" gutterBottom style={{fontFamily: "Quicksand" , fontWeight:"bold"}}>
       Maximum Distance
       </Typography>
       <Grid container spacing={2} alignItems="center">
         
         <Grid item xs>
-          <Slider
+          <Slider 
             value={typeof value === 'number' ? value : 0}
             onChange={handleSliderChange}
             aria-labelledby="input-slider"
           />
         </Grid>
         <Grid item>
-          <Input
+          <Input 
             className={classes.input}
             value={value}
             margin="dense"
