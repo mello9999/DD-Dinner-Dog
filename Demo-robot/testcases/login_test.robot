@@ -43,6 +43,10 @@ Input Password1
     Input Text     id = password         ${new_password}
 Submit Credentials
     Click Button   id = login_button
+Forget Password
+    Click Button   id = forgot_password
+register Password Should Be Open
+    Title Should Be    DD Dinner Dog
 profile Page Should Be Open
     Title Should Be    DD Dinner Dog
 
