@@ -11,7 +11,10 @@ const layout = {
     wrapperCol: { xs: 24, sm: 17, md: 18, lg: 18, xl: 19, xxl: 20 },
 };
 function Register(props) {
-
+    const [form] = Form.useForm();
+    const clear = () => {
+        form.resetFields();
+    }
     const onFinish = values => {
         console.log('Received values of form: ', values);
         const body = {
@@ -63,6 +66,7 @@ function Register(props) {
                     <Divider className="Divider" />
                     <Form
                         {...layout}
+                        form={form}
                         onFinish={onFinish}
                         style={{ width: "100%" }}
                     >
@@ -162,7 +166,7 @@ function Register(props) {
 
                         <div>
                             <div style={{marginTop: "-15px"}}>
-                                <Button style={{color : '#000000'}} id="Button_clear" type="link"><img id="Image7" alt="นิวหน้าหี7" src={Bin}/>
+                                <Button onClick={clear} style={{color : '#000000'}} id="Button_clear" type="link"><img id="Image7" alt="นิวหน้าหี7" src={Bin}/>
                                     clear
                                 </Button>
                             </div>    
