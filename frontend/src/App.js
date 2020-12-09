@@ -6,7 +6,7 @@ import LocalStorageService from './services/localStorageService';
 function App() {
   const [role, setRole] = useState(LocalStorageService.getRole());
   return (
-    <div className="App">
+    <div className="App" >
       <PrivateRoutes role={role} setRole={setRole} />
     </div>
   );

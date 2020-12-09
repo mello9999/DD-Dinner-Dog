@@ -5,7 +5,7 @@ import Bin from "../../z_bin.png"
 import { Form, Input, Button, Row, Col, Divider, notification, message } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import axios from '../../config/axios';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 const layout = {
     labelCol: { xs: 24, sm: 7, md: 6, lg: 6, xl: 5, xxl: 4 },
     wrapperCol: { xs: 24, sm: 17, md: 18, lg: 18, xl: 19, xxl: 20 },
@@ -37,7 +37,8 @@ function Register(props) {
     };
 
     return (
-        <Row justify="center" >
+        <Row justify="center" style={{width:"100%",
+            height:"100%"}} >
             <Col xs={23} sm={23} md={23} lg={14} xl={14} xxl={12}>
                 <div
                     className="Form"
