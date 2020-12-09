@@ -5,36 +5,51 @@ Library           SeleniumLibrary
 *** Variables ***
 ${REGISTER URL}   http://localhost:3000/register
 ${LOGIN URL}      http://localhost:3000/login
-${HOME URL}       http://localhost:3000/profile
 ${BROWSER}        Chrome
 ${old_email}            nene199@gmail.com 
 ${old_password}         2020    
 ${old_nickname}         nene 
+${old_PhoneNumber}      0899999998
 
 ${email}                bank1333@gmail.com
 ${password}             1333
 ${nickname}             bankNatchapol
+${PhoneNumber}          0899999999
 
 *** Test Cases ***
+Invalid Register case1   
+    Open Browser To DD Dinner Dog
+    Input Email               ${email} 
+    Input Password            ${old_password}
+    Input Confirm Password    ${password}
+    Input Nickname            ${nickname}
+    Input PhoneNumber         ${PhoneNumber}
+    Submit Credentials        
+    login Page Should Be Open
+    Close Browser
+
 Valid Register
     Open Browser To DD Dinner Dog
     Input Email               ${email} 
     Input Password            ${password}
     Input Confirm Password    ${password}
     Input Nickname            ${nickname}
+    Input PhoneNumber         ${PhoneNumber}
     Submit Credentials        
     login Page Should Be Open
     Close Browser
 
-Invalid Register
+Invalid Register case2
     Open Browser To DD Dinner Dog
-    Input Email               ${old_email}  
+    Input Email               ${old_email} 
     Input Password            ${old_password}
     Input Confirm Password    ${old_password}
-    Input Nickname1           ${old_nickname}
-    Submit Credentials
-    Wait Until Page Contains   Registration Fail.
+    Input Nickname            ${old_nickname}
+    Input PhoneNumber         ${old_PhoneNumber}
+    Submit Credentials        
+    login Page Should Be Open
     Close Browser
+
 
 *** Keywords ***
 Open Browser To DD Dinner Dog 
@@ -54,15 +69,15 @@ Input Confirm Password
     Input Text     id = confirm          ${password}    ${old_password}
 
 Input Nickname
-    [Arguments]    ${password}
-    Input Text     id = nickname         ${nickname}    
+    [Arguments]    ${nickname}  
+    Input Text     id = nickname         ${nickname}    ${old_nickname}
 
-Input Nickname1
+Input PhoneNumber
     [Arguments]    ${password}
-    Input Text     id = nickname         ${old_nickname}
+    Input Text     id = PhoneNumber      ${PhoneNumber}    ${old_PhoneNumber}
 
 Submit Credentials
-    Click Button    id = register_button
+    Click Button    id = submit_button
 
 login Page Should Be Open
     Title Should Be    DD Dinner Dog

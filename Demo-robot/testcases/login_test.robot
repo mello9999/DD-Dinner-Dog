@@ -6,9 +6,9 @@ Library           SeleniumLibrary
 ${LOGIN URL}      http://localhost:3000/login
 ${HOME URL}       http://localhost:3000/profile
 ${BROWSER}        Chrome
-${email}             nene199@gmail.com 
-${password}          2020     
-${new_password}      9999
+${email}             test1@test.com
+${password}          123456   
+${new_password}      789123
 
 *** Test Cases ***
 Valid Login
@@ -44,5 +44,4 @@ Submit Credentials
     Click Button   id = login_button
 profile Page Should Be Open
     Title Should Be    DD Dinner Dog
-
 

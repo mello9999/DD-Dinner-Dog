@@ -19,12 +19,12 @@ const content = (
 
 function confirm(e) {
     console.log(e);
-    message.success('so good');
+    // message.success('so good');
 }
 
 function cancel(e) {
     console.log(e);
-    message.error('wait a 1000000000sec');
+    // message.error('wait a 1000000000sec');
 }
 
 export default function Login(props) {
@@ -101,8 +101,8 @@ export default function Login(props) {
                         <div style={{marginTop: "-30px"}}>
                             <Popconfirm
                                 title = "Forget password ... comming soon"
-                                onConfirm={confirm}
-                                onCancel={cancel}>
+                                onConfirm={confirm} 
+                                onCancel={cancel}> 
                                 <Button type="link" style={{marginLeft: "370px" , color: '#646464'}}><p id="forgot_password"> Forgot password </p></Button>
                             </Popconfirm>
                         </div>

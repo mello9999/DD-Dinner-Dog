@@ -75,6 +75,7 @@ const LeftBar = () => {
                 <div class="LeftBar_vet">
                     <button onclick="ClickButtonVet()">ปรึกษาสัตวเเพทย์</button>
                 </div>
+                
             </div>
   );
 }
