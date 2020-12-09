@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import './style.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../../../actions';
-
+import LocalStorageService from '../../../services/localStorageService';
+import jwtDecode from 'jwt-decode';
 /**
 * @author
 * @function Header
@@ -12,8 +13,17 @@ import { logout } from '../../../actions';
 const Header = (props) => {
 
   const auth = useSelector(state => state.auth);
+  const [name, setName] = useState("")
   const dispatch = useDispatch();
-
+  useEffect(() => {
+    const token = LocalStorageService.getToken();
+    if (token) {
+        const localUser = jwtDecode(token);
+        setName(localUser.name);
+        console.log(localUser.name, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+    }
+  }
+  )
   // const logout = () => {
   //   dispatch(logout())
   // }
@@ -35,7 +45,9 @@ const Header = (props) => {
             
         </div>
           <div style={{margin: '20px 0', color: '#fff', fontWeight: 'bold'}}>
-            {auth.authenticated ? `Hi ${auth.name}` : ''}
+            {
+              console.log(name, 'nameeeeeeeeeeeeeeeeeeeeee'),
+            auth.authenticated ? `Hi ${name}` : ''}
           </div>
         <ul className="menu">
 

@@ -3,7 +3,10 @@ import './style.css';
 import Layout from './Layout';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRealtimeUsers, updateMessage, getRealtimeConversations } from '../../actions';
+import LocalStorageService from '../../services/localStorageService';
+import axios from '../../config/axios';
 
+import jwtDecode from 'jwt-decode';
 
 const User = (props) => {
 
@@ -16,7 +19,7 @@ const User = (props) => {
                       <img src="https://i.pinimg.com/originals/be/ac/96/beac96b8e13d2198fd4bb1d5ef56cdcf.jpg" alt="" />
                   </div>
                   <div style={{ display: 'flex', flex: 1, justifyContent: 'space-between', margin: '0 10px'}}>
-                      <span style={{fontWeight: 500}}>{user.firstName} {user.lastName} </span>
+                      <span style={{fontWeight: 500}}>{user.likeName}</span>
                       
                   </div>
               </div>
@@ -29,13 +32,27 @@ const ChatRoom = (props) => {
   const dispatch = useDispatch();
   const auth = useSelector(state => state.auth);
   const user = useSelector(state => state.user);
+  const [uss, setUss] = useState(user.users)
   const [chatStarted, setChatStarted] = useState(false);
   const [chatUser, setChatUser] = useState('');
   const [message, setMessage] = useState('');
   const [userUid, setUserUid] = useState(null)
   let unsubscribe;
   useEffect(() => {
+    const token = LocalStorageService.getToken();
+    if (token) {
+        const localUser = jwtDecode(token);
+        
 
+        axios
+            .post("/users/like", { uid: localUser.id })
+            .then((res) => {
+              console.log(res.data,'asdsdsdsdsd')
+              setUss(res.data.users);
+              alert("LIKE SUCCESS")
+            }).catch((err) => alert("LIKE ERROR"));
+
+    }
     unsubscribe = dispatch(getRealtimeUsers(auth.uid))
     .then(unsubscribe => {
       return unsubscribe;
@@ -62,7 +79,7 @@ const ChatRoom = (props) => {
   const initChat = (user) => {
 
     setChatStarted(true)
-    setChatUser(`${user.firstName} ${user.lastName}`)
+    setChatUser(`${uss.ownerName}`)
     setUserUid(user.uid);
 
     dispatch(getRealtimeConversations({ uid_1: auth.uid, uid_2: user.uid }));
@@ -88,7 +105,7 @@ const ChatRoom = (props) => {
     //console.log(msgObj);
 
   }
-
+  
 
   return (
     <Layout>
@@ -99,9 +116,9 @@ const ChatRoom = (props) => {
 
           {
             
-            user.users.length > 0 ?
-            user.users.map(user => {
-              
+            uss.length > 0 ?
+            uss.map(user => {
+              console.log(user, 'userss')
               return (
                 <User 
                   onClick={initChat}
