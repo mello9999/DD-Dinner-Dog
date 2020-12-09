@@ -176,7 +176,7 @@ export default function Profile(props) {
                                     style={{
                                         height: "150px",
                                         width: "150px",
-                                        border: "1px dashed black",
+                                        border: "3px solid black",
                                         borderRadius: "50%"
                                     }}
                                     htmlFor="fi1"
@@ -193,33 +193,37 @@ export default function Profile(props) {
                                     />
                                 </div>
                             </label>
-                            <input
+                            <input 
+                                id="Box_name"
                                 type="text"
 
                                 onChange={(e) => setName(e.target.value)}
-                                style={{ "width": "100px", "border": "1px solid white", "backgroundColor": "grey" }}
+                                style={{ "width": "100px", "border": "3px solid #727272", "backgroundColor": "#ffffff" }}
                             />
                         </Grid>
 
-                        <Grid container item xs={8} style={{ "borderRadius": "2%", "backgroundColor": "orange", "border": "30px dashed orange" }}>
+                        <Grid container item xs={8} style={{ "borderRadius": "2%", "backgroundColor": "#E1B76D", "border": "30px solid #E1B76D" }}>
                             <div>
                                 <Grid container item xs={12} style={{ "borderRadius": "2%", "border": "3px solid  white", "padding": "30px" }}>
                                     <Grid item xs={12} align="center" >
-                                        <h2 style={{ "marginTop": "-50px", "backgroundColor": "orange", "width": "200px", "color": "white" }}>
+                                        <h2 style={{ "marginTop": "-50px", "backgroundColor": "#E1B76D", "width": "200px", "color": "white" }}>
                                             Account Setting
                                         </h2>
                                     </Grid>
                                     <Grid container item xs={5}>
                                         <Grid container item xs={12} direction="column" align="left">
                                             <Typography inline="true" valient="body1" style={{ "color": "white" }}>
-                                                gender
+                                                Gender
                                             </Typography>
-                                            <input
-                                                type="text"
-                                                value={gender || ''}
-                                                onChange={(e) => setGender(e.target.value)}
-                                                style={{ "width": "100px" }}
-                                            />
+                                            
+                                                <input 
+                                                    id="Box_gender"
+                                                    type="text"
+                                                    value={gender || ''}
+                                                    onChange={(e) => setGender(e.target.value)}
+                                                    style={{ "width": "100px" }}
+                                                />
+                                            
                                         </Grid>
 
                                         <Grid container item xs={12} direction="column" align="left">
@@ -227,6 +231,7 @@ export default function Profile(props) {
                                                 Age
                                             </Typography>
                                             <input
+                                                id="Box_age"
                                                 type="text"
                                                 value={age || ''}
                                                 onChange={(e) => setAge(e.target.value)}
@@ -239,6 +244,7 @@ export default function Profile(props) {
                                                 Breeds
                                             </Typography>
                                             <input
+                                                id="Box_breeds"
                                                 type="text"
                                                 value={breeds || ''}
                                                 onChange={(e) => setBreeds(e.target.value)}
@@ -250,6 +256,7 @@ export default function Profile(props) {
                                                 Location
                                             </Typography>
                                             <input
+                                                id="Box_location"
                                                 type="text"
                                                 value={location || ''}
                                                 onChange={(e) => setLocation(e.target.value)}
@@ -264,6 +271,7 @@ export default function Profile(props) {
                                                 About
                                             </Typography>
                                             <input
+                                                id="Box_about"
                                                 type="text"
                                                 value={about || ''}
                                                 onChange={(e) => setAbout(e.target.value)}
@@ -285,7 +293,7 @@ export default function Profile(props) {
                                                         style={{
                                                             height: "200px",
                                                             width: "300px",
-                                                            border: "1px dashed black",
+                                                            border: "3px solid #727272",
                                                             borderRadius: "10%",
                                                             backgroundColor: "white"
                                                         }}
@@ -326,7 +334,7 @@ export default function Profile(props) {
                                                     style={{
                                                         height: "120px",
                                                         width: "120px",
-                                                        border: "1px dashed black",
+                                                        border: "3px solid #727272",
                                                         borderRadius: "10%",
                                                         backgroundColor: "white"
                                                     }}
@@ -353,7 +361,7 @@ export default function Profile(props) {
                                                     style={{
                                                         height: "120px",
                                                         width: "120px",
-                                                        border: "1px dashed black",
+                                                        border: "3px solid #727272",
                                                         borderRadius: "10%",
                                                         backgroundColor: "white"
                                                     }}
@@ -380,7 +388,7 @@ export default function Profile(props) {
                                                     style={{
                                                         height: "120px",
                                                         width: "120px",
-                                                        border: "1px dashed black",
+                                                        border: "3px solid #727272",
                                                         borderRadius: "10%",
                                                         backgroundColor: "white"
                                                     }}
@@ -404,10 +412,11 @@ export default function Profile(props) {
                                             
                                             <label htmlFor="fi6">
                                                 <div
+                                                    
                                                     style={{
                                                         height: "120px",
                                                         width: "120px",
-                                                        border: "1px dashed black",
+                                                        border: "3px solid #727272",
                                                         borderRadius: "10%",
                                                         backgroundColor: "white"
                                                     }}
@@ -428,18 +437,22 @@ export default function Profile(props) {
 
                                         </Grid>
                                     </Grid>
-                                    <Grid item xs={6} align="right" >
-                                        <Button variant="contained"
-                                            component="label"
-                                            onClick={submitForm}>Save</Button>
+                                    <div id="Box_save">
+                                        <Grid item xs={6} align="right" >
+                                            <Button variant="contained"
+                                                component="label"
+                                                onClick={submitForm} style={{backgroundColor: "#ee7458" , color: "#ffffff" , border: "2px solid #F4E6CF"}}>Save</Button>
 
-                                    </Grid>
-                                    <Grid item xs={6} align="right" >
-                                        <Button variant="contained"
-                                            component="label"
-                                            onClick={logout}>Logout</Button>
-                                    </Grid>
+                                        </Grid>
+                                    </div>
 
+                                    <div id="Box_logout">
+                                        <Grid item xs={6} align="right" >
+                                            <Button variant="contained"
+                                                component="label"
+                                                onClick={logout} style={{backgroundColor: "#ee7458" , color: "#ffffff" ,  border: "2px solid #F4E6CF"}}>Logout</Button>
+                                        </Grid>
+                                    </div>
                                 </Grid>
                             </div>
                         </Grid>
