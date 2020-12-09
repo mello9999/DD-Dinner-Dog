@@ -4,7 +4,7 @@ import DogFoot3 from "../../z_DogFoot2.png"
 import { Form, Input, Button, Row, Col, Divider, notification, message } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import axios from '../../config/axios';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 const layout = {
     labelCol: { xs: 24, sm: 7, md: 6, lg: 6, xl: 5, xxl: 4 },
     wrapperCol: { xs: 24, sm: 17, md: 18, lg: 18, xl: 19, xxl: 20 },
@@ -158,6 +158,9 @@ function Register(props) {
                             <Input placeholder="Phone Number" style={{marginLeft: "80px"}}/>
                         </Form.Item>
                         <div>
+                            <Link id="clear_button">claer</Link>
+                        </div>
+                        <div>
                             <Button id="submit_button" className="nextButton" type="primary" htmlType="submit">
                                 submit
                             </Button>
@@ -165,7 +168,7 @@ function Register(props) {
 
                         <div style={{marginTop: "-34px"}}>
                             <Button id="login_button2" href='/login' className="backButton" type="primary">
-                                <p style={{marginTop: "2px"}}>login</p>
+                                <p style={{marginTop: "2px"}}>Back</p>
                             </Button>
                         </div>
 
