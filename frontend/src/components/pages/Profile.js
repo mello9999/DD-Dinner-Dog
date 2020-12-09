@@ -9,27 +9,33 @@ import { Button, Grid, Typography } from '@material-ui/core';
 export default function Profile(props) {
     const [name, setName] = useState("");
     const [id, setId] = useState(0);
-    const [gender, setGender] = useState(null);
+    const [gender, setGender] = useState("");
     const [age, setAge] = useState(null);
-    const [breeds, setBreeds] = useState(null);
-    const [location, setLocation] = useState(null);
-    const [about, setAbout] = useState(null);
+    const [breeds, setBreeds] = useState("");
+    const [location, setLocation] = useState("");
+    const [about, setAbout] = useState("");
     const [profileFileData, setProfileData] = useState(null);
     const [certificateFileData, setCertificateData] = useState(null);
     const [picture1Data, setPicture1Data] = useState(null);
     const [picture2Data, setPicture2Data] = useState(null);
     const [picture3Data, setPicture3Data] = useState(null);
     const [picture4Data, setPicture4Data] = useState(null);
+
     const onChangeProfilePicture = e => {
+        
         if (e.target.files[0]) {
             //console.log("picture: ", e.target.files);
             const reader = new FileReader();
+
             reader.addEventListener("load", () => {
                 setProfileData(reader.result);
-            });
+
+            })
             reader.readAsDataURL(e.target.files[0]);
-        }
+        };
+
     };
+
     const onChangeCertificate = e => {
         if (e.target.files[0]) {
             //console.log("picture: ", e.target.files);
@@ -43,7 +49,7 @@ export default function Profile(props) {
     const onChangePicture1 = e => {
         if (e.target.files[0]) {
             //console.log("picture: ", e.target.files);
-            
+
             const reader = new FileReader();
             reader.addEventListener("load", () => {
                 setPicture1Data(reader.result);
@@ -85,26 +91,38 @@ export default function Profile(props) {
         LocalStorageService.removeToken();
         props.setRole("guest");
     }
-    
+
 
     const submitForm = () => {
-        const formData = new FormData();
-        formData.append("id", id);
-        formData.append("name", name);
-        formData.append("gender", gender);
-        formData.append("age", age);
-        formData.append("breeds", breeds);
-        formData.append("location", location);
-        formData.append("about", about);
-        formData.append("profileFileData", profileFileData);
-        formData.append("certificateFileData", certificateFileData);
-        formData.append("picture1Data", picture1Data);
-        formData.append("picture2Data", picture2Data);
-        formData.append("picture3Data", picture3Data);
-        formData.append("picture4Data", picture4Data);
-      
+        // const formData = new FormData();
+        // formData.append("id", id);
+        // formData.append("name", name);
+        // formData.append("gender", gender);
+        // formData.append("age", age);
+        // formData.append("breeds", breeds);
+        // formData.append("location", location);
+        // formData.append("about", about);
+        // formData.append("profileFileData", profileFileData);
+        // formData.append("certificateFileData", certificateFileData);
+        // formData.append("picture1Data", picture1Data);
+        // formData.append("picture2Data", picture2Data);
+        // formData.append("picture3Data", picture3Data);
+        // formData.append("picture4Data", picture4Data);
+        let data = {
+            "id": id,
+            "name": name,
+            "gender": gender,
+            "age": age,
+            "breeds": breeds,
+            "location": location,
+            "about": about,
+            "profileFileData": profileFileData,
+            "certificateFileData": certificateFileData,
+            "picture1Data": picture1Data
+
+        }
         axios
-            .post("/doginfo/upload", formData)
+            .post("/doginfo/upload", data)
             .then((res) => {
                 alert("File Upload success");
             })
@@ -116,20 +134,27 @@ export default function Profile(props) {
         const token = LocalStorageService.getToken();
         if (token) {
             const user = jwtDecode(token);
-            console.log(user, 'awsx')
-            setId(user.id);
-            setName(user.name);
-            setGender(user.gender);
-            setAge(user.age);
-            setBreeds(user.breeds);
-            setLocation(user.location);
-            setAbout(user.about);
-            setProfileData(user.profileFileData);
-            setCertificateData(user.certificateFileData);
-            setPicture1Data(user.picture1Data);
-            setPicture2Data(user.picture2Data);
-            setPicture3Data(user.picture3Data);
-            setPicture4Data(user.picture4Data);
+            
+
+            axios
+                .post("/doginfo/getinfo", { id: user.id })
+                .then((res) => {
+                    
+                    setId(res.data.id);
+                    setName(res.data.name);
+                    setGender(res.data.gender);
+                    setAge(res.data.age);
+                    setBreeds(res.data.breeds);
+                    setLocation(res.data.location);
+                    setAbout(res.data.about);
+                    setProfileData(res.data.profilePicture);
+                    setCertificateData(res.data.certificate);
+                    setPicture1Data(res.data.picture1);
+                    setPicture2Data(res.data.picture2);
+                    setPicture3Data(res.data.picture3);
+                    setPicture4Data(res.data.picture4);
+                }).catch((err) => alert("refresh error"));
+
         }
     }, [])
     return (
@@ -170,7 +195,7 @@ export default function Profile(props) {
                             </label>
                             <input
                                 type="text"
-                            
+
                                 onChange={(e) => setName(e.target.value)}
                                 style={{ "width": "100px", "border": "1px solid white", "backgroundColor": "grey" }}
                             />
@@ -191,7 +216,7 @@ export default function Profile(props) {
                                             </Typography>
                                             <input
                                                 type="text"
-                                                
+                                                value={gender || ''}
                                                 onChange={(e) => setGender(e.target.value)}
                                                 style={{ "width": "100px" }}
                                             />
@@ -203,7 +228,7 @@ export default function Profile(props) {
                                             </Typography>
                                             <input
                                                 type="text"
-                                                
+                                                value={age || ''}
                                                 onChange={(e) => setAge(e.target.value)}
                                                 style={{ "width": "100px" }}
                                             />
@@ -215,7 +240,7 @@ export default function Profile(props) {
                                             </Typography>
                                             <input
                                                 type="text"
-                                                
+                                                value={breeds || ''}
                                                 onChange={(e) => setBreeds(e.target.value)}
                                                 style={{ "width": "200px" }}
                                             />
@@ -226,7 +251,7 @@ export default function Profile(props) {
                                             </Typography>
                                             <input
                                                 type="text"
-                                                
+                                                value={location || ''}
                                                 onChange={(e) => setLocation(e.target.value)}
                                                 style={{ "width": "200px" }}
                                             />
@@ -240,7 +265,7 @@ export default function Profile(props) {
                                             </Typography>
                                             <input
                                                 type="text"
-                                                
+                                                value={about || ''}
                                                 onChange={(e) => setAbout(e.target.value)}
                                                 style={{ "width": "400px" }}
                                             />
@@ -322,13 +347,7 @@ export default function Profile(props) {
 
                                         </Grid>
                                         <Grid container item xs={2} direction="column" align="left" style={{ "marginLeft": "5px" }}>
-                                            <input
-                                                id="fi4"
-                                                type="file"
-                                                accept="image/*"
-                                                onChange={onChangePicture2}
-                                                hidden
-                                            />
+                                            
                                             <label htmlFor="fi4">
                                                 <div
                                                     style={{
@@ -355,13 +374,7 @@ export default function Profile(props) {
 
                                         </Grid>
                                         <Grid container item xs={2} direction="column" align="left" style={{ "marginLeft": "5px" }}>
-                                            <input
-                                                id="fi5"
-                                                type="file"
-                                                accept="image/*"
-                                                onChange={onChangePicture3}
-                                                hidden
-                                            />
+                                            
                                             <label htmlFor="fi5">
                                                 <div
                                                     style={{
@@ -388,13 +401,7 @@ export default function Profile(props) {
 
                                         </Grid>
                                         <Grid container item xs={3} direction="column" align="left" style={{ "marginLeft": "5px" }}>
-                                            <input
-                                                id="fi6"
-                                                type="file"
-                                                accept="image/*"
-                                                onChange={onChangePicture4}
-                                                hidden
-                                            />
+                                            
                                             <label htmlFor="fi6">
                                                 <div
                                                     style={{
@@ -428,7 +435,7 @@ export default function Profile(props) {
 
                                     </Grid>
                                     <Grid item xs={6} align="right" >
-                                    <Button variant="contained"
+                                        <Button variant="contained"
                                             component="label"
                                             onClick={logout}>Logout</Button>
                                     </Grid>

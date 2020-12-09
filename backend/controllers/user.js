@@ -18,8 +18,10 @@ const registerUser = async (req, res) => {
         });
         targetUser1 = await db.User.findOne({ where: { username: username } });
         await db.DogInfo.create({
-            id: targetUser1.id
+            id: targetUser1.id,
+            name: "", gender: "",  breeds: "", location: "", about: ""
         });
+        
         //const targetUser = await db.User.findOne({ where: { username: username } });
         // await db.DOG_INFO.create({
         //     username:username

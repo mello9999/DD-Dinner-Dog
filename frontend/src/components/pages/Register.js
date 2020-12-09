@@ -3,12 +3,15 @@ import { Form, Input, Button, Row, Col, Divider, notification } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import axios from '../../config/axios';
 import { withRouter } from 'react-router-dom';
+import { signup } from '../../actions';
+import { useDispatch, useSelector } from 'react-redux';
 const layout = {
     labelCol: { xs: 24, sm: 7, md: 6, lg: 6, xl: 5, xxl: 4 },
     wrapperCol: { xs: 24, sm: 17, md: 18, lg: 18, xl: 19, xxl: 20 },
 };
 function Register(props) {
-
+    
+    const dispatch = useDispatch();
     const onFinish = values => {
         console.log('Received values of form: ', values);
         const body = {
@@ -16,6 +19,13 @@ function Register(props) {
             password: values.password,
             name: values.nickname
         }
+        
+    
+        const user = {
+        name: values.nickname, email:values.email, password: values.password
+        }
+        
+        dispatch(signup(user))
         axios.post('/users/register', body)
             .then(res => {
                 notification.success({
@@ -73,7 +83,8 @@ function Register(props) {
                                 {
                                     required: true,
                                     message: 'Please input your password!',
-                                },
+                                }
+                                
                             ]}
                             hasFeedback
                         >
