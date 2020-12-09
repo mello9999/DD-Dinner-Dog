@@ -8,19 +8,20 @@ import IconButton from '@material-ui/core/IconButton';
 
 import "../home/SwipeButtons.css";
 
-const SwipeButtons = () => {
+
+const SwipeButtons = (props) => {
     return (
         <div className="swipeButtons">
             <IconButton className="swipeButtons_repeat" style={{width:"50px",height:"50px"}}>
             <ReplayIcon fontSize="large" />
             </IconButton>
-            <IconButton className="swipeButtons_left" style={{width:"50px",height:"50px"}}>
+            <IconButton className="swipeButtons_left" onClick={props.swipe('left')} style={{width:"50px",height:"50px"}}>
             <CloseIcon fontSize="large" />
             </IconButton>
             <IconButton className="swipeButtons_star" style={{width:"50px",height:"50px"}}>
             <StarRateIcon fontSize="large" />
             </IconButton>
-            <IconButton className="swipeButtons_right" style={{width:"50px",height:"50px"}}>
+            <IconButton className="swipeButtons_right" onClick={props.swipe('right')} style={{width:"50px",height:"50px"}}>
             <FavoriteIcon fontSize="large" />
             </IconButton>
             <IconButton className="swipeButtons_lightning" style={{width:"50px",height:"50px"}}>

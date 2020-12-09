@@ -5,7 +5,7 @@ import LocalStorageService from '../../../services/localStorageService';
 import './Home.css'
 import jwtDecode from 'jwt-decode';
 import Swap from './Swap-page';
-
+import data from './data.json';
 
 
 
@@ -13,11 +13,12 @@ import Swap from './Swap-page';
 export default function Home(props) {
     const [name, setName] = useState("");
     const [id, setId] = useState(0);
+    
     const logout = () => {
         LocalStorageService.removeToken();
         props.setRole("guest");
     }
-    
+
     useEffect(() => {
         const token = LocalStorageService.getToken();
         if (token) {
@@ -28,9 +29,9 @@ export default function Home(props) {
     }, [])
     return (
         <div>
-            
-                <Swap />
-            
+
+            <Swap data={data}/>
+
         </div>
     );
 }
