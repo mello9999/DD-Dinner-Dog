@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  
+  width:100%;
+  height:100%;
 }
 
 .Form {   /*กรอบ dd dinner dog*/
@@ -180,7 +181,7 @@
 
 #submit_button {
   border-radius: 30px;
-  margin-top: 7px;
+  margin-top: 25px;
   margin-left: 500px;
   width: 150px;
   height: 40px;
@@ -193,7 +194,7 @@
 
 #submit_button:hover{
   border-radius: 30px;
-  margin-top: 7px;
+  margin-top: 25px;
   margin-left: 500px;
   width: 150px;
   height: 40px;
@@ -240,6 +241,15 @@
   
 }
 
-#clear_button {
+#Button_clear {
   margin-left: 500px;
+  margin-top: -20px;
+  
+  
+}
+
+#Image7 {
+  height: 20px;
+  
+  
 }
