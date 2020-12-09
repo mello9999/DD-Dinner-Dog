@@ -7,6 +7,7 @@ import FormLabel from '@material-ui/core/FormLabel';
 import DistanceSlider from '../setting/DistanceSlider';
 import AgeRangeSlider from '../setting/AgeRange';
 import ThemeModeButton from '../setting/ThemeModeButton';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles({
     mainCard: {
@@ -63,6 +64,9 @@ export default function Setting() {
                             id="password"
                             variant="outlined"
                         />
+                    </div>
+                    <div className={styles.changePassButt}> 
+                        <Button>Change Password</Button>
                     </div>
                     <div className={styles.textFieldContainer}>
                         <label  mb={5}>
