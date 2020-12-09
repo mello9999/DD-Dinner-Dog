@@ -2,7 +2,7 @@ import axios from 'axios';
 import localStorageService from '../services/localStorageService';
 import { notification } from 'antd';
 
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "http://localhost:8000";
 
 axios.interceptors.request.use(
     config => {

@@ -33,7 +33,7 @@ const registerUser = async (req, res) => {
 const loginUser = async (req, res) => {
 
     const { username, password } = req.body;
-
+    
     const targetUser = await db.User.findOne({ where: { username: username } })
     if (!targetUser) {
         res.status(400).send({ message: "Username or password is wrong." });

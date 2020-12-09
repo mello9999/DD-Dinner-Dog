@@ -135,11 +135,11 @@ export default function Profile(props) {
         if (token) {
             const user = jwtDecode(token);
             
-
+            
             axios
-                .post('/doginfo/getinfo/' )
+                .post('/doginfo/getinfo' ,user)
                 .then((res) => {
-                    
+                    console.lof(res)
                     setId(res.data.id);
                     setName(res.data.name);
                     setGender(res.data.gender);
@@ -153,7 +153,7 @@ export default function Profile(props) {
                     setPicture2Data(res.data.picture2);
                     setPicture3Data(res.data.picture3);
                     setPicture4Data(res.data.picture4);
-                }).catch((err) => alert("refresh error"));
+                }).catch((err) => console.log("refresh error"));
 
         }
     }, [])

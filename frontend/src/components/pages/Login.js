@@ -19,8 +19,8 @@ export default function Login(props) {
             password: values.password
         };
         dispatch(signin(body))
-        axios.post("/users/login", body)
-            .then(result => {
+        console.log(body)
+        axios.post("/users/login", body).then(result => {
                 LocalStorageService.setToken(result.data.token);
                 props.setRole("user");
                 window.location.replace('/profile');

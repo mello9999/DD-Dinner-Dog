@@ -19,7 +19,7 @@ const upload = async (req, res) => {
     }
 }
 const getinfo = async (req, res) => {
-
+    console.log(req,'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
     const dogInfo = await db.DogInfo.findOne({where: {id: req.body.id}});
     
     res.status(200).send(dogInfo);

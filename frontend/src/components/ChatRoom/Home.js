@@ -42,8 +42,8 @@ const ChatRoom = (props) => {
     const token = LocalStorageService.getToken();
     if (token) {
         const localUser = jwtDecode(token);
-        
-
+        console.log('idddddddddddddddddddddddddddddddddd')
+        console.log(localUser, 'idddddddddddddddddddddddddddddddddd')
         axios
             .post("/users/like", { uid: localUser.id })
             .then((res) => {
