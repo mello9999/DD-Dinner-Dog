@@ -4,6 +4,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import TextField from '@material-ui/core/TextField';
 import FormLabel from '@material-ui/core/FormLabel';
+import DistanceSlider from '../setting/DistanceSlider';
+import AgeRangeSlider from '../setting/AgeRange';
+import ThemeModeButton from '../setting/ThemeModeButton';
 
 const useStyles = makeStyles({
     mainCard: {
@@ -84,13 +87,13 @@ export default function Setting() {
                 </Card>
                 <div className={styles.devCard}>
                     <div>
-                        Maximum Distance
+                        <DistanceSlider />
                     </div>
                     <div>
-                        Age Range
+                        <AgeRangeSlider />
                     </div>
                     <div>
-                        Theme mode
+                        <ThemeModeButton />
                     </div>
                     <div>
                         Connect accounts
