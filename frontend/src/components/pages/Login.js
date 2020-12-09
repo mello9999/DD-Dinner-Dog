@@ -98,10 +98,15 @@ export default function Login(props) {
                                 <Input.Password size="large" placeholder="Password" style={{borderRadius: "20px" , borderColor:"#727272" , borderWidth:"2.5px"}}/>
                                 
                         </Form.Item>
-                            <div style={{marginTop: "-30px"}}>
+                        <div style={{marginTop: "-30px"}}>
+                            <Popconfirm
+                                title = "Forget password ... comming soon"
+                                onConfirm={confirm}
+                                onCancel={cancel}>
                                 <Button type="link" style={{marginLeft: "370px" , color: '#646464'}}><p id="forgot_password"> Forgot password </p></Button>
-                            </div>
-
+                            </Popconfirm>
+                        </div>
+                            
                         <div>
                             <Button id = "login_button" className="Button" type="primary" htmlType="submit" /*shape="round"*/ size="large" style={{marginLeft: "-30px" , marginTop: "15px" , fontFamily: 'Quicksand' , fontWeight: "500"}}>
                                 Submit
@@ -122,8 +127,6 @@ export default function Login(props) {
                                 title = "DD veterinary ... comming soon"
                                 onConfirm={confirm}
                                 onCancel={cancel}>
-                                
-
                                     <Button id = "DD_veter" className="Button" type="primary"  /*shape="round"*/ size="large" style={{marginLeft: "430px" , marginTop: "15px" , fontFamily: 'Quicksand' , fontWeight: "500"}}>
                                         DD veterinary
                                     </Button>
