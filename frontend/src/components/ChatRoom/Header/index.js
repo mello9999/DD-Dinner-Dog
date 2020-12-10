@@ -15,6 +15,7 @@ const Header = (props) => {
   const auth = useSelector(state => state.auth);
   const [name, setName] = useState("")
   const dispatch = useDispatch();
+  
   useEffect(() => {
         setName(auth.name);
        

@@ -24,7 +24,7 @@ const User = (props) => {
 
 
   return (
-    <div onClick={() => onClick(user)} className="displayName">
+    <div onClick={() => onClick(user)} className="displayName" tabIndex="0">
       <div className="displayPic">
         <img src={`${prc}`} alt="" />
       </div>
@@ -48,9 +48,11 @@ const ChatRoom = (props) => {
   const [message, setMessage] = useState('');
   const [userUid, setUserUid] = useState(null)
   const [searchTerm, setSearchTerm] = React.useState("");
+  const [prc1, setPrc1] = useState('');
   const handleChange = event => {
     setSearchTerm(event.target.value);
   };
+  const today = new Date().toISOString().slice(0, 10);
   const results = !searchTerm
     ? user.users
     : user.users.filter(person =>
@@ -124,7 +126,7 @@ const ChatRoom = (props) => {
   }
 
   const submitMessage = (e) => {
-
+    e.preventDefault();
     const msgObj = {
       user_uid_1: auth.uid,
       user_uid_2: userUid,
@@ -140,14 +142,15 @@ const ChatRoom = (props) => {
     }
 
     //console.log(msgObj);
-
+    
   }
 
 
   return (
     <Layout>
       <section className="container">
-      <div className="listOfUsers">
+        <div className="listOfUsers">
+          <p>friend: {results.length}</p>
           <input
             type="text"
             placeholder="Search"
@@ -157,48 +160,57 @@ const ChatRoom = (props) => {
           <ul>
             {results.map(item => (
               <User
-                      onClick={initChat}
-                      key={item.uid}
-                      user={item}
-                    />
+                onClick={initChat}
+                key={item.uid}
+                user={item}
+              />
             ))}
-            </ul>
-    
+          </ul>
+
         </div>
-          
-
-          <div className="chatArea">
-
-            <div className="chatHeader">
-              {
-                chatStarted ? chatUser : ''
-              }
-            </div>
-            <div className="messageSections">
-              {
-                chatStarted ?
-                  user.conversations.map(con =>
-                    <div style={{ textAlign: con.user_uid_1 === auth.uid ? 'right' : 'left' }}>
-                      <p className="messageStyle" >{con.message}</p>
-                    </div>)
-                  : null
-              }
 
 
-            </div>
+        <div className="chatArea">
+
+          <div className="chatHeader">
+            {
+              
+              chatStarted ? today : ''
+            }
+          </div>
+          <div className="messageSections">
             {
               chatStarted ?
-                <div className="chatControls">
-                  <textarea
+                user.conversations.map(con => {
+                  
+                  
+                  return (
+                    <div style={{ textAlign: con.user_uid_1 === auth.uid ?'right': 'left' }}>
+                      <img src={prc1} alt=""></img>
+                      <p className="messageStyle" >{con.message}</p>
+                    </div>)
+                })
+                : null
+            }
+
+
+          </div>
+          {
+            chatStarted ?
+              <div className="chatControls" >
+                <form onSubmit={submitMessage} style={{ width: "100%" }}>
+                  ...
+                  <input
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Write Message"
                   />
-                  <button onClick={submitMessage}>Send</button>
-                </div> : null
-            }
+                  <button type="submit" >Send</button>
+                </form>
+              </div> : null
+          }
 
-          </div>
+        </div>
       </section>
     </Layout>
   );

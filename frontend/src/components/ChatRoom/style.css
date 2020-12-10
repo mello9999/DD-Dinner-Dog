@@ -35,7 +35,7 @@
     height: 50px;
     bottom: 0;
 }
-.chatControls textarea{
+.chatControls input{
     width: 90%;
 }
 .chatControls button{
@@ -96,3 +96,13 @@
     background: green;
     box-shadow: 0 0 0 0;
 }
+
+.displayName:hover {
+background-color: red;
+}
+.displayName:visited {
+    background-color: blue;
+    }
+.displayName:focus {
+    background-color: green;
+    }
