@@ -125,7 +125,7 @@ export default function Login(props) {
                             
                         </div>
                         <div style={{marginRight:"100px" , marginTop:"45px"}}>
-                            <p id="line_or"><hr></hr>
+                        <hr></hr><p id="line_or">
                             or</p>
                         </div>
                         <div>
