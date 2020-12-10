@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import 'antd/dist/antd.css';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 import store from './store';
 import { Provider } from "react-redux"
 

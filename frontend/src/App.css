@@ -1,6 +1,12 @@
+html, body, #root {
+  height: 100%
+}
+._loading_overlay_wrapper {
+  height: 100%
+}
 .App {
   text-align: center;
-  
+  height: 100%
 }
 
 .Form {

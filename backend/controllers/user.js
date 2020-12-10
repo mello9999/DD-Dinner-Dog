@@ -3,7 +3,7 @@ const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const registerUser = async (req, res) => {
-    const { username, password, name } = req.body;
+    const { username, password, name} = req.body;
     const targetUser = await db.User.findOne({ where: { username: username } });
     if (targetUser) {
         res.status(400).send({ message: "Username already taken." });
@@ -14,7 +14,8 @@ const registerUser = async (req, res) => {
         await db.User.create({
             username: username,
             password: hashedPassword,
-            name: name
+            name: name,
+            
         });
         targetUser1 = await db.User.findOne({ where: { username: username } });
         await db.DogInfo.create({
@@ -26,7 +27,7 @@ const registerUser = async (req, res) => {
         // await db.DOG_INFO.create({
         //     username:username
         // });
-        res.status(201).send({ message: "User created" });
+        res.status(201).send({ message: "User created", id:targetUser1.id });
     }
 }
 
@@ -43,7 +44,7 @@ const loginUser = async (req, res) => {
         if (isCorrectPassword) {
             const payload = {
                 id: targetUser.id,
-                name: dog.name, gender: dog.gender, age: dog.age, breeds: dog.breeds, location: dog.locations, about: dog.about, profilePicture: dog.profilePicture, certificate: dog.certificate, picture1: dog.picture1, picture2: dog.picture2, picture3: dog.picture3, picture4: dog.spicture4
+                name: targetUser.name
             };
             const token = jwt.sign(payload, process.env.SECRET_OR_KEY, { expiresIn: 3600 });
             res.status(200).send({
@@ -55,10 +56,15 @@ const loginUser = async (req, res) => {
         }
     }
 }
-
+/*, profilePicture: dog.profilePicture, certificate: dog.certificate, picture1: dog.picture1, picture2: dog.picture2, picture3: dog.picture3, picture4: dog.spicture4 */
 const like = async (req, res) => {
-    const { uid } = req.params.id;
-    const targetLike = await db.Like.findAll({ where: { ownerID: uid } })
+    
+    const  uid  = req.body.id;
+    
+    let f = { where: { id: uid } };
+    
+    const targetLike = await db.Like.findAll(f)
+    
     res.status(200).send({
         users: targetLike,
         message: "Like successful."

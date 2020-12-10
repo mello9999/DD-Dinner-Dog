@@ -1,25 +1,27 @@
 import firebase from 'firebase'
 
 import { authConstanst } from './constants';
-export const signup = (user) => {
+export const Signup = (user ,id) => {
     const auth = firebase.auth
     const firestore = firebase.firestore
+    
     return async (dispatch) => {
 
         const db = firestore();
-
+        
         dispatch({ type: `${authConstanst.USER_LOGIN}_REQUEST` });
 
         auth()
             .createUserWithEmailAndPassword(user.email, user.password)
             .then(data => {
-                console.log(data);
+                
                 const currentUser = auth().currentUser;
                 const name = `${user.name}`;
                 currentUser.updateProfile({
                     displayName: name
                 })
                     .then(() => {
+                        
                         //if you are here means it is updated successfully
                         db.collection('users')
                             .doc(data.user.uid)
@@ -27,7 +29,8 @@ export const signup = (user) => {
                                 name: user.name,
                                 uid: data.user.uid,
                                 createdAt: new Date(),
-                                isOnline: true
+                                isOnline: true,
+                                id:id
                             })
 
                     });
@@ -35,7 +38,6 @@ export const signup = (user) => {
             .catch(error => {
                 console.log(error);
             })
-
 
     }
 
@@ -48,12 +50,13 @@ export const signin = (user) => {
     return async dispatch => {
 
         dispatch({ type: `${authConstanst.USER_LOGIN}_REQUEST` });
+
         auth()
             .signInWithEmailAndPassword(user.username, user.password)
             .then((data) => {
-                console.log(data);
+                
 
-
+                
                 const db = firestore();
                 db.collection('users')
                     .doc(data.user.uid)
@@ -61,14 +64,13 @@ export const signin = (user) => {
                         isOnline: true
                     })
                     .then(() => {
-                        const name = data.user.displayName.split(" ");
-                        const firstName = name[0];
-                        const lastName = name[1];
-
+                        const name = data.user.displayName;
+                        
                         const loggedInUser = {
                             name,
                             uid: data.user.uid,
-                            email: data.user.username
+                            email: data.user.username,
+                            
                         }
 
                         localStorage.setItem('user', JSON.stringify(loggedInUser));

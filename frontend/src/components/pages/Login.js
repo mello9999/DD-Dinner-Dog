@@ -20,16 +20,17 @@ export default function Login(props) {
         };
         dispatch(signin(body))
         axios.post("/users/login", body)
-            .then(result => {
-                LocalStorageService.setToken(result.data.token);
-                props.setRole("user");
-                window.location.replace('/profile');
-            })
-            .catch(err => {                
-                notification.error({ 
-                    message: `Login Fail.`
-                });
-            })
+        .then(result => {
+            LocalStorageService.setToken(result.data.token);
+            props.setRole("user");
+            window.location.replace('/profile');
+        })
+        .catch(err => {                
+            notification.error({ 
+                message: `Login Fail.`
+            });
+        })
+        
     };
 
     return (

@@ -16,12 +16,8 @@ const Header = (props) => {
   const [name, setName] = useState("")
   const dispatch = useDispatch();
   useEffect(() => {
-    const token = LocalStorageService.getToken();
-    if (token) {
-        const localUser = jwtDecode(token);
-        setName(localUser.name);
-        console.log(localUser.name, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
-    }
+        setName(auth.name);
+       
   }
   )
   // const logout = () => {
@@ -46,12 +42,13 @@ const Header = (props) => {
         </div>
           <div style={{margin: '20px 0', color: '#fff', fontWeight: 'bold'}}>
             {
-              console.log(name, 'nameeeeeeeeeeeeeeeeeeeeee'),
+              
             auth.authenticated ? `Hi ${name}` : ''}
           </div>
         <ul className="menu">
 
             {
+              console.log(auth.uid, "uiddddddddddddd"),
               auth.authenticated ?
               <li>
                 <Link to={'#'} onClick={() => {

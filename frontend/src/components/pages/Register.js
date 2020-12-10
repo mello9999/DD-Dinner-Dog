@@ -3,7 +3,7 @@ import { Form, Input, Button, Row, Col, Divider, notification } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import axios from '../../config/axios';
 import { withRouter } from 'react-router-dom';
-import { signup } from '../../actions';
+import { Signup } from '../../actions';
 import { useDispatch, useSelector } from 'react-redux';
 const layout = {
     labelCol: { xs: 24, sm: 7, md: 6, lg: 6, xl: 5, xxl: 4 },
@@ -14,20 +14,24 @@ function Register(props) {
     const dispatch = useDispatch();
     const onFinish = values => {
         console.log('Received values of form: ', values);
-        const body = {
-            username: values.email,
-            password: values.password,
-            name: values.nickname
-        }
+      
         
     
         const user = {
         name: values.nickname, email:values.email, password: values.password
         }
         
-        dispatch(signup(user))
+        
+        const body = {
+            username: values.email,
+            password: values.password,
+            name: values.nickname,
+            
+        }
         axios.post('/users/register', body)
             .then(res => {
+                console.log(res)
+                dispatch(Signup(user, res.data.id))
                 notification.success({
                     message: `Successful Registration, Mx.${values.nickname}.`
                 });
