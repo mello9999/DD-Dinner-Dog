@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.7.3 on win32)" generated="20201210 14:54:51.837" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.7.3 on win32)" generated="20201210 20:25:02.786" rpa="false">
 <suite id="s1" name="Login Test" source="F:\DD-Dinner-Dog\Demo-robot\testcases\login_test.robot">
 <test id="s1-t1" name="Valid Login">
 <kw name="Open Browser To DD Dinner Dog">
@@ -9,76 +9,22 @@
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201210 14:54:52.092" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/login'.</msg>
-<status status="PASS" starttime="20201210 14:54:52.092" endtime="20201210 14:54:56.688"></status>
+<msg timestamp="20201210 20:25:09.352" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/login'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201210 20:25:32.917" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201210 20:25:32.100" endtime="20201210 20:25:32.917"></status>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>DD Dinner Dog</arg>
-</arguments>
-<msg timestamp="20201210 14:54:56.694" level="INFO">Page title is 'DD Dinner Dog'.</msg>
-<status status="PASS" starttime="20201210 14:54:56.688" endtime="20201210 14:54:56.694"></status>
+<msg timestamp="20201210 20:25:33.116" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=87.0.4280.88)
+</msg>
+<status status="FAIL" starttime="20201210 20:25:09.352" endtime="20201210 20:25:33.116"></status>
 </kw>
-<status status="PASS" starttime="20201210 14:54:52.092" endtime="20201210 14:54:56.694"></status>
+<status status="FAIL" starttime="20201210 20:25:09.352" endtime="20201210 20:25:33.117"></status>
 </kw>
-<kw name="Input Username">
-<arguments>
-<arg>${email}</arg>
-</arguments>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id = username</arg>
-<arg>${username}</arg>
-</arguments>
-<msg timestamp="20201210 14:54:56.696" level="INFO">Typing text 'nene199@gmail.com' into text field 'id = username'.</msg>
-<status status="PASS" starttime="20201210 14:54:56.696" endtime="20201210 14:54:56.936"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:54:56.695" endtime="20201210 14:54:56.936"></status>
-</kw>
-<kw name="Input Password">
-<arguments>
-<arg>${password}</arg>
-</arguments>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id = password</arg>
-<arg>${password}</arg>
-</arguments>
-<msg timestamp="20201210 14:54:56.937" level="INFO">Typing text '2020' into text field 'id = password'.</msg>
-<status status="PASS" starttime="20201210 14:54:56.937" endtime="20201210 14:54:57.056"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:54:56.936" endtime="20201210 14:54:57.056"></status>
-</kw>
-<kw name="Submit Credentials">
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>id = login_button</arg>
-</arguments>
-<msg timestamp="20201210 14:54:57.057" level="INFO">Clicking button 'id = login_button'.</msg>
-<status status="PASS" starttime="20201210 14:54:57.057" endtime="20201210 14:54:57.134"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:54:57.057" endtime="20201210 14:54:57.135"></status>
-</kw>
-<kw name="profile Page Should Be Open">
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>DD Dinner Dog</arg>
-</arguments>
-<msg timestamp="20201210 14:54:57.141" level="INFO">Page title is 'DD Dinner Dog'.</msg>
-<status status="PASS" starttime="20201210 14:54:57.136" endtime="20201210 14:54:57.141"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:54:57.135" endtime="20201210 14:54:57.142"></status>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201210 14:54:57.142" endtime="20201210 14:54:59.352"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:54:52.090" endtime="20201210 14:54:59.353" critical="yes"></status>
+<status status="FAIL" starttime="20201210 20:25:09.351" endtime="20201210 20:25:33.117" critical="yes">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=87.0.4280.88)
+</status>
 </test>
 <test id="s1-t2" name="Invalid Login Case1 : log in with Unregister Email">
 <kw name="Open Browser To DD Dinner Dog">
@@ -88,72 +34,29 @@
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201210 14:54:59.357" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/login'.</msg>
-<status status="PASS" starttime="20201210 14:54:59.356" endtime="20201210 14:55:03.664"></status>
+<msg timestamp="20201210 20:25:33.121" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/login'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201210 20:25:52.073" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=87.0.4280.88)
+</msg>
+<status status="FAIL" starttime="20201210 20:25:39.888" endtime="20201210 20:25:52.073"></status>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>DD Dinner Dog</arg>
-</arguments>
-<msg timestamp="20201210 14:55:03.670" level="INFO">Page title is 'DD Dinner Dog'.</msg>
-<status status="PASS" starttime="20201210 14:55:03.664" endtime="20201210 14:55:03.670"></status>
+<msg timestamp="20201210 20:25:52.073" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=87.0.4280.88)
+</msg>
+<msg timestamp="20201210 20:25:52.076" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=87.0.4280.88)
+</msg>
+<status status="FAIL" starttime="20201210 20:25:33.121" endtime="20201210 20:25:52.077"></status>
 </kw>
-<status status="PASS" starttime="20201210 14:54:59.356" endtime="20201210 14:55:03.670"></status>
+<status status="FAIL" starttime="20201210 20:25:33.120" endtime="20201210 20:25:52.077"></status>
 </kw>
-<kw name="Input Username">
-<arguments>
-<arg>${new_email}</arg>
-</arguments>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id = username</arg>
-<arg>${username}</arg>
-</arguments>
-<msg timestamp="20201210 14:55:03.672" level="INFO">Typing text 'banklnwza007@test.com' into text field 'id = username'.</msg>
-<status status="PASS" starttime="20201210 14:55:03.672" endtime="20201210 14:55:03.959"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:03.671" endtime="20201210 14:55:03.959"></status>
-</kw>
-<kw name="Input Password1">
-<arguments>
-<arg>${new_password}</arg>
-</arguments>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id = password</arg>
-<arg>${new_password}</arg>
-</arguments>
-<msg timestamp="20201210 14:55:03.961" level="INFO">Typing text '2021' into text field 'id = password'.</msg>
-<status status="PASS" starttime="20201210 14:55:03.961" endtime="20201210 14:55:04.096"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:03.959" endtime="20201210 14:55:04.096"></status>
-</kw>
-<kw name="Submit Credentials">
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>id = login_button</arg>
-</arguments>
-<msg timestamp="20201210 14:55:04.098" level="INFO">Clicking button 'id = login_button'.</msg>
-<status status="PASS" starttime="20201210 14:55:04.097" endtime="20201210 14:55:04.176"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:04.097" endtime="20201210 14:55:04.176"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Login Fail.</arg>
-</arguments>
-<status status="PASS" starttime="20201210 14:55:04.177" endtime="20201210 14:55:04.210"></status>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201210 14:55:04.210" endtime="20201210 14:55:06.370"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:54:59.355" endtime="20201210 14:55:06.370" critical="yes"></status>
+<status status="FAIL" starttime="20201210 20:25:33.119" endtime="20201210 20:25:52.078" critical="yes">WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=87.0.4280.88)
+</status>
 </test>
 <test id="s1-t3" name="Invalid Login Case2 : log in with Email and Password not matched">
 <kw name="Open Browser To DD Dinner Dog">
@@ -163,212 +66,56 @@
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201210 14:55:06.373" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/login'.</msg>
-<status status="PASS" starttime="20201210 14:55:06.373" endtime="20201210 14:55:10.652"></status>
+<msg timestamp="20201210 20:25:52.082" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/login'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="FAIL" starttime="20201210 20:26:00.461" endtime="20201210 20:26:00.461"></status>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>DD Dinner Dog</arg>
-</arguments>
-<msg timestamp="20201210 14:55:10.658" level="INFO">Page title is 'DD Dinner Dog'.</msg>
-<status status="PASS" starttime="20201210 14:55:10.652" endtime="20201210 14:55:10.658"></status>
+<msg timestamp="20201210 20:26:00.461" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<status status="FAIL" starttime="20201210 20:25:52.082" endtime="20201210 20:26:00.461"></status>
 </kw>
-<status status="PASS" starttime="20201210 14:55:06.373" endtime="20201210 14:55:10.659"></status>
+<status status="FAIL" starttime="20201210 20:25:52.081" endtime="20201210 20:26:00.461"></status>
 </kw>
-<kw name="Input Username">
-<arguments>
-<arg>${email}</arg>
-</arguments>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id = username</arg>
-<arg>${username}</arg>
-</arguments>
-<msg timestamp="20201210 14:55:10.661" level="INFO">Typing text 'nene199@gmail.com' into text field 'id = username'.</msg>
-<status status="PASS" starttime="20201210 14:55:10.660" endtime="20201210 14:55:10.935"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:10.659" endtime="20201210 14:55:10.935"></status>
-</kw>
-<kw name="Input Password1">
-<arguments>
-<arg>${new_password}</arg>
-</arguments>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id = password</arg>
-<arg>${new_password}</arg>
-</arguments>
-<msg timestamp="20201210 14:55:10.936" level="INFO">Typing text '2021' into text field 'id = password'.</msg>
-<status status="PASS" starttime="20201210 14:55:10.936" endtime="20201210 14:55:11.053"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:10.936" endtime="20201210 14:55:11.053"></status>
-</kw>
-<kw name="Submit Credentials">
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>id = login_button</arg>
-</arguments>
-<msg timestamp="20201210 14:55:11.055" level="INFO">Clicking button 'id = login_button'.</msg>
-<status status="PASS" starttime="20201210 14:55:11.054" endtime="20201210 14:55:11.126"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:11.054" endtime="20201210 14:55:11.126"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Login Fail.</arg>
-</arguments>
-<status status="PASS" starttime="20201210 14:55:11.127" endtime="20201210 14:55:11.586"></status>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201210 14:55:11.587" endtime="20201210 14:55:13.735"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:06.372" endtime="20201210 14:55:13.737" critical="yes"></status>
+<status status="FAIL" starttime="20201210 20:25:52.080" endtime="20201210 20:26:00.461" critical="yes">Execution terminated by signal</status>
 </test>
 <test id="s1-t4" name="Forget Password">
-<kw name="Open Browser To DD Dinner Dog">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<arguments>
-<arg>${LOGIN URL}</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20201210 14:55:13.751" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/login'.</msg>
-<status status="PASS" starttime="20201210 14:55:13.750" endtime="20201210 14:55:18.584"></status>
-</kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>DD Dinner Dog</arg>
-</arguments>
-<msg timestamp="20201210 14:55:18.590" level="INFO">Page title is 'DD Dinner Dog'.</msg>
-<status status="PASS" starttime="20201210 14:55:18.584" endtime="20201210 14:55:18.590"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:13.747" endtime="20201210 14:55:18.590"></status>
-</kw>
-<kw name="Forget Password">
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>id = forgot_password</arg>
-</arguments>
-<msg timestamp="20201210 14:55:18.592" level="INFO">Clicking button 'id = forgot_password'.</msg>
-<status status="PASS" starttime="20201210 14:55:18.591" endtime="20201210 14:55:18.670"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:18.591" endtime="20201210 14:55:18.670"></status>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201210 14:55:18.671" endtime="20201210 14:55:21.241"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:13.744" endtime="20201210 14:55:21.243" critical="yes"></status>
+<tags>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" starttime="20201210 20:26:00.461" endtime="20201210 20:26:00.461" critical="yes">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-t5" name="Register New User">
-<kw name="Open Browser To DD Dinner Dog">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<arguments>
-<arg>${LOGIN URL}</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20201210 14:55:21.255" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/login'.</msg>
-<status status="PASS" starttime="20201210 14:55:21.254" endtime="20201210 14:55:25.851"></status>
-</kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>DD Dinner Dog</arg>
-</arguments>
-<msg timestamp="20201210 14:55:25.857" level="INFO">Page title is 'DD Dinner Dog'.</msg>
-<status status="PASS" starttime="20201210 14:55:25.851" endtime="20201210 14:55:25.857"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:21.252" endtime="20201210 14:55:25.858"></status>
-</kw>
-<kw name="Register Credentials">
-<kw name="Click Link" library="SeleniumLibrary">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>id = register</arg>
-</arguments>
-<msg timestamp="20201210 14:55:25.859" level="INFO">Clicking link 'id = register'.</msg>
-<status status="PASS" starttime="20201210 14:55:25.859" endtime="20201210 14:55:26.147"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:25.858" endtime="20201210 14:55:26.148"></status>
-</kw>
-<kw name="register Page Should Be Open">
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>DD Dinner Dog</arg>
-</arguments>
-<msg timestamp="20201210 14:55:26.154" level="INFO">Page title is 'DD Dinner Dog'.</msg>
-<status status="PASS" starttime="20201210 14:55:26.149" endtime="20201210 14:55:26.154"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:26.148" endtime="20201210 14:55:26.154"></status>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201210 14:55:26.154" endtime="20201210 14:55:28.628"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:21.249" endtime="20201210 14:55:28.629" critical="yes"></status>
+<tags>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" starttime="20201210 20:26:00.461" endtime="20201210 20:26:00.461" critical="yes">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-t6" name="Switch role user : User to vet">
-<kw name="Open Browser To DD Dinner Dog">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<arguments>
-<arg>${LOGIN URL}</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20201210 14:55:28.632" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/login'.</msg>
-<status status="PASS" starttime="20201210 14:55:28.631" endtime="20201210 14:55:33.197"></status>
-</kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>DD Dinner Dog</arg>
-</arguments>
-<msg timestamp="20201210 14:55:33.203" level="INFO">Page title is 'DD Dinner Dog'.</msg>
-<status status="PASS" starttime="20201210 14:55:33.197" endtime="20201210 14:55:33.203"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:28.631" endtime="20201210 14:55:33.203"></status>
-</kw>
-<kw name="DD vet login">
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>id = DD_veter</arg>
-</arguments>
-<msg timestamp="20201210 14:55:33.205" level="INFO">Clicking button 'id = DD_veter'.</msg>
-<status status="PASS" starttime="20201210 14:55:33.204" endtime="20201210 14:55:33.291"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:33.204" endtime="20201210 14:55:33.291"></status>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201210 14:55:33.292" endtime="20201210 14:55:35.420"></status>
-</kw>
-<status status="PASS" starttime="20201210 14:55:28.630" endtime="20201210 14:55:35.423" critical="yes"></status>
+<tags>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" starttime="20201210 20:26:00.471" endtime="20201210 20:26:00.471" critical="yes">Test execution stopped due to a fatal error.</status>
 </test>
 <doc>Simple example using SeleniumLibrary.</doc>
-<status status="PASS" starttime="20201210 14:54:51.840" endtime="20201210 14:55:35.431"></status>
+<status status="FAIL" starttime="20201210 20:25:02.786" endtime="20201210 20:26:00.471"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="6" fail="0">Critical Tests</stat>
-<stat pass="6" fail="0">All Tests</stat>
+<stat pass="0" fail="6">Critical Tests</stat>
+<stat pass="0" fail="6">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="3" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
+<stat pass="0" fail="3">robot:exit</stat>
 </tag>
 <suite>
-<stat pass="6" fail="0" id="s1" name="Login Test">Login Test</stat>
+<stat pass="0" fail="6" id="s1" name="Login Test">Login Test</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20201210 20:25:52.073" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=87.0.4280.88)
+</msg>
+<msg timestamp="20201210 20:26:00.461" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
 </errors>
 </robot>
