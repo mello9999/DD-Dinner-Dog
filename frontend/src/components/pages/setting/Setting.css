@@ -1,0 +1,91 @@
+.containerMain{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: saddlebrown;
+    
+    
+}
+
+
+
+.containerSetting{
+    display: flex;
+    min-width: 80vw;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+
+}
+
+#CardB {
+    border-radius: 30px;
+    margin-top: -20px;
+    height: 400px;
+    border: 3px solid #727272;
+    margin-left: 150px;
+}
+
+.MuiTextField-root fieldset {
+    border-radius: 30px ; 
+    border-color:#727272;
+    border: 3px solid #727272 ;
+    
+}
+
+#Box_change {
+    width: 125px;
+    height: 28px;
+    color: #ffffff;
+    margin-left: 80px;
+    margin-top: -20px;
+}
+
+#icon_line {
+    
+    height: 32px;
+    width: 32px;
+}
+
+#Box_save {
+    margin-top: 20px;
+    width: 100px;
+    height: 35px;
+    background-color: #ee7548;
+    color: #ffffff;
+    font-family: Quicksand;
+}
+
+.MuiSlider-root .MuiSlider-track{
+    color: #ee7548;
+}
+
+.MuiSlider-root .MuiSlider-thumb{
+    color: #ee7548;
+}
+
+#line_Bet {
+    transform: rotate(90deg);
+    width: 500px;
+    height:0px;
+    margin: 0 -300px 0 -220px;
+}
+
+#Big1 {
+    margin-right: 150px;
+}
+
+#Big2 {
+    margin-right: 150px;
+}
+
+#Big3 {
+    margin-right: 150px;
+}
+
+#Big4 {
+    margin-right: 150px;
+}

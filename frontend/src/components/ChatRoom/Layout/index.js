@@ -8,7 +8,7 @@ import Header from '../Header';
 
 const Layout = (props) => {
   return(
-    <div>
+    <div style={{background:'black'}}>
         
         {props.children}
     </div>

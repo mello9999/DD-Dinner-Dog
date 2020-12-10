@@ -170,7 +170,7 @@ const ChatRoom = (props) => {
         </div>
 
 
-        <div className="chatArea">
+        <div className="chatArea" >
 
           <div className="chatHeader">
             {
@@ -178,16 +178,16 @@ const ChatRoom = (props) => {
               chatStarted ? today : ''
             }
           </div>
-          <div className="messageSections">
+          <div className="messageSections" style={{ background: "black !important"} }>
             {
               chatStarted ?
                 user.conversations.map(con => {
                   
                   
                   return (
-                    <div style={{ textAlign: con.user_uid_1 === auth.uid ?'right': 'left' }}>
-                      <img src={prc1} alt=""></img>
-                      <p className="messageStyle" >{con.message}</p>
+                    <div style={{ background: "black", textAlign: con.user_uid_1 === auth.uid ?'right': 'left' }}>
+                      
+                      <p className="messageStyle">{con.message}</p>
                     </div>)
                 })
                 : null
@@ -198,7 +198,7 @@ const ChatRoom = (props) => {
           {
             chatStarted ?
               <div className="chatControls" >
-                <form onSubmit={submitMessage} style={{ width: "100%" }}>
+                <form onSubmit={submitMessage} style={{ width: "100%" , overflow:"hidden"}}>
                   ...
                   <input
                     value={message}

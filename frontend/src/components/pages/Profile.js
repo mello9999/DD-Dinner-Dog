@@ -350,45 +350,7 @@ export default function Profile(props) {
                                                 </Grid>
 
                                             </Grid>
-                                            <Typography inline="True" valient="body1" style={{ "color": "white" }} >
-                                                Insert Picture
-                                            </Typography>
-                                            <Grid container item xs={12} style={{ "marginTop": "0px" }}>
-
-                                                <Grid container item xs={2} direction="column" align="left" >
-                                                    <input
-                                                        id="fi3"
-                                                        type="file"
-                                                        accept="image/*"
-                                                        onChange={onChangePicture1}
-                                                        hidden
-                                                    />
-                                                    <label htmlFor="fi3">
-                                                        <div
-                                                            style={{
-                                                                height: "100%",
-                                                                width: "100%",
-                                                                border: "3px solid #727272",
-                                                                borderRadius: "10%",
-                                                                backgroundColor: "white"
-                                                            }}
-                                                            htmlFor="fi3"
-                                                        >
-                                                            <img
-                                                                src={picture1Data}
-                                                                alt=""
-                                                                style={{
-                                                                    objectFit: "cover",
-                                                                    height: "120px",
-                                                                    width: "120px",
-                                                                    borderRadius: "10%"
-                                                                }}
-                                                            />
-                                                        </div>
-                                                    </label>
-
-                                                </Grid>
-                                            </Grid>
+                                            
 
                                         </Grid>
                                         <Typography inline="True" valient="body1" style={{ "color": "white" }} >
@@ -428,16 +390,7 @@ export default function Profile(props) {
                                                             }}
                                                             htmlFor="fi4"
                                                         />
-                                                        <img
-                                                            src={picture2Data}
-                                                            alt=""
-                                                            style={{
-                                                                objectFit: "cover",
-                                                                height: "120px",
-                                                                width: "120px",
-                                                                borderRadius: "10%"
-                                                            }}
-                                                        />
+                                                        
                                                     </div>
                                                 </label>
 
@@ -468,16 +421,7 @@ export default function Profile(props) {
                                                             }}
                                                             htmlFor="fi5"
                                                         />
-                                                        <img
-                                                            src={picture3Data}
-                                                            alt=""
-                                                            style={{
-                                                                objectFit: "cover",
-                                                                height: "120px",
-                                                                width: "120px",
-                                                                borderRadius: "10%"
-                                                            }}
-                                                        />
+                                                        
                                                     </div>
                                                 </label>
 
@@ -537,16 +481,7 @@ export default function Profile(props) {
                                                             }}
                                                             htmlFor="fi6"
                                                         />
-                                                        <img
-                                                            src={picture4Data}
-                                                            alt=""
-                                                            style={{
-                                                                objectFit: "cover",
-                                                                height: "120px",
-                                                                width: "120px",
-                                                                borderRadius: "10%"
-                                                            }}
-                                                        />
+                                                
                                                     </div>
                                                 </label>
 
