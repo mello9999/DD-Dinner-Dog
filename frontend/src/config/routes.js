@@ -35,7 +35,7 @@ export default {
             components.login,
             components.register,
             components.profile,
-            components.chatroom
+            components.chat
         ],
         redirectRoutes: "/login"
     },

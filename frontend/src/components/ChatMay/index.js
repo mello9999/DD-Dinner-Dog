@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { Typography, List, Input, Button, Row, Col, Divider } from 'antd';
-import axios from '../../config/axios';
-import Todo from './Todo';
-import { Link } from 'react-router-dom';
+import React from 'react'
 
-const { Text } = Typography;
+import LeftBar from './LeftBar.js';
+import RightBar from './RightBar.js';
 
-export default function TodoList() {
+export default function ChatMay(props){
     
     return (
         <div>
-            <left></left>
-            <right></right>
+            <LeftBar/>
+            <RightBar/>
         </div>
+        
+        
+        
     );
 }
