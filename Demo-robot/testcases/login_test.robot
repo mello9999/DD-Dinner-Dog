@@ -7,6 +7,7 @@ ${LOGIN URL}      http://localhost:3000/login
 ${HOME URL}       http://localhost:3000/profile
 ${BROWSER}        Chrome
 ${email}             nene199@gmail.com
+${new_email}         banklnwza007@test.com 
 ${password}          2020   
 ${new_password}      2021
 
@@ -19,8 +20,15 @@ Valid Login
     profile Page Should Be Open
     Close Browser
     
+Invalid Login Case1 : log in with Unregister Email
+    Open Browser To DD Dinner Dog 
+    Input Username    ${new_email}
+    Input Password1    ${new_password}
+    Submit Credentials
+    Wait Until Page Contains   Login Fail.
+    Close Browser
 
-Invalid Login
+Invalid Login Case2 : log in with Email and Password not matched
     Open Browser To DD Dinner Dog 
     Input Username    ${email} 
     Input Password1    ${new_password}
@@ -32,6 +40,17 @@ Forget Password
     Open Browser To DD Dinner Dog 
     Forget Password
     Close Browser 
+
+Register New User 
+    Open Browser To DD Dinner Dog
+    Register Credentials
+    register Page Should Be Open
+    Close Browser
+
+Switch role user : User to vet
+    Open Browser To DD Dinner Dog
+    DD vet login 
+    Close Browser
 
 *** Keywords ***
 Open Browser To DD Dinner Dog 
@@ -50,7 +69,11 @@ Submit Credentials
     Click Button   id = login_button
 Forget Password
     Click Button   id = forgot_password
-register Password Should Be Open
+Register Credentials
+    Click Link     id = register
+DD vet login 
+    Click Button   id = DD_veter
+register Page Should Be Open
     Title Should Be    DD Dinner Dog
 profile Page Should Be Open
     Title Should Be    DD Dinner Dog

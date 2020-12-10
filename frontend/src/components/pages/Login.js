@@ -116,7 +116,7 @@ export default function Login(props) {
 
                         <div style={{marginTop: "-15px" , marginRight: "90px"}}>
                             
-                            <Button id = "Register" href='/register' type="link" style={{marginLeft: "100px" , color: '#646464' , marginTop: "-10px"}}><p id="register"> Register</p> </Button>
+                            <Button id="register" href='/register' type="link" style={{marginLeft: "100px" , color: '#646464' , marginTop: "-10px"}}><p> Register</p> </Button>
                             
                         </div>
                         <div style={{marginRight:"100px" , marginTop:"45px"}}>
