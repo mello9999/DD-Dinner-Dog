@@ -95,7 +95,7 @@ export default function Profile(props) {
         props.setRole("guest");
     }
 
-    
+
     const submitForm = async () => {
         setisActive(true)
         let body = {
@@ -148,7 +148,7 @@ export default function Profile(props) {
         const token = LocalStorageService.getToken();
         if (token) {
             const user = jwtDecode(token);
-            
+
 
             axios
                 .post('/doginfo/getinfo/', { id: user.id })
@@ -179,9 +179,9 @@ export default function Profile(props) {
             active={isActive}
             spinner
             text='Uploading files...'
-            style={{"height":"100%"}}
+            style={{ "height": "100%" }}
         >
-            <div style={{ "display": "flex", "padding": "30px 100px 0 0" ,"height":"100%"}}>
+            <div style={{ "display": "flex", "padding": "30px 100px 0 0", "height": "100%" }}>
 
                 <form>
                     <Grid container spacing={1} >
@@ -244,7 +244,7 @@ export default function Profile(props) {
                                                     type="text"
                                                     value={gender || ''}
                                                     onChange={(e) => setGender(e.target.value)}
-                                                    style={{ "width": "100px" }}
+                                                    style={{ "width": "50%" }}
                                                 />
 
                                             </Grid>
@@ -258,7 +258,7 @@ export default function Profile(props) {
                                                     type="text"
                                                     value={age || ''}
                                                     onChange={(e) => setAge(e.target.value)}
-                                                    style={{ "width": "100px" }}
+                                                    style={{ "width": "50%" }}
                                                 />
                                             </Grid>
 
@@ -271,7 +271,7 @@ export default function Profile(props) {
                                                     type="text"
                                                     value={breeds || ''}
                                                     onChange={(e) => setBreeds(e.target.value)}
-                                                    style={{ "width": "200px" }}
+                                                    style={{ "width": "90%" }}
                                                 />
                                             </Grid>
                                             <Grid container item xs={12} direction="column" align="left">
@@ -283,7 +283,7 @@ export default function Profile(props) {
                                                     type="text"
                                                     value={location || ''}
                                                     onChange={(e) => setLocation(e.target.value)}
-                                                    style={{ "width": "200px" }}
+                                                    style={{ "width": "90%" }}
                                                 />
                                             </Grid>
 
@@ -298,37 +298,189 @@ export default function Profile(props) {
                                                     type="text"
                                                     value={about || ''}
                                                     onChange={(e) => setAbout(e.target.value)}
-                                                    style={{ "width": "400px" }}
+                                                    style={{ "width": "150%" }}
                                                 />
                                                 <Grid container item xs={6} direction="column" align="left" style={{ "marginTop": "22px" }}>
                                                     <Typography inline="True" valient="body1" style={{ "color": "white" }}>
-                                                        Certificate
-                                                </Typography>
+                                                        About
+                                            </Typography>
                                                     <input
-                                                        id="fi2"
+                                                        id="Box_about"
+                                                        type="text"
+                                                        value={about || ''}
+                                                        onChange={(e) => setAbout(e.target.value)}
+                                                        style={{ "width": "400px" }}
+                                                    />
+                                                    <Grid container item xs={6} direction="column" align="left" style={{ "marginTop": "22px" }}>
+                                                        <Typography inline="True" valient="body1" style={{ "color": "white" }}>
+                                                            Certificate
+                                                </Typography>
+                                                        <input
+                                                            id="fi2"
+                                                            type="file"
+                                                            accept="image/*"
+                                                            onChange={onChangeCertificate}
+                                                            hidden
+                                                        />
+                                                        <label htmlFor="fi2">
+                                                            <div
+                                                                style={{
+                                                                    height: "200px",
+                                                                    width: "300px",
+                                                                    border: "3px solid #727272",
+                                                                    borderRadius: "10%",
+                                                                    backgroundColor: "white"
+                                                                }}
+                                                                htmlFor="fi2"
+                                                            >
+                                                                <img
+                                                                    src={certificateFileData}
+                                                                    alt=""
+                                                                    style={{
+                                                                        objectFit: "cover",
+                                                                        height: "200px",
+                                                                        width: "300px",
+                                                                        borderRadius: "10%"
+                                                                    }}
+                                                                />
+                                                            </div>
+                                                        </label>
+
+                                                    </Grid>
+                                                </Grid>
+
+                                            </Grid>
+                                            <Typography inline="True" valient="body1" style={{ "color": "white" }} >
+                                                Insert Picture
+                                    </Typography>
+                                            <Grid container item xs={12} style={{ "marginTop": "0px" }}>
+
+                                                <Grid container item xs={2} direction="column" align="left" >
+                                                    <input
+                                                        id="fi3"
                                                         type="file"
                                                         accept="image/*"
-                                                        onChange={onChangeCertificate}
+                                                        onChange={onChangePicture1}
                                                         hidden
                                                     />
-                                                    <label htmlFor="fi2">
+                                                    <label htmlFor="fi3">
                                                         <div
                                                             style={{
-                                                                height: "200px",
-                                                                width: "300px",
+                                                                height: "100%",
+                                                                width: "100%",
                                                                 border: "3px solid #727272",
                                                                 borderRadius: "10%",
                                                                 backgroundColor: "white"
                                                             }}
-                                                            htmlFor="fi2"
+                                                            htmlFor="fi3"
                                                         >
                                                             <img
-                                                                src={certificateFileData}
+                                                                src={picture1Data}
                                                                 alt=""
                                                                 style={{
                                                                     objectFit: "cover",
-                                                                    height: "200px",
-                                                                    width: "300px",
+                                                                    height: "120px",
+                                                                    width: "120px",
+                                                                    borderRadius: "10%"
+                                                                }}
+                                                            />
+                                                        </div>
+                                                    </label>
+
+                                                </Grid>
+                                                <Grid container item xs={2} direction="column" align="left" style={{ "marginLeft": "5px" }}>
+                                                    <input
+                                                        id="fi4"
+                                                        type="file"
+                                                        accept="image/*"
+                                                        onChange={onChangePicture2}
+                                                        hidden
+                                                    />
+                                                    <label htmlFor="fi4">
+                                                        <div
+                                                            style={{
+                                                                height: "120px",
+                                                                width: "120px",
+                                                                border: "3px solid #727272",
+                                                                borderRadius: "10%",
+                                                                backgroundColor: "white"
+                                                            }}
+                                                            htmlFor="fi4"
+                                                        >
+                                                            <img
+                                                                src={picture2Data}
+                                                                alt=""
+                                                                style={{
+                                                                    objectFit: "cover",
+                                                                    height: "120px",
+                                                                    width: "120px",
+                                                                    borderRadius: "10%"
+                                                                }}
+                                                            />
+                                                        </div>
+                                                    </label>
+
+                                                </Grid>
+                                                <Grid container item xs={2} direction="column" align="left" style={{ "marginLeft": "5px" }}>
+                                                    <input
+                                                        id="fi5"
+                                                        type="file"
+                                                        accept="image/*"
+                                                        onChange={onChangePicture3}
+                                                        hidden
+                                                    />
+                                                    <label htmlFor="fi5">
+                                                        <div
+                                                            style={{
+                                                                height: "120px",
+                                                                width: "120px",
+                                                                border: "3px solid #727272",
+                                                                borderRadius: "10%",
+                                                                backgroundColor: "white"
+                                                            }}
+                                                            htmlFor="fi5"
+                                                        >
+                                                            <img
+                                                                src={picture3Data}
+                                                                alt=""
+                                                                style={{
+                                                                    objectFit: "cover",
+                                                                    height: "120px",
+                                                                    width: "120px",
+                                                                    borderRadius: "10%"
+                                                                }}
+                                                            />
+                                                        </div>
+                                                    </label>
+
+                                                </Grid>
+                                                <Grid container item xs={3} direction="column" align="left" style={{ "marginLeft": "5px" }}>
+                                                    <input
+                                                        id="fi6"
+                                                        type="file"
+                                                        accept="image/*"
+                                                        onChange={onChangePicture4}
+                                                        hidden
+                                                    />
+                                                    <label htmlFor="fi6">
+                                                        <div
+
+                                                            style={{
+                                                                height: "120px",
+                                                                width: "120px",
+                                                                border: "3px solid #727272",
+                                                                borderRadius: "10%",
+                                                                backgroundColor: "white"
+                                                            }}
+                                                            htmlFor="fi6"
+                                                        >
+                                                            <img
+                                                                src={picture4Data}
+                                                                alt=""
+                                                                style={{
+                                                                    objectFit: "cover",
+                                                                    height: "120px",
+                                                                    width: "120px",
                                                                     borderRadius: "10%"
                                                                 }}
                                                             />
@@ -337,163 +489,23 @@ export default function Profile(props) {
 
                                                 </Grid>
                                             </Grid>
+                                            <div id="Box_save">
+                                                <Grid item xs={6} align="right" >
+                                                    <Button variant="contained"
+                                                        component="label"
+                                                        onClick={submitForm} style={{ backgroundColor: "#ee7458", color: "#ffffff", border: "2px solid #F4E6CF" }}>Save</Button>
 
+                                                </Grid>
+                                            </div>
+
+                                            <div id="Box_logout">
+                                                <Grid item xs={6} align="right" >
+                                                    <Button variant="contained"
+                                                        component="label"
+                                                        onClick={logout} style={{ backgroundColor: "#ee7458", color: "#ffffff", border: "2px solid #F4E6CF" }}>Logout</Button>
+                                                </Grid>
+                                            </div>
                                         </Grid>
-                                        <Typography inline="True" valient="body1" style={{ "color": "white" }} >
-                                            Insert Picture
-                                    </Typography>
-                                        <Grid container item xs={12} style={{ "marginTop": "0px" }}>
-
-                                            <Grid container item xs={2} direction="column" align="left" >
-                                                <input
-                                                    id="fi3"
-                                                    type="file"
-                                                    accept="image/*"
-                                                    onChange={onChangePicture1}
-                                                    hidden
-                                                />
-                                                <label htmlFor="fi3">
-                                                    <div
-                                                        style={{
-                                                            height: "120px",
-                                                            width: "120px",
-                                                            border: "3px solid #727272",
-                                                            borderRadius: "10%",
-                                                            backgroundColor: "white"
-                                                        }}
-                                                        htmlFor="fi3"
-                                                    >
-                                                        <img
-                                                            src={picture1Data}
-                                                            alt=""
-                                                            style={{
-                                                                objectFit: "cover",
-                                                                height: "120px",
-                                                                width: "120px",
-                                                                borderRadius: "10%"
-                                                            }}
-                                                        />
-                                                    </div>
-                                                </label>
-
-                                            </Grid>
-                                            <Grid container item xs={2} direction="column" align="left" style={{ "marginLeft": "5px" }}>
-                                                <input
-                                                    id="fi4"
-                                                    type="file"
-                                                    accept="image/*"
-                                                    onChange={onChangePicture2}
-                                                    hidden
-                                                />
-                                                <label htmlFor="fi4">
-                                                    <div
-                                                        style={{
-                                                            height: "120px",
-                                                            width: "120px",
-                                                            border: "3px solid #727272",
-                                                            borderRadius: "10%",
-                                                            backgroundColor: "white"
-                                                        }}
-                                                        htmlFor="fi4"
-                                                    >
-                                                        <img
-                                                            src={picture2Data}
-                                                            alt=""
-                                                            style={{
-                                                                objectFit: "cover",
-                                                                height: "120px",
-                                                                width: "120px",
-                                                                borderRadius: "10%"
-                                                            }}
-                                                        />
-                                                    </div>
-                                                </label>
-
-                                            </Grid>
-                                            <Grid container item xs={2} direction="column" align="left" style={{ "marginLeft": "5px" }}>
-                                                <input
-                                                    id="fi5"
-                                                    type="file"
-                                                    accept="image/*"
-                                                    onChange={onChangePicture3}
-                                                    hidden
-                                                />
-                                                <label htmlFor="fi5">
-                                                    <div
-                                                        style={{
-                                                            height: "120px",
-                                                            width: "120px",
-                                                            border: "3px solid #727272",
-                                                            borderRadius: "10%",
-                                                            backgroundColor: "white"
-                                                        }}
-                                                        htmlFor="fi5"
-                                                    >
-                                                        <img
-                                                            src={picture3Data}
-                                                            alt=""
-                                                            style={{
-                                                                objectFit: "cover",
-                                                                height: "120px",
-                                                                width: "120px",
-                                                                borderRadius: "10%"
-                                                            }}
-                                                        />
-                                                    </div>
-                                                </label>
-
-                                            </Grid>
-                                            <Grid container item xs={3} direction="column" align="left" style={{ "marginLeft": "5px" }}>
-                                                <input
-                                                    id="fi6"
-                                                    type="file"
-                                                    accept="image/*"
-                                                    onChange={onChangePicture4}
-                                                    hidden
-                                                />
-                                                <label htmlFor="fi6">
-                                                    <div
-
-                                                        style={{
-                                                            height: "120px",
-                                                            width: "120px",
-                                                            border: "3px solid #727272",
-                                                            borderRadius: "10%",
-                                                            backgroundColor: "white"
-                                                        }}
-                                                        htmlFor="fi6"
-                                                    >
-                                                        <img
-                                                            src={picture4Data}
-                                                            alt=""
-                                                            style={{
-                                                                objectFit: "cover",
-                                                                height: "120px",
-                                                                width: "120px",
-                                                                borderRadius: "10%"
-                                                            }}
-                                                        />
-                                                    </div>
-                                                </label>
-
-                                            </Grid>
-                                        </Grid>
-                                        <div id="Box_save">
-                                            <Grid item xs={6} align="right" >
-                                                <Button variant="contained"
-                                                    component="label"
-                                                    onClick={submitForm} style={{ backgroundColor: "#ee7458", color: "#ffffff", border: "2px solid #F4E6CF" }}>Save</Button>
-
-                                            </Grid>
-                                        </div>
-
-                                        <div id="Box_logout">
-                                            <Grid item xs={6} align="right" >
-                                                <Button variant="contained"
-                                                    component="label"
-                                                    onClick={logout} style={{ backgroundColor: "#ee7458", color: "#ffffff", border: "2px solid #F4E6CF" }}>Logout</Button>
-                                            </Grid>
-                                        </div>
                                     </Grid>
                                 </div>
                             </Grid>
