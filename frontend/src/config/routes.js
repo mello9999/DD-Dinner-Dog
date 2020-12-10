@@ -2,6 +2,7 @@ import TodoPage from '../components/pages/Index';
 import LoginPage from '../components/pages/Login';
 import HomePage from '../components/pages/home/Home';
 import RegisterPage from '../components/pages/Register';
+import ProfilePage from '../components/pages/Profile';
 import ChatRoom from '../components/ChatRoom/Home';
 import Setting from '../components/pages/setting/Setting';
 
@@ -59,6 +60,6 @@ export default {
             components.chatroom,
             components.setting,
         ],
-        redirectRoutes: "/home"
+        redirectRoutes: "/profile"
     }
 }

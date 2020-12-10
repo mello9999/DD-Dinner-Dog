@@ -6,12 +6,12 @@ import { AiOutlineWechat } from "react-icons/ai";
 import { MdPets } from "react-icons/md";
 import { IoNotifications } from "react-icons/io5";
 import { IoIosSettings } from "react-icons/io";
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { IconButton } from '@material-ui/core';
 import Setting from "../../pages/setting/Setting";
 
 function Header({backButton}) {
-    const history = useHistory();
+    
     return (
         <div className = "container">
             <Link to="/home">
