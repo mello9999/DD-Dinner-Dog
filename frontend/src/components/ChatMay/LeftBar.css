@@ -1,0 +1,201 @@
+.LeftBar{
+  border: medium none;
+  background: #FAF5F1 none repeat scroll 0% 0%;
+  width: 346px;
+  height: 682px;
+  text-align: left;
+  margin-top: 0px;
+  position: absolute;
+  /* padding: 15px; */
+}
+
+.LeftBar h2{
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #7D7A78;
+  margin-left: 15px;
+}
+
+.LeftBar_input{
+  position: relative;
+  width: 264px;
+  height: 34px;
+  margin: 0px auto;
+}
+
+          .LeftBar_input img{
+              width: 15px;
+              height: 15px;
+              position: absolute;
+              left: 20px;
+              top: 9px;
+          }
+
+          .LeftBar_input input{
+              width: 264px; 
+              height: 34px;
+              padding: 7px 15px;  /*ความห่างกับตัวอักษร*/
+              padding-left: 45px; /*ความห่างตัวอักษรกับทางซ้าย*/
+              padding-top: 10px;
+              box-sizing: border-box;
+              background: rgb(255, 255, 255); /*สีพื้นหลัง*/
+              border: 2px solid #D6D6D6;  /*กรอบ*/
+              border-radius: 34px;    /*ความโค้ง*/
+              font-size: 14px; 
+              color: #6d6d6d; /*สีตอนพิม*/
+              outline: none; /**/
+          }
+
+.LeftBar_user1{
+  width: 360px;
+  height: 75px;
+  left: 21px;
+  top: 190px;
+  background: #FFFFFF;
+  border-radius: 29px;
+  margin-left: 22px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: start; 
+}
+
+          .LeftBar_user1 img{
+              margin-left: 9px;
+              margin-right: 20px;
+          }
+
+          .LeftBar_user1_text{
+              text-align: left;
+              margin-right: 90px; 
+          }
+
+          .LeftBar_user1_text h2{
+              margin-top: 23px;
+              margin-left: 0px;
+              margin-bottom: 0px;
+              margin-right: 0px;
+              font-size: 24px;
+              color: #898989;
+          }
+
+          .LeftBar_user1_text h3{
+              margin-top: 5px;
+              font-size: 14px;
+              color: #898989;
+          }
+
+          .LeftBar_user1 h4{
+              font-weight: normal;
+              font-size: 14px;
+              float: right;
+              color: #898989;
+              top: 117px;
+              left: 279px;
+              text-align: right;
+          }
+
+.LeftBar_user2{
+  display: flex;
+  justify-content: start;
+}
+      
+          .LeftBar_user2 img{
+              margin-left: 80px;
+              margin-right: 20px;
+          }
+      
+          .LeftBar_user2_text{
+              text-align: left;
+              margin-right: 90px; 
+          }
+      
+          .LeftBar_user2_text h2{
+              margin-top: 23px;
+              margin-left: 0px;
+              margin-bottom: 0px;
+              font-size: 24px;
+              color: #898989;
+          }
+      
+          .LeftBar_user2_text h3{
+              margin-top: 5px;
+              font-size: 14px;
+              color: #898989;
+          }
+      
+          .LeftBar_user2 h4{
+              font-weight: normal;
+              font-size: 14px;
+              float: right;
+              color: #898989;
+              top: 117px;
+              left: 279px;
+              text-align: right;
+          }
+
+.LeftBar_user3{
+  display: flex;
+  justify-content: start;
+}
+
+      .LeftBar_user3 img{
+          margin-left: 80px;
+          margin-right: 20px;
+      }
+
+      .LeftBar_user3_text{
+          text-align: left;
+          margin-right: 90px; 
+      }
+
+      .LeftBar_user3_text h2{
+          margin-top: 23px;
+          margin-left: 0px;
+          margin-bottom: 0px;
+          font-size: 24px;
+          color: #898989;
+      }
+
+      .LeftBar_user3_text h3{
+          margin-top: 5px;
+          font-size: 14px;
+          color: #898989;
+      }
+
+      .LeftBar_user3 h4{
+          font-weight: normal;
+          font-size: 14px;
+          float: right;
+          color: #898989;
+          top: 117px;
+          left: 279px;
+          text-align: right;
+      }
+
+
+.LeftBar_vet button{
+  position: absolute;
+  width: 264px;
+  height: 34px;
+  left: 40px;
+  top: 584px;
+  background: #7FA94B;
+  border-radius: 34px;
+  color: white;
+  border: white;
+  font-size: 18px;
+}
+
+.LeftBar_vet button:hover{
+  background-color: rgb(255, 255, 255);
+  color: #000;
+}
+
+.no-bullet {
+    list-style-type: none;
+}
+
+.displaynone{
+    display: none;
+}
