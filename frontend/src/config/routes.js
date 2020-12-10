@@ -1,8 +1,9 @@
 import TodoPage from '../components/pages/Index';
 import LoginPage from '../components/pages/Login';
-import ProfilePage from '../components/pages/Profile';
+import HomePage from '../components/pages/home/Home';
 import RegisterPage from '../components/pages/Register';
 import ChatRoom from '../components/ChatRoom/Home';
+import Setting from '../components/pages/setting/Setting';
 
 const components = {
     todo: {
@@ -24,7 +25,15 @@ const components = {
     chatroom: {
         url: "/chat",
         component:ChatRoom
-     }
+     },
+    home: {
+        url: "/home",
+        component: HomePage
+    },
+    setting: {
+        url: "/setting",
+        component: Setting
+    }
 
 }
 
@@ -35,18 +44,21 @@ export default {
             components.login,
             components.register,
             components.profile,
-            components.chat
+            components.chat,
+            components.home,
+            components.setting
         ],
         redirectRoutes: "/login"
     },
     user: {
         allowedRoutes: [
             components.todo,
-            components.profile,
+            components.home,
             components.login,
             components.register,
-            components.chatroom
+            components.chatroom,
+            components.setting,
         ],
-        redirectRoutes: "/profile"
+        redirectRoutes: "/home"
     }
 }

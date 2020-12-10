@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD:frontend/src/components/pages/Profile.js
 //import { Button } from 'antd';
 import LocalStorageService from '../../services/localStorageService';
 import axios from '../../config/axios';
@@ -90,6 +91,23 @@ export default function Profile(props) {
             reader.readAsDataURL(e.target.files[0]);
         }
     };
+=======
+// import { Button } from 'antd';
+import LocalStorageService from '../../../services/localStorageService';
+/*import { Link } from 'react-router-dom';*/
+import './Home.css'
+import jwtDecode from 'jwt-decode';
+import Swap from './Swap-page';
+import data from './data.json';
+
+
+
+
+export default function Home(props) {
+    const [name, setName] = useState("");
+    const [id, setId] = useState(0);
+    
+>>>>>>> eye:frontend/src/components/pages/home/Home.js
     const logout = () => {
         LocalStorageService.removeToken();
         props.setRole("guest");
@@ -175,6 +193,7 @@ export default function Profile(props) {
         }
     }, [])
     return (
+<<<<<<< HEAD:frontend/src/components/pages/Profile.js
         <LoadingOverlay
             active={isActive}
             spinner
@@ -587,6 +606,13 @@ export default function Profile(props) {
     </div>
 
     </LoadingOverlay>
+=======
+        <div>
+
+            <Swap data={data}/>
+
+        </div>
+>>>>>>> eye:frontend/src/components/pages/home/Home.js
     );
 }
 //setSelectedFile(e.target.value);
