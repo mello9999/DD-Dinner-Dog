@@ -1,11 +1,14 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "bank1333",
+    "username": "natchapolpatamawisut@dd-dinner-dog",
+    "password": "Bank_1333",
     "database": "DD-Dinner-Dog",
-    "host": "127.0.0.1",
+    "host": "dd-dinner-dog.postgres.database.azure.com",
     "dialect": "postgres",
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "dialectOptions": {
+      "ssl": true
+    }
   },
   "test": {
     "username": "root",
