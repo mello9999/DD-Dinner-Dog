@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+
 //import { Button } from 'antd';
 import LocalStorageService from '../../services/localStorageService';
 import axios from '../../config/axios';
 import LoadingOverlay from 'react-loading-overlay';
 import jwtDecode from 'jwt-decode';
 import { Button, Grid, Typography } from '@material-ui/core';
+
 
 export default function Profile(props) {
     const [isActive, setisActive] = useState(false)
@@ -15,13 +17,13 @@ export default function Profile(props) {
     const [breeds, setBreeds] = useState("");
     const [location, setLocation] = useState("");
     const [about, setAbout] = useState("");
-    const [profileFileData, setProfileData] = useState(null);
+    const [profileFileData, setProfileData] = useState(require("C:/Users/User/DD-Dinner-Dog/frontend/src/components/pages/z_add9.jpg"));
 
-    const [certificateFileData, setCertificateData] = useState(null);
-    const [picture1Data, setPicture1Data] = useState(null);
-    const [picture2Data, setPicture2Data] = useState(null);
-    const [picture3Data, setPicture3Data] = useState(null);
-    const [picture4Data, setPicture4Data] = useState(null);
+    const [certificateFileData, setCertificateData] = useState(require("C:/Users/User/DD-Dinner-Dog/frontend/src/components/pages/z_add6.png"));
+    const [picture1Data, setPicture1Data] = useState(require("C:/Users/User/DD-Dinner-Dog/frontend/src/components/pages/z_add7.png"));
+    const [picture2Data, setPicture2Data] = useState(require("C:/Users/User/DD-Dinner-Dog/frontend/src/components/pages/z_add7.png"));
+    const [picture3Data, setPicture3Data] = useState(require("C:/Users/User/DD-Dinner-Dog/frontend/src/components/pages/z_add7.png"));
+    const [picture4Data, setPicture4Data] = useState(require("C:/Users/User/DD-Dinner-Dog/frontend/src/components/pages/z_add7.png"));
 
     const onChangeProfilePicture = e => {
 
@@ -195,12 +197,13 @@ export default function Profile(props) {
                                     hidden
                                 />
                                 <label htmlFor="fi1">
-                                    <div
+                                    <div 
                                         style={{
                                             height: "150px",
                                             width: "150px",
                                             border: "3px solid black",
-                                            borderRadius: "50%"
+                                            borderRadius: "50%",
+                                            
                                         }}
                                         htmlFor="fi1"
                                     >
@@ -208,15 +211,17 @@ export default function Profile(props) {
                                             src={profileFileData}
                                             alt=""
                                             style={{
+                                                
                                                 objectFit: "cover",
-                                                height: "150px",
-                                                width: "150px",
+                                                height: "140px",
+                                                width: "130px",
                                                 borderRadius: "50%"
                                             }}
                                         />
                                     </div>
                                 </label>
                                 <input
+                                    placeholder="Name"
                                     id="Box_name"
                                     type="text"
                                     value={name || ''}
@@ -229,31 +234,33 @@ export default function Profile(props) {
                                 <div>
                                     <Grid container item xs={12} style={{ "borderRadius": "2%", "border": "3px solid  white", "padding": "30px" }}>
                                         <Grid item xs={12} align="center" >
-                                            <h2 style={{ "marginTop": "-50px", "backgroundColor": "#E1B76D", "width": "200px", "color": "white" }}>
+                                            <h2 style={{ "marginTop": "-50px", "backgroundColor": "#E1B76D", "width": "200px", "color": "white"}}>
                                                 Account Setting
                                         </h2>
                                         </Grid>
                                         <Grid container item xs={5}>
                                             <Grid container item xs={12} direction="column" align="left">
-                                                <Typography inline="true" valient="body1" style={{ "color": "white" }}>
-                                                    Gender
+                                                <Typography inline="true" valient="body1" style={{ "color": "white"}}>
+                                                
                                             </Typography>
 
                                                 <input
+                                                    placeholder="Gender"
                                                     id="Box_gender"
                                                     type="text"
                                                     value={gender || ''}
                                                     onChange={(e) => setGender(e.target.value)}
-                                                    style={{ "width": "50%" }}
+                                                    style={{ "width": "50%" , "font-family": "Quicksand" }}
                                                 />
 
                                             </Grid>
 
                                             <Grid container item xs={12} direction="column" align="left">
                                                 <Typography inline="True" valient="body1" style={{ "color": "white" }}>
-                                                    Age
+                                                   
                                             </Typography>
                                                 <input
+                                                    placeholder="Age"
                                                     id="Box_age"
                                                     type="text"
                                                     value={age || ''}
@@ -264,9 +271,10 @@ export default function Profile(props) {
 
                                             <Grid container item xs={12} direction="column" align="left">
                                                 <Typography inline="True" valient="body1" style={{ "color": "white" }} >
-                                                    Breeds
+                                                   
                                             </Typography>
-                                                <input
+                                                <input 
+                                                    placeholder="Breeds"
                                                     id="Box_breeds"
                                                     type="text"
                                                     value={breeds || ''}
@@ -276,9 +284,10 @@ export default function Profile(props) {
                                             </Grid>
                                             <Grid container item xs={12} direction="column" align="left">
                                                 <Typography inline="True" valient="body1" style={{ "color": "white" }} >
-                                                    Location
+                                                    
                                             </Typography>
                                                 <input
+                                                    placeholder="Location"
                                                     id="Box_location"
                                                     type="text"
                                                     value={location || ''}
@@ -291,9 +300,10 @@ export default function Profile(props) {
                                         <Grid container item xs={7}>
                                             <Grid container item xs={6} direction="column" align="left">
                                                 <Typography inline="True" valient="body1" style={{ "color": "white" }}>
-                                                    About
+                                                    
                                             </Typography>
                                                 <input
+                                                placeholder="About"
                                                     id="Box_about"
                                                     type="text"
                                                     value={about || ''}
@@ -301,32 +311,24 @@ export default function Profile(props) {
                                                     style={{ "width": "150%" }}
                                                 />
                                                 <Grid container item xs={6} direction="column" align="left" style={{ "marginTop": "22px" }}>
-                                                    <Typography inline="True" valient="body1" style={{ "color": "white" }}>
-                                                        About
-                                            </Typography>
-                                                    <input
-                                                        id="Box_about"
-                                                        type="text"
-                                                        value={about || ''}
-                                                        onChange={(e) => setAbout(e.target.value)}
-                                                        style={{ "width": "400px" }}
-                                                    />
+                                                    
                                                     <Grid container item xs={6} direction="column" align="left" style={{ "marginTop": "22px" }}>
                                                         <Typography inline="True" valient="body1" style={{ "color": "white" }}>
-                                                            Certificate
+                                                        Certificate
                                                 </Typography>
                                                         <input
+                                                            
                                                             id="fi2"
                                                             type="file"
                                                             accept="image/*"
                                                             onChange={onChangeCertificate}
                                                             hidden
                                                         />
-                                                        <label htmlFor="fi2">
-                                                            <div
+                                                        <label htmlFor="fi2" >
+                                                            <div 
                                                                 style={{
                                                                     height: "200px",
-                                                                    width: "300px",
+                                                                    width: "100%",
                                                                     border: "3px solid #727272",
                                                                     borderRadius: "10%",
                                                                     backgroundColor: "white"
@@ -369,7 +371,7 @@ export default function Profile(props) {
                                                 <label htmlFor="fi3">
                                                     <div
                                                         style={{
-                                                            height: "120px",
+                                                            height: "126px",
                                                             width: "69%",
                                                             marginRight: "55px",
                                                             border: "3px solid #727272",
@@ -400,8 +402,8 @@ export default function Profile(props) {
                                                 <label htmlFor="fi4">
                                                     <div
                                                         style={{
-                                                            height: "120px",
-                                                            width: "78.5%",
+                                                            height: "126px",
+                                                            width: "81%",
                                                             marginLeft: "30px",
                                                             border: "3px solid #727272",
                                                             borderRadius: "10%",
@@ -431,7 +433,7 @@ export default function Profile(props) {
                                                 <label htmlFor="fi5">
                                                     <div
                                                         style={{
-                                                            height: "120px",
+                                                            height: "126px",
                                                             width: "69%",
                                                             marginLeft: "55px",
                                                             border: "3px solid #727272",
@@ -461,8 +463,8 @@ export default function Profile(props) {
                                                     <div
 
                                                         style={{
-                                                            height: "120px",
-                                                            width: "60%",
+                                                            height: "126px",
+                                                            width: "58%",
                                                             marginLeft: "90px",
                                                             border: "3px solid #727272",
                                                             borderRadius: "10%",
@@ -488,11 +490,11 @@ export default function Profile(props) {
 
                                             </Grid>
                                         </Grid>
-                                        <div id="Box_save">
+                                        <div id="Box_save2">
                                             <Grid item xs={6} align="right" >
                                                 <Button variant="contained"
                                                     component="label"
-                                                    onClick={submitForm} style={{ backgroundColor: "#ee7458", color: "#ffffff", border: "2px solid #F4E6CF" }}>Save</Button>
+                                                    onClick={submitForm} style={{backgroundColor: "#ee7458", color: "#ffffff", border: "2px solid #F4E6CF" }}>Save</Button>
 
                                             </Grid>
                                         </div>
@@ -504,7 +506,8 @@ export default function Profile(props) {
                                                     onClick={logout} style={{ backgroundColor: "#ee7458", color: "#ffffff", border: "2px solid #F4E6CF" }}>Logout</Button>
                                             </Grid>
                                         </div>
-
+                                        
+                                        
 
                                     </Grid>
                                         

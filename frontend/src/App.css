@@ -259,3 +259,52 @@ html, body, #root {
   
   
 }
+
+#Box_gender {
+  border-radius: 30px;
+  border: 3px solid #727272;
+  font-family: Quicksand;
+  outline: none;
+}
+
+#Box_age {
+  border-radius: 30px;
+  border: 3px solid #727272;
+  outline: none;
+}
+
+#Box_breeds {
+  border-radius: 30px;
+  border: 3px solid #727272;
+  outline: none;
+}
+
+#Box_location {
+  border-radius: 30px;
+  border: 3px solid #727272;
+  outline: none;
+}
+
+#Box_about {
+  border-radius: 30px;
+  border: 3px solid #727272;
+  outline: none;
+}
+
+#Box_save2 {
+  margin-left: 350px;
+  margin-top: 30px;
+
+}
+
+#Box_logout {
+  margin-left: 185px;
+  margin-top: 30px;
+}
+
+#Box_name {
+  margin-top: 20px;
+  border-radius: 30px;
+  outline: none;
+}
+
