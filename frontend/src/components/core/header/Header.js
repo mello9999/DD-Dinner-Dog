@@ -14,35 +14,41 @@ function Header({backButton}) {
     
     return (
         <div className = "container">
-            <Link to="/home">
+            <Link to="/home" className="linktool">
                 <IconButton>
                     <AiFillHome className="iconContainer" />
                 </IconButton>
+                <span className="tooltip">Home</span>
             </Link>
-            <Link to="/premium">
+            <Link onClick={()=>alert("Coming Soon")} className="linktool">
                 <IconButton>
                     <GiCutDiamond className="iconContainer" />
                 </IconButton>
+                <span className="tooltip">Premium</span>
             </Link>
-            <Link to="/chat">
+            <Link to="/chat" className="linktool">
                 <IconButton>
                     <AiOutlineWechat className="iconContainer" />
                 </IconButton>
+                <span className="tooltip">Chat</span>
             </Link>
-            <Link to="/profile">
+            <Link to="/profile" className="linktool">
                 <IconButton>
                     <MdPets className="iconContainer" />
                 </IconButton>
+                <span className="tooltip">Profile</span>
             </Link>
-            <Link to="/notification">
-                <IconButton>
+            <Link onClick={()=>alert("Coming Soon")} className="linktool">
+                <IconButton className="ico">
                     <IoNotifications className="iconContainer" />
                 </IconButton>
+                <span className="tooltip">Notification</span>
             </Link>
-            <Link to="/setting">
+            <Link to="/setting" className="linktool">
                 <IconButton>
                     <IoIosSettings className="iconContainer" />
                 </IconButton>
+                <span className="tooltip">Setting</span>
             </Link>
 
 

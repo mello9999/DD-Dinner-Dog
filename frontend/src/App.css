@@ -308,3 +308,40 @@ html, body, #root {
   outline: none;
 }
 
+.linktool .tooltip{
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  width: 120px;
+  margin-left: -93px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  margin-top: 70px;
+  
+  
+}
+
+
+.linktool .tooltip::after  {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.linktool:hover .tooltip{
+visibility: visible;
+}
+.home .linktool {
+  background-color: red;
+  }
