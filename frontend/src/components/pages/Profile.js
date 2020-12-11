@@ -163,12 +163,12 @@ export default function Profile(props) {
                     setBreeds(res.data.breeds);
                     setLocation(res.data.location);
                     setAbout(res.data.about);
-                    setProfileData(res.data.profilePicture);
-                    setCertificateData(res.data.certificate);
-                    setPicture1Data(res.data.picture1);
-                    setPicture2Data(res.data.picture2);
-                    setPicture3Data(res.data.picture3);
-                    setPicture4Data(res.data.picture4);
+                    setProfileData((res.data.profilePicture)? res.data.profilePicture:require("./z_add9.jpg"));
+                    setCertificateData((res.data.certificate)? res.data.certificate:require("./z_add6.png"));
+                    setPicture1Data((res.data.picture1)? res.data.picture1:require("./z_add7.png"));
+                    setPicture2Data((res.data.picture2)? res.data.picture2:require("./z_add7.png"));
+                    setPicture3Data((res.data.picture3)? res.data.picture3:require("./z_add7.png"));
+                    setPicture4Data((res.data.picture4)? res.data.picture4:require("./z_add7.png"));
                 }).catch((err) => {
                     console.log(err)
                     alert("refresh error")
@@ -398,6 +398,14 @@ export default function Profile(props) {
 
                                             </Grid>
                                             <Grid container item xs={2} direction="column" align="left" style={{ "marginLeft": "5px" }}>
+                                            
+                                            <input
+                                                    id="fi4"
+                                                    type="file"
+                                                    accept="image/*"
+                                                    onChange={onChangePicture2}
+                                                    hidden
+                                                />
 
                                                 <label htmlFor="fi4">
                                                     <div
@@ -429,7 +437,13 @@ export default function Profile(props) {
 
                                             </Grid>
                                             <Grid container item xs={2} direction="column" align="left" style={{ "marginLeft": "5px" }}>
-
+                                            <input
+                                                    id="fi5"
+                                                    type="file"
+                                                    accept="image/*"
+                                                    onChange={onChangePicture3}
+                                                    hidden
+                                                />
                                                 <label htmlFor="fi5">
                                                     <div
                                                         style={{
@@ -458,6 +472,14 @@ export default function Profile(props) {
 
                                             </Grid>
                                             <Grid container item xs={3} direction="column" align="left" style={{ "marginLeft": "5px" }}>
+                                            
+                                            <input
+                                                    id="fi6"
+                                                    type="file"
+                                                    accept="image/*"
+                                                    onChange={onChangePicture4}
+                                                    hidden
+                                                />
 
                                                 <label htmlFor="fi6">
                                                     <div
