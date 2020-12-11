@@ -44,10 +44,6 @@ export default {
         allowedRoutes: [
             components.login,
             components.register,
-            components.profile,
-            components.chatroom,
-            components.home,
-            components.setting
         ],
         redirectRoutes: "/login"
     },

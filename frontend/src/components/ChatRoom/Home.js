@@ -13,12 +13,13 @@ const User = (props) => {
 
   const { user, onClick } = props;
   const [prc, setPrc] = useState('');
+  
   axios
     .post('/doginfo/getinfo/', { id: user.id })
     .then((res) => {
 
       setPrc(res.data.profilePicture);
-
+console.log('aaaaaa')
     })
 
 
@@ -178,14 +179,14 @@ const ChatRoom = (props) => {
               chatStarted ? today : ''
             }
           </div>
-          <div className="messageSections" style={{ background: "black !important"} }>
+          <div className="messageSections">
             {
               chatStarted ?
                 user.conversations.map(con => {
                   
                   
                   return (
-                    <div style={{ background: "black", textAlign: con.user_uid_1 === auth.uid ?'right': 'left' }}>
+                    <div style={{ textAlign: con.user_uid_1 === auth.uid ?'right': 'left' }}>
                       
                       <p className="messageStyle">{con.message}</p>
                     </div>)
@@ -198,7 +199,7 @@ const ChatRoom = (props) => {
           {
             chatStarted ?
               <div className="chatControls" >
-                <form onSubmit={submitMessage} style={{ width: "100%" , overflow:"hidden"}}>
+                <form className="inform" onSubmit={submitMessage} style={{ width: "100%", display:"inline" }}>
                   ...
                   <input
                     value={message}

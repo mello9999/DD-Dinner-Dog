@@ -42,7 +42,7 @@ export default function Login(props) {
         .then(result => {
             LocalStorageService.setToken(result.data.token);
             props.setRole("user");
-            //window.location.replace('/profile');
+            window.location.replace('/home');
         })
         .catch(err => {                
             notification.error({ 
@@ -139,16 +139,16 @@ export default function Login(props) {
                             </Popconfirm>
                         </div>
                         <div>
-                            <img  id="Image1" alt="นิวหน้าหี" src={phone}/>
+                            <img  id="Image1" alt="" src={phone}/>
                         </div>
                         <div>
-                            <img id="Image2" alt="นิวหน้าหี2" src={google} />
+                            <img id="Image2" alt="" src={google} />
                         </div>
                         <div>
-                            <img id="Image3" alt="นิวหน้าหี3" src={line}/>
+                            <img id="Image3" alt="" src={line}/>
                         </div>
                         <div>
-                            <img id="Image4" alt="นิวหน้าหี4" src={facebook} />
+                            <img id="Image4" alt="" src={facebook} />
                         </div>
                     </Form>
                 </div>

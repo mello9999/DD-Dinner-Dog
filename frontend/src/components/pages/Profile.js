@@ -370,8 +370,8 @@ export default function Profile(props) {
                                                     <div
                                                         style={{
                                                             height: "120px",
-                                                            width: "95%",
-                                                            marginRight: "7px",
+                                                            width: "69%",
+                                                            marginRight: "55px",
                                                             border: "3px solid #727272",
                                                             borderRadius: "10%",
                                                             backgroundColor: "white"
@@ -384,7 +384,7 @@ export default function Profile(props) {
                                                             style={{
                                                                 height: "120px",
                                                                 width: "120px",
-                                                                border: "3px solid #727272",
+                                                                border: "0px",
                                                                 borderRadius: "10%",
                                                                 backgroundColor: "white"
                                                             }}
@@ -415,7 +415,7 @@ export default function Profile(props) {
                                                             style={{
                                                                 height: "120px",
                                                                 width: "120px",
-                                                                border: "3px solid #727272",
+                                                                border: "0px",
                                                                 borderRadius: "10%",
                                                                 backgroundColor: "white"
                                                             }}
@@ -444,6 +444,7 @@ export default function Profile(props) {
                                                             src={picture3Data}
                                                             alt=""
                                                             style={{
+                                                                border: "0px",
                                                                 objectFit: "cover",
                                                                 height: "120px",
                                                                 width: "120px",
@@ -461,8 +462,8 @@ export default function Profile(props) {
 
                                                         style={{
                                                             height: "120px",
-                                                            width: "50%",
-                                                            marginLeft: "85px",
+                                                            width: "60%",
+                                                            marginLeft: "90px",
                                                             border: "3px solid #727272",
                                                             borderRadius: "10%",
                                                             backgroundColor: "white"
@@ -473,11 +474,11 @@ export default function Profile(props) {
                                                             src={picture4Data}
                                                             alt=""
                                                             style={{
+                                                                border: "0px",
+                                                                objectFit: "cover",
                                                                 height: "120px",
                                                                 width: "120px",
-                                                                border: "3px solid #727272",
-                                                                borderRadius: "10%",
-                                                                backgroundColor: "white"
+                                                                borderRadius: "10%"
                                                             }}
                                                             htmlFor="fi6"
                                                         />
