@@ -84,9 +84,12 @@ To Visit App :
 <p align = 'center'> ...coming soon... </p>
   
 # Built With 
-<p align = 'center'> ...coming soon... </p>
+- [X] Django ในการสร้าง Database ใน PgAdmin  
+- [X] React ทำ frontend 
+- [X] Robot Framework ทำ Automating testing
+- [X] Azure app service ในการ Deploy ขึ้น cloud server  
   
 # Versioning 
-<p align = 'center'> ...coming soon... </p>
+> DD-Dinner-Dog base on version 1.0.0 in 11/12/2563 
   
 
