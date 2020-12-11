@@ -23,19 +23,21 @@ const alreadyRemoved = []
 
 const Ppic = (props) => {
   let m = ((Math.random() > 0.5) ? 1 : -1) * Math.round(Math.random() * 15);
-  console.log(props.data)
+  
   const [prc, setPrc] = useState(null);
+  const [name, setName] = useState("");
 
   useEffect(() => {
     axios.post('/doginfo/getinfo', { id: props.data.id }).then(
       (res) => {
         setPrc((res !== undefined) ? res.data : '')
+        setName(res.data.name)
       })
   }, [])
 
  
-    return prc ? (<div style={{ backgroundImage: `url(${prc.profilePicture})`, transform: `rotate(${m}deg)` }}
-      className="card"><h3>name</h3></div>) : <div></div>
+    return prc ? (<div style={{ backgroundImage: `url(${prc.profilePicture})`, backgroundRepeat:"no-repeat",  backgroundSize:"cover", transform: `rotate(${m}deg)` }}
+      className="card"><h3>{name}</h3></div>)  : <div></div>
   
 }
 
@@ -49,7 +51,7 @@ const Swap = (props) => {
   const user = useSelector(state => state.user);
   let charactersState = user.users;
   const [dog, setCharacters] = useState(user.users)
-  console.log({dog})
+  
   let unsubscribe;
   const [lastDirection, setLastDirection] = useState()
   // const [name, setName] = useState("")
@@ -69,7 +71,7 @@ const Swap = (props) => {
   //   }
   // }, [])
   useEffect(() => {
-
+    
     unsubscribe = dispatch(getRealtimeUsers(auth.uid))
       .then(unsubscribe => {
         return unsubscribe;
@@ -147,7 +149,7 @@ const Swap = (props) => {
       </div>
       <div className="swipeButtons">
         <IconButton className="swipeButtons_repeat" onClick={() => refresh()} style={{ width: "50px", height: "50px" }}>
-          <Link to="/"><ReplayIcon fontSize="large" /></Link>
+          <Link id="rp" to="/"><ReplayIcon fontSize="large" /></Link>
 
         </IconButton>
         <IconButton className="swipeButtons_left" onClick={() => swipe('left')} style={{ width: "50px", height: "50px" }}>

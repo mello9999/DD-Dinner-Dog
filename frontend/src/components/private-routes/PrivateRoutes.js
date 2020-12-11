@@ -21,8 +21,9 @@ function PrivateRoutes(props) {
                 >
                     <div>
                         {(() => {
+                            console.log(route.url.slice(1, route.url.length))
                             if (route.url !== "/login" && route.url !== "/register") {
-                                return <Header />
+                                return <Header className={route.url.slice(1, route.url.length)} />
                             }
                         })()}
 
