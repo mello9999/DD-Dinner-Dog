@@ -17,7 +17,7 @@ ${nickname}             bankNatchapol
 ${PhoneNumber}          0899999999
 
 *** Test Cases ***
-Reset form 
+Reset form
     Open Browser To DD Dinner Dog
     Input Email               ${email} 
     Input Password            ${password}
