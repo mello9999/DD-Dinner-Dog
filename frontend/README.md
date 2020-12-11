@@ -1,19 +1,19 @@
 # Work Planner 
 ### Web page
 ### P'May  :woman:
-   - [ ] Profile page
-   - [ ] Chat page
+   - [X] Profile page
+   - [X] Chat page
 
 ### Eye  :red_haired_woman:	
-  - [ ] Swap page
-  - [ ] ส่วนเสริม!!!   
-    - [ ] Setting Page
+  - [X] Swap page
+  - [X] ส่วนเสริม!!!   
+    - [X] Setting Page
     
 ### New  :bearded_person:
-  - [ ] Login page  
-  - [ ] Register page 
+  - [X] Login page  
+  - [X] Register page 
   
 ---
 - #### Extra :bangbang::bangbang:
-- [ ]  Premium page 
+- [X]  Premium page 
 ---
