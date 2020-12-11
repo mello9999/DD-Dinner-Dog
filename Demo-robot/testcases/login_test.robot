@@ -4,7 +4,7 @@ Library           SeleniumLibrary
 
 *** Variables ***
 ${LOGIN URL}      http://localhost:3000/login
-${HOME URL}       http://localhost:3000/profile
+${HOME URL}       http://localhost:3000/home
 ${BROWSER}        Chrome
 ${email}             nene199@gmail.com
 ${new_email}         banklnwza007@test.com 
@@ -17,7 +17,7 @@ Valid Login
     Input Username    ${email} 
     Input Password    ${password}
     Submit Credentials
-    profile Page Should Be Open
+    home Page Should Be Open
     Close Browser
     
 Invalid Login Case1 : log in with Unregister Email
@@ -52,6 +52,7 @@ Switch role user : User to vet
     DD vet login 
     Close Browser
 
+
 *** Keywords ***
 Open Browser To DD Dinner Dog 
     Open Browser       ${LOGIN URL}      ${BROWSER}
@@ -75,6 +76,6 @@ DD vet login
     Click Button   id = DD_veter
 register Page Should Be Open
     Title Should Be    DD Dinner Dog
-profile Page Should Be Open
+home Page Should Be Open
     Title Should Be    DD Dinner Dog
 
