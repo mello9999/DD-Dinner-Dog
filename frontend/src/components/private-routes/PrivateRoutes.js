@@ -7,23 +7,27 @@ function PrivateRoutes(props) {
 
     const allowedRoutes = ConfigRoutes[role].allowedRoutes;
     const redirectRoute = ConfigRoutes[role].redirectRoutes;
-    
+
     return (
-        
+
         <Switch>
             {allowedRoutes.map(route => (
-                
-                
+
+
                 <Route
                     path={route.url}
                     key={route.url}
                     exact
                 >
-                    {(() => {if(route.url !== "/login" && route.url !== "/register") {
-                        return <Header />
-                        }})()}
-                   
-                    <route.component setRole={props.setRole} />
+                    <div>
+                        {(() => {
+                            if (route.url !== "/login" && route.url !== "/register") {
+                                return <Header />
+                            }
+                        })()}
+
+                        <route.component setRole={props.setRole} />
+                    </div>
                 </Route>))}
             <Redirect to={redirectRoute} />
         </Switch>

@@ -1,6 +1,6 @@
 import { Switch } from "@material-ui/core";
 import React, { useMemo, useState, useEffect } from "react";
-import { Route, Router } from "react-router-dom";
+import { Route, Router , useHistory } from "react-router-dom";
 import Header from "../../core/header/Header";
 import DogCards from "../home/DogCards";
 import SwipeButtons from "../home/SwipeButtons";
@@ -21,29 +21,35 @@ const alreadyRemoved = []
 
 
 
-const Ppic = React.memo((props) => {
+const Ppic = (props) => {
   let m = ((Math.random() > 0.5) ? 1 : -1) * Math.round(Math.random() * 15);
   console.log(props.data)
   const [prc, setPrc] = useState(null);
-  console.log(prc, "prcccccccccccccccccc")
-  axios.post('/doginfo/getinfo', { id: props.data.id }).then(
-    (res) => {
-      setPrc((res!== undefined)?res.data:'')
-    })
- return useMemo(() => {return prc ? ( <div style={{ backgroundImage: `url(${prc.profilePicture})`, transform: `rotate(${m}deg)` }}
-    className="card"><h3>name</h3></div> ): <div></div>})
-})
+
+  useEffect(() => {
+    axios.post('/doginfo/getinfo', { id: props.data.id }).then(
+      (res) => {
+        setPrc((res !== undefined) ? res.data : '')
+      })
+  }, [])
+
+ 
+    return prc ? (<div style={{ backgroundImage: `url(${prc.profilePicture})`, transform: `rotate(${m}deg)` }}
+      className="card"><h3>name</h3></div>) : <div></div>
+  
+}
 
 const Swap = (props) => {
 
 
 
   const dispatch = useDispatch();
+  const history = useHistory();
   const auth = useSelector(state => state.auth);
   const user = useSelector(state => state.user);
   let charactersState = user.users;
   const [dog, setCharacters] = useState(user.users)
-  console.log(dog)
+  console.log({dog})
   let unsubscribe;
   const [lastDirection, setLastDirection] = useState()
   // const [name, setName] = useState("")
@@ -66,23 +72,13 @@ const Swap = (props) => {
 
     unsubscribe = dispatch(getRealtimeUsers(auth.uid))
       .then(unsubscribe => {
-
         return unsubscribe;
       })
       .catch(error => {
         console.log(error);
       })
 
-
-
-  }, []);
-
-  //console.log(user);
-
-  //componentWillUnmount
-  useEffect(() => {
-
-
+    
     return () => {
 
       //cleanup
@@ -90,6 +86,9 @@ const Swap = (props) => {
 
     }
   }, []);
+
+  //console.log(user);
+
   const childRefs = useMemo(() => Array(charactersState.length).fill(0).map(i => React.createRef()), [])
 
   const swiped = (direction, nameToDelete) => {
@@ -114,7 +113,7 @@ const Swap = (props) => {
     }
   }
 
- 
+
   const refresh = () => {
     while (alreadyRemoved.length > 0) {
       alreadyRemoved.pop();
@@ -128,7 +127,7 @@ const Swap = (props) => {
       <div>
         <div className="dogCards_cardContainer">
           {dog.map((dog, index) => (
-            <TinderCard
+            <TinderCard                     
               ref={childRefs[index]} className='swipe'
 
 
@@ -137,11 +136,11 @@ const Swap = (props) => {
               onSwipe={(dir) => swiped(dir, dog.name)}
               onCardLeftScreen={() => outOfFrame(dog.name)}
             >
-              
-            <Ppic data={dog} key={index}/>
-              
-                    
-                    
+
+              <Ppic data={dog} key={index} />
+
+
+
             </TinderCard>
           ))}
         </div>

@@ -19,7 +19,7 @@ const User = (props) => {
     .then((res) => {
 
       setPrc(res.data.profilePicture);
-console.log('aaaaaa')
+
     })
 
 
@@ -39,10 +39,11 @@ console.log('aaaaaa')
 
 const ChatRoom = (props) => {
 
-
+  
   const dispatch = useDispatch();
   const auth = useSelector(state => state.auth);
   const user = useSelector(state => state.user);
+  console.log(auth, "adddddddd")
   const [uss, setUss] = useState(user.users)
   const [chatStarted, setChatStarted] = useState(false);
   const [chatUser, setChatUser] = useState('');
@@ -87,6 +88,7 @@ const ChatRoom = (props) => {
     //         alert("refresh error")
     //     });
     //   }
+    
 
 
     unsubscribe = dispatch(getRealtimeUsers(auth.uid))
