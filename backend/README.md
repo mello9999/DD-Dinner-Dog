@@ -4,13 +4,11 @@
 # Work Planner 
 ### Bank :man:
 #### Database 
-  - [ ] 1. Account
-  - [ ] 2. Dog_Info
-  - [ ] 3. Certificate
-  - [ ] 4. Health
-  - [ ] 5. Address
-  - [ ] 6. LIKE
-  - [ ] 7. DISLIKE
-  - [ ] 8. SUPER LIKE
-  - [ ] 9. MESSAGE (chat log)
+  - [X] 1. Account
+  - [X] 2. Dog_Info
+  - [X] 3. Dog info
+  - [X] 4. Health
+  - [X] 5. Address
+  - [X] 6. LIKE
+  - [X] 9. MESSAGE (chat log)
   

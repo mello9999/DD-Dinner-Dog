@@ -81,12 +81,19 @@ To Visit App :
 `localhost:3000/...` 
   
 # Deployment  
-<p align = 'center'> ...coming soon... </p>
+Tools : 
+- [X] Azure PostgreSQL 
+- [X] Azure app service 
+
+:globe_with_meridians: :desktop_computer: Web Application Link : ` ... ` :wolf: 
   
 # Built With 
-<p align = 'center'> ...coming soon... </p>
+- [X] Django ในการสร้าง Database ใน PgAdmin  
+- [X] React ทำ frontend 
+- [X] Robot Framework ทำ Automating testing
+- [X] Azure app service ในการ Deploy ขึ้น cloud server  
   
 # Versioning 
-<p align = 'center'> ...coming soon... </p>
+> :dog: DD-Dinner-Dog base on version 1.0.0 in 11/12/2563 
   
 
