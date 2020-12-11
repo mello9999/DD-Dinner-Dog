@@ -81,8 +81,11 @@ To Visit App :
 `localhost:3000/...` 
   
 # Deployment  
+Tools : 
 - [X] Azure PostgreSQL 
 - [X] Azure app service 
+
+:globe_with_meridians:desktop_computer: Web Application Link : ` ... ` :wolf: 
   
 # Built With 
 - [X] Django ในการสร้าง Database ใน PgAdmin  
@@ -91,6 +94,6 @@ To Visit App :
 - [X] Azure app service ในการ Deploy ขึ้น cloud server  
   
 # Versioning 
-> DD-Dinner-Dog base on version 1.0.0 in 11/12/2563 
+> :dog: DD-Dinner-Dog base on version 1.0.0 in 11/12/2563 
   
 
