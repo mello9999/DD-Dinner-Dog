@@ -1,9 +1,6 @@
 import { Switch } from "@material-ui/core";
 import React, { useMemo, useState, useEffect } from "react";
 import { Route, Router , useHistory } from "react-router-dom";
-import Header from "../../core/header/Header";
-import DogCards from "../home/DogCards";
-import SwipeButtons from "../home/SwipeButtons";
 import { Link } from 'react-router-dom';
 import "../home/SwipeButtons.css";
 import "../home/DogCards.css";
@@ -80,7 +77,8 @@ const Swap = (props) => {
         console.log(error);
       })
 
-    
+      
+
     return () => {
 
       //cleanup
