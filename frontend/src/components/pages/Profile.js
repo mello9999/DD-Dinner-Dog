@@ -17,13 +17,13 @@ export default function Profile(props) {
     const [breeds, setBreeds] = useState("");
     const [location, setLocation] = useState("");
     const [about, setAbout] = useState("");
-    const [profileFileData, setProfileData] = useState(require("C:/Users/User/DD-Dinner-Dog/frontend/src/components/pages/z_add9.jpg"));
+    const [profileFileData, setProfileData] = useState(require("./z_add9.jpg"));
 
-    const [certificateFileData, setCertificateData] = useState(require("C:/Users/User/DD-Dinner-Dog/frontend/src/components/pages/z_add6.png"));
-    const [picture1Data, setPicture1Data] = useState(require("C:/Users/User/DD-Dinner-Dog/frontend/src/components/pages/z_add7.png"));
-    const [picture2Data, setPicture2Data] = useState(require("C:/Users/User/DD-Dinner-Dog/frontend/src/components/pages/z_add7.png"));
-    const [picture3Data, setPicture3Data] = useState(require("C:/Users/User/DD-Dinner-Dog/frontend/src/components/pages/z_add7.png"));
-    const [picture4Data, setPicture4Data] = useState(require("C:/Users/User/DD-Dinner-Dog/frontend/src/components/pages/z_add7.png"));
+    const [certificateFileData, setCertificateData] = useState(require("./z_add6.png"));
+    const [picture1Data, setPicture1Data] = useState(require("./z_add7.png"));
+    const [picture2Data, setPicture2Data] = useState(require("./z_add7.png"));
+    const [picture3Data, setPicture3Data] = useState(require("./z_add7.png"));
+    const [picture4Data, setPicture4Data] = useState(require("./z_add7.png"));
 
     const onChangeProfilePicture = e => {
 
