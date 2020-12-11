@@ -13,7 +13,3 @@
   - [X] Login page  
   - [X] Register page 
   
----
-- #### Extra :bangbang::bangbang:
-- [X]  Premium page 
----
