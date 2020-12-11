@@ -7,7 +7,7 @@
 #### Robot Framework Tester of project 
 - [x] login
 - [x] register
-- [ ] Home
-- [ ] Profile
-- [ ] Chat
-- [ ] Setting 
+- [X] Home
+- [X] Profile
+- [X] Chat
+- [X] Setting 
