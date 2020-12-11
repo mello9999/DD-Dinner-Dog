@@ -81,7 +81,8 @@ To Visit App :
 `localhost:3000/...` 
   
 # Deployment  
-<p align = 'center'> ...coming soon... </p>
+- [X] Azure PostgreSQL 
+- [X] Azure app service 
   
 # Built With 
 - [X] Django ในการสร้าง Database ใน PgAdmin  
