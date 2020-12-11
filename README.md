@@ -87,6 +87,6 @@ To Visit App :
 <p align = 'center'> ...coming soon... </p>
   
 # Versioning 
-<p align = 'center'> ...coming soon... </p>
+> version 1.0.0 on 11/12/2020 
   
 
