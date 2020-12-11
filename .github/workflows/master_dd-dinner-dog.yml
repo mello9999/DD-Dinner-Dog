@@ -22,13 +22,10 @@ jobs:
 
     - name: npm install, build, and test
       run: |
-        cd backend
-        npm install
-        node index.js
-        cd ..
         cd frontend
         npm install
         npm start
+        
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
