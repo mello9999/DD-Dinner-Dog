@@ -6,9 +6,12 @@ import axios from '../../config/axios';
 import LoadingOverlay from 'react-loading-overlay';
 import jwtDecode from 'jwt-decode';
 import { Button, Grid, Typography } from '@material-ui/core';
-
+import { signout } from '../../actions';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function Profile(props) {
+    const dispatch = useDispatch();
+  const auth = useSelector(state => state.auth);
     const [isActive, setisActive] = useState(false)
     const [name, setName] = useState("");
     const [id, setId] = useState(0);
@@ -95,6 +98,7 @@ export default function Profile(props) {
     const logout = () => {
         LocalStorageService.removeToken();
         props.setRole("guest");
+    
     }
 
 
