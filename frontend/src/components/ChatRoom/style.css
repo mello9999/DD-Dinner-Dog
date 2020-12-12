@@ -106,13 +106,13 @@
 }
 
 .displayName:hover {
-background-color: red;
+background-color: #ee7548;
 }
 .displayName:visited {
     background-color: blue;
     }
 .displayName:focus {
-    background-color: green;
+    background-color: #727272;
     }
 
 .inform  {

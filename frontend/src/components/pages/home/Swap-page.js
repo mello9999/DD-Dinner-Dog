@@ -147,7 +147,7 @@ const Swap = (props) => {
       </div>
       <div className="swipeButtons">
         <IconButton className="swipeButtons_repeat" onClick={() => refresh()} style={{ width: "50px", height: "50px" }}>
-          <Link id="rp" to="/"><ReplayIcon fontSize="large" /></Link>
+          <Link to="/"><ReplayIcon fontSize="large" /></Link>
 
         </IconButton>
         <IconButton className="swipeButtons_left" onClick={() => swipe('left')} style={{ width: "50px", height: "50px" }}>
