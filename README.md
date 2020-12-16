@@ -85,7 +85,7 @@ Tools :
 - [X] Azure PostgreSQL 
 - [X] Azure app service 
 
-:globe_with_meridians: :desktop_computer: Web Application Link : `https://dd-dinner-dog.azurewebsites.net` :wolf: 
+:globe_with_meridians: :desktop_computer: Web Application Link : `https://banknatchapol.github.io/SEFE` :wolf: 
   
 # Built With 
 - [X] Django ในการสร้าง Database ใน PgAdmin  
