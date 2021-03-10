@@ -86,6 +86,7 @@ Tools :
 - [X] Azure app service 
 
 :globe_with_meridians: :desktop_computer: Web Application Link : `https://banknatchapol.github.io/SEFE` :wolf: 
+> :exclamation::exclamation: ตอนนี้ DD Dinner Dog ได้ปิดกิจการลงเเล้ว สามารถตืดตาม Product ใหม่ ๆ ได้เร็ว ๆ นี้ :exclamation::exclamation:
   
 # Built With 
 - [X] Django ในการสร้าง Database ใน PgAdmin  
