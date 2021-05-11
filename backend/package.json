@@ -17,7 +17,7 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.12",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mysql2": "^2.1.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
